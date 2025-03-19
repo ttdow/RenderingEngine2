@@ -16,7 +16,7 @@ namespace Engine
 
 		Engine::Transform transform;
 
-		SceneNode() = delete;
+		SceneNode();
 		SceneNode(const std::string& name);
 
 	private:
@@ -28,6 +28,14 @@ namespace Engine
 	public:
 
 		std::unique_ptr<SceneNode> root;
+
+		Scene() = delete;						  // Default constructor
+		Scene(const std::string& name);			  // Constructor
+		~Scene();								  // Destructor
+		Scene(const Scene& other);				  // Copy constructor
+		Scene& operator=(const Scene& other);	  // Copy assignment operator
+		Scene(Scene&& other) noexcept;			  // Move constructor
+		Scene& operator=(Scene&& other) noexcept; // Move assignment operator
 
 	private:
 

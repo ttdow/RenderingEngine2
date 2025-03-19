@@ -2,9 +2,12 @@
 
 #include "AssetLoader.h"
 
-bool Engine::AssetLoader::LoadGLTF(const std::string& filePath)
+std::unique_ptr<Engine::Scene> Engine::AssetLoader::LoadGLTF(const std::string& filePath)
 {
 	std::cout << "Loading glTF file: " << filePath << std::endl;
+	
+
+	std::unique_ptr<Engine::Scene> scene = std::make_unique<Engine::Scene>("Root");
 
 	// Save the system file path.
 	std::filesystem::path path = filePath;
@@ -13,9 +16,7 @@ bool Engine::AssetLoader::LoadGLTF(const std::string& filePath)
 	auto gltfFile = fastgltf::GltfDataBuffer::FromPath(path);
 	if (!gltfFile)
 	{
-		std::cout << "Failed to load glTF file!\n";
-
-		return false;
+		throw std::runtime_error("Failed to load glTF file!");
 	}
 
 	fastgltf::Asset gltf;
@@ -39,10 +40,10 @@ bool Engine::AssetLoader::LoadGLTF(const std::string& filePath)
 	}
 
 	LoadExtensions(gltf);
-	LoadScenes(gltf);
+	LoadScenes(gltf, scene);
 	LoadNodes(gltf);
 
-	return true;
+	return scene;
 }
 
 bool Engine::AssetLoader::ParseGLTF()
@@ -52,28 +53,40 @@ bool Engine::AssetLoader::ParseGLTF()
 
 bool Engine::AssetLoader::LoadExtensions(fastgltf::Asset& gltf)
 {
-	//if (gltf.extensionsRequired.size() > 0)
-	//{
-		std::cout << "Extensions required: " << gltf.extensionsRequired.size() << std::endl;
-	//}
-
-	//if (gltf.extensionsUsed.size() > 0)
-	//{
-		std::cout << "Extensions used: " << gltf.extensionsUsed.size() << std::endl;
-	//}
-
-		std::cout << "Lights: " << gltf.lights.size() << std::endl;
-
 	return true;
 }
 
-bool Engine::AssetLoader::LoadScenes(fastgltf::Asset& gltf)
+bool Engine::AssetLoader::LoadScenes(fastgltf::Asset& gltf, std::unique_ptr<Engine::Scene>& sceneGraph)
 {
-	std::cout << "Scenes: " << gltf.scenes.size() << std::endl;
-
-	for (uint32_t i = 0; i < gltf.scenes.size(); i++)
+	// Get number of scenes in glTF file.
+	const uint32_t nScenes = gltf.scenes.size();
+	if (nScenes <= 0)
 	{
+		throw std::runtime_error("There are no scenes in the loaded glTF file!");
+	}
+	
+	// Allocate memory for top-level scene nodes.
+	sceneGraph->root->children.resize(nScenes);
+
+	std::cout << "Scenes: " << nScenes << std::endl;
+
+	for (uint32_t i = 0; i < nScenes; i++)
+	{
+		// Get a reference to the current scene in the glTF file.
 		fastgltf::Scene& scene = gltf.scenes[i];
+
+		// Create a new scene graph node.
+		sceneGraph->root->children[i] = new Engine::SceneNode(scene.name.c_str());
+		Engine::SceneNode& newNode = *sceneGraph->root->children[i];
+
+		// Allocate memory for the node's children.
+		newNode.children.reserve(scene.nodeIndices.size());
+
+		std::cout << scene.name << std::endl;
+		std::cout << newNode.name << std::endl;
+		
+		//newNode.name = scene.name;
+		//newNode.children.reserve(scene.nodeIndices.size());
 
 		std::cout << "  Scene[" << i << "]: " << scene.name << std::endl;
 		std::cout << "    Nodes: " << scene.nodeIndices.size() << std::endl;
