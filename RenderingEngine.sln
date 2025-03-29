@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RenderingEngine", "RenderingEngine\RenderingEngine.vcxproj", "{BF708DA0-0355-4DD6-B471-C48940865CE1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RenderingEngineTests", "RenderingEngineTests\RenderingEngineTests.vcxproj", "{272A2481-86FD-2395-5177-77B4BBE9208C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{BF708DA0-0355-4DD6-B471-C48940865CE1}.Debug|x64.Build.0 = Debug|x64
 		{BF708DA0-0355-4DD6-B471-C48940865CE1}.Release|x64.ActiveCfg = Release|x64
 		{BF708DA0-0355-4DD6-B471-C48940865CE1}.Release|x64.Build.0 = Release|x64
+		{272A2481-86FD-2395-5177-77B4BBE9208C}.Debug|x64.ActiveCfg = Debug|x64
+		{272A2481-86FD-2395-5177-77B4BBE9208C}.Debug|x64.Build.0 = Debug|x64
+		{272A2481-86FD-2395-5177-77B4BBE9208C}.Release|x64.ActiveCfg = Release|x64
+		{272A2481-86FD-2395-5177-77B4BBE9208C}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6DF61DA-DB7A-47B5-9D84-5F5F96E876CE}
 	EndGlobalSection
 EndGlobal

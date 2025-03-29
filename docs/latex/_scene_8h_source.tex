@@ -1,0 +1,49 @@
+\doxysection{Scene.\+h}
+\hypertarget{_scene_8h_source}{}\label{_scene_8h_source}\index{RenderingEngine/src/Scene.h@{RenderingEngine/src/Scene.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}pch.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Transform.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }Engine}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{class\ }SceneNode}
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ std::string\ name;}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ std::vector<SceneNode*>\ children;}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ SceneNode*\ parent;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_transform}{Engine::Transform}}\ transform;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ SceneNode();}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ SceneNode(\textcolor{keyword}{const}\ std::string\&\ name);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{class\ }Scene}
+\DoxyCodeLine{00027\ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ std::unique\_ptr<SceneNode>\ root;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ Scene()\ =\ \textcolor{keyword}{delete};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Default\ constructor}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ Scene(\textcolor{keyword}{const}\ std::string\&\ name);\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Constructor}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \string~Scene();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Destructor}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ Scene(\textcolor{keyword}{const}\ Scene\&\ other);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Copy\ constructor}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ Scene\&\ operator=(\textcolor{keyword}{const}\ Scene\&\ other);\ \ \ \ \ \textcolor{comment}{//\ Copy\ assignment\ operator}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ Scene(Scene\&\&\ other)\ \textcolor{keyword}{noexcept};\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Move\ constructor}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ Scene\&\ operator=(Scene\&\&\ other)\ \textcolor{keyword}{noexcept};\ \textcolor{comment}{//\ Move\ assignment\ operator}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \};}
+\DoxyCodeLine{00043\ \}}
+
+\end{DoxyCode}

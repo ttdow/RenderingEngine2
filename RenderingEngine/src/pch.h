@@ -1,19 +1,22 @@
 #pragma once
 
+#define _CRT_SECURE_NO_WARNINGS
+
+#include <algorithm>
 #include <chrono>
-#include <cstdlib>
 #include <cmath>
+#include <cstdlib>
+#include <future>
 #include <iostream>
 #include <limits>
-#include <string>
-#include <random>
-#include <vector>
-#include <future>
+#include <map>
 #include <memory>
 #include <optional>
+#include <random>
+#include <string>
 #include <utility>
+#include <vector>
 
-const double INF = std::numeric_limits<double>::infinity();
 const double PI = 3.1415926535897932385;
 
 inline double DegreesToRadians(double degrees)

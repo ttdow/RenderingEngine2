@@ -9,8 +9,8 @@ namespace Engine
 	public:
 		double min, max;
 
-		Interval() : min(+INF), max(-INF) {}
-		Interval(double min, double max) : min(min), max(max) {}
+		//Interval() : min(1000), max(-1000) {}
+		//Interval(double min, double max) : min(min), max(max) {}
 
 		double Size() const
 		{
@@ -35,6 +35,6 @@ namespace Engine
 			return x;
 		}
 
-		static const Interval empty, universe;
+		//static const Interval empty, universe;
 	};
 }

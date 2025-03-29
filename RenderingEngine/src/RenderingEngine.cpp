@@ -10,63 +10,28 @@
 
 namespace Engine
 {
-	const Interval Interval::empty = Interval(+INF, -INF);
-	const Interval Interval::universe = Interval(-INF, INF);
-
 	Random* Random::instance = nullptr;
 
-	RenderingEngine::RenderingEngine()
+	RenderingEngine::RenderingEngine(HINSTANCE hInstance, HWND hwnd)
 	{
-		// Initialize SDL2.
-		if (SDL_Init(SDL_INIT_VIDEO) != 0)
-		{
-			throw std::runtime_error(SDL_GetError());
-		}
+		// Create the Vulkan backend for rendering.
+		vulkanBackend = std::make_unique<VulkanBackend>(hInstance, hwnd);
 
 		// Determine window dimensions.
 		imageWidth = SCREEN_WIDTH;
 		imageHeight = int(imageWidth / ASPECT_RATIO);
 		imageHeight = (imageHeight < 1) ? 1 : imageHeight;
 		SCREEN_HEIGHT = imageHeight;
-
-		// Create window surface.
-		pWindow = SDL_CreateWindow("Rendering Engine", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
-		if (!pWindow)
-		{
-			SDL_Quit();
-
-			throw std::runtime_error(SDL_GetError());
-		}
-
-		// Get render driver info.
-		int numDrivers = SDL_GetNumRenderDrivers();
-		SDL_RendererInfo info;
-		for (int i = 0; i < numDrivers; i++)
-		{
-			SDL_GetRenderDriverInfo(i, &info);
-			std::cout << "Renderer " << i << ": " << info.name << std::endl;
-		}
-
-		// Create rendering context.
-		pRenderer = SDL_CreateRenderer(pWindow, -1, SDL_RENDERER_ACCELERATED);
-		if (!pRenderer)
-		{
-			SDL_DestroyWindow(pWindow);
-			SDL_Quit();
-
-			throw std::runtime_error(SDL_GetError());
-		}
 	}
 
 	RenderingEngine::~RenderingEngine()
 	{
-		SDL_DestroyRenderer(pRenderer);
-		SDL_DestroyWindow(pWindow);
-		SDL_Quit();
+		vulkanBackend.reset(); // Delete object and set the pointer to nullptr.
 	}
 
 	void RenderingEngine::Run()
 	{
+		/*
 		// Camera.
 		std::unique_ptr<Camera> camera = std::make_unique<Camera>(SCREEN_WIDTH, 16.0 / 9.0);
 
@@ -170,6 +135,7 @@ namespace Engine
 		delete[](pixels);
 		delete[](accumulationBuffer);
 		SDL_DestroyTexture(texture);
+		*/
 	}
 
 	void RenderingEngine::Render()

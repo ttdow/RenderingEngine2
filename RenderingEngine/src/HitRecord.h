@@ -5,12 +5,15 @@
 
 namespace Engine
 {
+	class Material;
+
 	class HitRecord
 	{
 	public:
 
 		Vector3 p;
 		Vector3 N;
+		std::shared_ptr<Material> mat;
 		double t;
 		bool frontFace;
 

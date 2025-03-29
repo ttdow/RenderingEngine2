@@ -1,0 +1,5 @@
+<map id="Engine::HitRecord" name="Engine::HitRecord">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,112,134,139"/>
+<area shape="rect" id="Node000002" href="$class_engine_1_1_vector3.html" title="A simple 3D vector class for representing and manipulating 3D vectors." alt="" coords="13,5,126,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="72,47,72,112,67,112,67,47"/>
+</map>

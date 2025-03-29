@@ -22,8 +22,8 @@ namespace Engine
 		Vector3 offset = Vector3(Random::Get()->RandomDouble() - 0.5, Random::Get()->RandomDouble() - 0.5, 0.0);
 
 		Vector3 target = pixel00Location + 
-			(double(x) + offset.x()) * pixelDelta_u + 
-			(double(y) + offset.y()) * pixelDelta_v;
+			(double(x) + offset.x) * pixelDelta_u + 
+			(double(y) + offset.y) * pixelDelta_v;
 
 		return Ray(center, Vector3::Normalize(target - center));
 	}
