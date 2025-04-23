@@ -1,0 +1,79 @@
+\doxysection{Engine\+::Lambertian Class Reference}
+\hypertarget{class_engine_1_1_lambertian}{}\label{class_engine_1_1_lambertian}\index{Engine::Lambertian@{Engine::Lambertian}}
+
+
+{\ttfamily \#include $<$Lambertian.\+h$>$}
+
+
+
+Inheritance diagram for Engine\+::Lambertian\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{class_engine_1_1_lambertian__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Engine\+::Lambertian\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{class_engine_1_1_lambertian__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_engine_1_1_lambertian_a460c78b91d6458c4ee03546c2bd40fcb}{Lambertian}} (const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&\mbox{\hyperlink{class_engine_1_1_lambertian_a28587fcd6d98f7cd10de39d61cd58b5d}{albedo}})
+\item 
+bool \mbox{\hyperlink{class_engine_1_1_lambertian_a5be9310e99af78dcf025a4072c5deb86}{Scatter}} (const \mbox{\hyperlink{class_engine_1_1_ray}{Ray}} \&in, const \mbox{\hyperlink{class_engine_1_1_hit_record}{Hit\+Record}} \&record, \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&attenuation, \mbox{\hyperlink{class_engine_1_1_ray}{Ray}} \&scattered) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_engine_1_1_material}{Engine\+::\+Material}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_engine_1_1_material_a8c9cbd21b1ea98de6f2532bc00dc2d1d}{\texorpdfstring{$\sim$}{\string~}\+Material}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \mbox{\hyperlink{class_engine_1_1_lambertian_a28587fcd6d98f7cd10de39d61cd58b5d}{albedo}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_engine_1_1_lambertian_a460c78b91d6458c4ee03546c2bd40fcb}\index{Engine::Lambertian@{Engine::Lambertian}!Lambertian@{Lambertian}}
+\index{Lambertian@{Lambertian}!Engine::Lambertian@{Engine::Lambertian}}
+\doxysubsubsection{\texorpdfstring{Lambertian()}{Lambertian()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_lambertian_a460c78b91d6458c4ee03546c2bd40fcb} 
+Engine\+::\+Lambertian\+::\+Lambertian (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&}]{albedo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_engine_1_1_lambertian_a5be9310e99af78dcf025a4072c5deb86}\index{Engine::Lambertian@{Engine::Lambertian}!Scatter@{Scatter}}
+\index{Scatter@{Scatter}!Engine::Lambertian@{Engine::Lambertian}}
+\doxysubsubsection{\texorpdfstring{Scatter()}{Scatter()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_lambertian_a5be9310e99af78dcf025a4072c5deb86} 
+bool Engine\+::\+Lambertian\+::\+Scatter (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_engine_1_1_ray}{Ray}} \&}]{in}{, }\item[{const \mbox{\hyperlink{class_engine_1_1_hit_record}{Hit\+Record}} \&}]{record}{, }\item[{\mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&}]{attenuation}{, }\item[{\mbox{\hyperlink{class_engine_1_1_ray}{Ray}} \&}]{scattered}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_engine_1_1_material_a4631717cd587e32931047de2c38c6026}{Engine\+::\+Material}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_engine_1_1_lambertian_a28587fcd6d98f7cd10de39d61cd58b5d}\index{Engine::Lambertian@{Engine::Lambertian}!albedo@{albedo}}
+\index{albedo@{albedo}!Engine::Lambertian@{Engine::Lambertian}}
+\doxysubsubsection{\texorpdfstring{albedo}{albedo}}
+{\footnotesize\ttfamily \label{class_engine_1_1_lambertian_a28587fcd6d98f7cd10de39d61cd58b5d} 
+\mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} Engine\+::\+Lambertian\+::albedo\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Rendering\+Engine/src/\mbox{\hyperlink{_lambertian_8h}{Lambertian.\+h}}\end{DoxyCompactItemize}

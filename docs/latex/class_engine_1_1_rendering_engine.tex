@@ -1,0 +1,99 @@
+\doxysection{Engine\+::Rendering\+Engine Class Reference}
+\hypertarget{class_engine_1_1_rendering_engine}{}\label{class_engine_1_1_rendering_engine}\index{Engine::RenderingEngine@{Engine::RenderingEngine}}
+
+
+{\ttfamily \#include $<$Rendering\+Engine.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_engine_1_1_rendering_engine_a5f1d87a8831794d27d11feed947b1205}{Rendering\+Engine}} ()=delete
+\item 
+\mbox{\hyperlink{class_engine_1_1_rendering_engine_a44a010895db118fdbd7e98fe375b3f3a}{Rendering\+Engine}} (HINSTANCE h\+Instance, HWND hwnd)
+\item 
+\mbox{\hyperlink{class_engine_1_1_rendering_engine_aa2e7ab59c3be7cb7de564241c70a265c}{\texorpdfstring{$\sim$}{\string~}\+Rendering\+Engine}} ()
+\item 
+void \mbox{\hyperlink{class_engine_1_1_rendering_engine_a715c106543e45b7ad041a497b3079f70}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_engine_1_1_vulkan_backend}{Vulkan\+Backend}} $>$ \mbox{\hyperlink{class_engine_1_1_rendering_engine_a294129d63242491c902e470ea355230e}{vulkan\+Backend}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_engine_1_1_d_x12_backend}{DX12\+Backend}} $>$ \mbox{\hyperlink{class_engine_1_1_rendering_engine_ab2f571ea30743f729b27b4518dd89fb1}{dx12\+Backend}}
+\item 
+\mbox{\hyperlink{namespace_engine_a9b8ef0d90a91152ce524f073abcd2064}{Rendering\+Backend}} \mbox{\hyperlink{class_engine_1_1_rendering_engine_ac9a7f535857cdccb2ea645e3784e86cf}{selected\+Backend}} = \mbox{\hyperlink{namespace_engine_a9b8ef0d90a91152ce524f073abcd2064a9517d49f12986c2edac9cfd8c902a920}{Rendering\+Backend\+::\+DX12}}
+\item 
+int \mbox{\hyperlink{class_engine_1_1_rendering_engine_a2104efc31fb81ae054c10b927d836305}{image\+Width}}
+\item 
+int \mbox{\hyperlink{class_engine_1_1_rendering_engine_aca4bdf9ffd04a6f3f7990f396d73d34e}{image\+Height}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_engine_1_1_rendering_engine_a5f1d87a8831794d27d11feed947b1205}\index{Engine::RenderingEngine@{Engine::RenderingEngine}!RenderingEngine@{RenderingEngine}}
+\index{RenderingEngine@{RenderingEngine}!Engine::RenderingEngine@{Engine::RenderingEngine}}
+\doxysubsubsection{\texorpdfstring{RenderingEngine()}{RenderingEngine()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_engine_1_1_rendering_engine_a5f1d87a8831794d27d11feed947b1205} 
+Engine\+::\+Rendering\+Engine\+::\+Rendering\+Engine (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{class_engine_1_1_rendering_engine_a44a010895db118fdbd7e98fe375b3f3a}\index{Engine::RenderingEngine@{Engine::RenderingEngine}!RenderingEngine@{RenderingEngine}}
+\index{RenderingEngine@{RenderingEngine}!Engine::RenderingEngine@{Engine::RenderingEngine}}
+\doxysubsubsection{\texorpdfstring{RenderingEngine()}{RenderingEngine()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_engine_1_1_rendering_engine_a44a010895db118fdbd7e98fe375b3f3a} 
+Engine\+::\+Rendering\+Engine\+::\+Rendering\+Engine (\begin{DoxyParamCaption}\item[{HINSTANCE}]{h\+Instance}{, }\item[{HWND}]{hwnd}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine_1_1_rendering_engine_aa2e7ab59c3be7cb7de564241c70a265c}\index{Engine::RenderingEngine@{Engine::RenderingEngine}!````~RenderingEngine@{\texorpdfstring{$\sim$}{\string~}RenderingEngine}}
+\index{````~RenderingEngine@{\texorpdfstring{$\sim$}{\string~}RenderingEngine}!Engine::RenderingEngine@{Engine::RenderingEngine}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}RenderingEngine()}{\string~RenderingEngine()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_rendering_engine_aa2e7ab59c3be7cb7de564241c70a265c} 
+Engine\+::\+Rendering\+Engine\+::\texorpdfstring{$\sim$}{\string~}\+Rendering\+Engine (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_engine_1_1_rendering_engine_a715c106543e45b7ad041a497b3079f70}\index{Engine::RenderingEngine@{Engine::RenderingEngine}!Update@{Update}}
+\index{Update@{Update}!Engine::RenderingEngine@{Engine::RenderingEngine}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_rendering_engine_a715c106543e45b7ad041a497b3079f70} 
+void Engine\+::\+Rendering\+Engine\+::\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_engine_1_1_rendering_engine_ab2f571ea30743f729b27b4518dd89fb1}\index{Engine::RenderingEngine@{Engine::RenderingEngine}!dx12Backend@{dx12Backend}}
+\index{dx12Backend@{dx12Backend}!Engine::RenderingEngine@{Engine::RenderingEngine}}
+\doxysubsubsection{\texorpdfstring{dx12Backend}{dx12Backend}}
+{\footnotesize\ttfamily \label{class_engine_1_1_rendering_engine_ab2f571ea30743f729b27b4518dd89fb1} 
+std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_engine_1_1_d_x12_backend}{DX12\+Backend}}$>$ Engine\+::\+Rendering\+Engine\+::dx12\+Backend\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_rendering_engine_aca4bdf9ffd04a6f3f7990f396d73d34e}\index{Engine::RenderingEngine@{Engine::RenderingEngine}!imageHeight@{imageHeight}}
+\index{imageHeight@{imageHeight}!Engine::RenderingEngine@{Engine::RenderingEngine}}
+\doxysubsubsection{\texorpdfstring{imageHeight}{imageHeight}}
+{\footnotesize\ttfamily \label{class_engine_1_1_rendering_engine_aca4bdf9ffd04a6f3f7990f396d73d34e} 
+int Engine\+::\+Rendering\+Engine\+::image\+Height\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_rendering_engine_a2104efc31fb81ae054c10b927d836305}\index{Engine::RenderingEngine@{Engine::RenderingEngine}!imageWidth@{imageWidth}}
+\index{imageWidth@{imageWidth}!Engine::RenderingEngine@{Engine::RenderingEngine}}
+\doxysubsubsection{\texorpdfstring{imageWidth}{imageWidth}}
+{\footnotesize\ttfamily \label{class_engine_1_1_rendering_engine_a2104efc31fb81ae054c10b927d836305} 
+int Engine\+::\+Rendering\+Engine\+::image\+Width\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_rendering_engine_ac9a7f535857cdccb2ea645e3784e86cf}\index{Engine::RenderingEngine@{Engine::RenderingEngine}!selectedBackend@{selectedBackend}}
+\index{selectedBackend@{selectedBackend}!Engine::RenderingEngine@{Engine::RenderingEngine}}
+\doxysubsubsection{\texorpdfstring{selectedBackend}{selectedBackend}}
+{\footnotesize\ttfamily \label{class_engine_1_1_rendering_engine_ac9a7f535857cdccb2ea645e3784e86cf} 
+\mbox{\hyperlink{namespace_engine_a9b8ef0d90a91152ce524f073abcd2064}{Rendering\+Backend}} Engine\+::\+Rendering\+Engine\+::selected\+Backend = \mbox{\hyperlink{namespace_engine_a9b8ef0d90a91152ce524f073abcd2064a9517d49f12986c2edac9cfd8c902a920}{Rendering\+Backend\+::\+DX12}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_rendering_engine_a294129d63242491c902e470ea355230e}\index{Engine::RenderingEngine@{Engine::RenderingEngine}!vulkanBackend@{vulkanBackend}}
+\index{vulkanBackend@{vulkanBackend}!Engine::RenderingEngine@{Engine::RenderingEngine}}
+\doxysubsubsection{\texorpdfstring{vulkanBackend}{vulkanBackend}}
+{\footnotesize\ttfamily \label{class_engine_1_1_rendering_engine_a294129d63242491c902e470ea355230e} 
+std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_engine_1_1_vulkan_backend}{Vulkan\+Backend}}$>$ Engine\+::\+Rendering\+Engine\+::vulkan\+Backend\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Rendering\+Engine/src/\mbox{\hyperlink{_rendering_engine_8h}{Rendering\+Engine.\+h}}\item 
+Rendering\+Engine/src/\mbox{\hyperlink{_rendering_engine_8cpp}{Rendering\+Engine.\+cpp}}\end{DoxyCompactItemize}

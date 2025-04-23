@@ -1,0 +1,166 @@
+\doxysection{DQNAgent.\+h}
+\hypertarget{_d_q_n_agent_8h_source}{}\label{_d_q_n_agent_8h_source}\index{RenderingEngine/src/DQNAgent.h@{RenderingEngine/src/DQNAgent.h}}
+\mbox{\hyperlink{_d_q_n_agent_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_neural_network_8h}{NeuralNetwork.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_loss_function_8h}{LossFunction.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_engine}{Engine}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_engine_1_1_experience}{Experience}}}
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ std::vector<float>\ \mbox{\hyperlink{struct_engine_1_1_experience_aa8391018d8130245b92ef4df85e86f71}{state}};}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_engine_1_1_experience_aa59039e407f948a42ca6af4266eb3c26}{action}};}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_engine_1_1_experience_a5dc41ed6d09ffbb9ae6f4b3166b1dd34}{reward}};}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ std::vector<float>\ \mbox{\hyperlink{struct_engine_1_1_experience_a8d5684b901164873bebe64061fbd6722}{nextState}};}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_engine_1_1_experience_ab917e879aba91c3c1b85c86e0701fa4a}{done}};}
+\DoxyCodeLine{00016\ \ \ \ \ \};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_engine_1_1_replay_buffer_ad530b25fd20d11376a7f710838dd9eab}{ReplayBuffer}}}
+\DoxyCodeLine{00019\ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_replay_buffer_ad530b25fd20d11376a7f710838dd9eab}{ReplayBuffer}}(\textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{class_engine_1_1_replay_buffer_a424526e7e44006525c6aa97f69a0562e}{capacity}})\ :\ \mbox{\hyperlink{class_engine_1_1_replay_buffer_a424526e7e44006525c6aa97f69a0562e}{capacity}}(\mbox{\hyperlink{class_engine_1_1_replay_buffer_a424526e7e44006525c6aa97f69a0562e}{capacity}})\ \{\}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine_1_1_replay_buffer_aecfec79de110b1e716c6b74cdb7a7c37}{Add}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_engine_1_1_experience}{Experience}}\&\ exp)}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_engine_1_1_replay_buffer_acb9e41e82b3fd8dca6f84a32d5e8da03}{buffer}}.size()\ <\ \mbox{\hyperlink{class_engine_1_1_replay_buffer_a424526e7e44006525c6aa97f69a0562e}{capacity}})}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_replay_buffer_acb9e41e82b3fd8dca6f84a32d5e8da03}{buffer}}.push\_back(exp);}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_replay_buffer_acb9e41e82b3fd8dca6f84a32d5e8da03}{buffer}}[\mbox{\hyperlink{class_engine_1_1_replay_buffer_a6f11e7e919692e6f881269be30cc7149}{index}}]\ =\ exp;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_replay_buffer_a6f11e7e919692e6f881269be30cc7149}{index}}\ =\ (\mbox{\hyperlink{class_engine_1_1_replay_buffer_a6f11e7e919692e6f881269be30cc7149}{index}}\ +\ 1)\ \%\ \mbox{\hyperlink{class_engine_1_1_replay_buffer_a424526e7e44006525c6aa97f69a0562e}{capacity}};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_engine_1_1_replay_buffer_abca52b2626b2f177d0706526ff79d467}{CanSample}}(\textcolor{keywordtype}{size\_t}\ batchSize)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00039\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_engine_1_1_replay_buffer_acb9e41e82b3fd8dca6f84a32d5e8da03}{buffer}}.size()\ >=\ batchSize;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ std::vector<Experience>\ \mbox{\hyperlink{class_engine_1_1_replay_buffer_ab8abfe962a03ee0477dfb4d66db295c4}{Sample}}(\textcolor{keywordtype}{size\_t}\ batchSize)}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Experience>\ batch;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ batch.reserve(batchSize);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ std::uniform\_int\_distribution<size\_t>\ dist(0,\ \mbox{\hyperlink{class_engine_1_1_replay_buffer_acb9e41e82b3fd8dca6f84a32d5e8da03}{buffer}}.size()\ -\/\ 1);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ batchSize;\ i++)}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ batch.push\_back(\mbox{\hyperlink{class_engine_1_1_replay_buffer_acb9e41e82b3fd8dca6f84a32d5e8da03}{buffer}}[dist(\mbox{\hyperlink{class_engine_1_1_replay_buffer_a10551230100dcdeaa884e5ea2b0844ef}{rng}})]);}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ batch;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ std::vector<Experience>\ \mbox{\hyperlink{class_engine_1_1_replay_buffer_acb9e41e82b3fd8dca6f84a32d5e8da03}{buffer}};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{class_engine_1_1_replay_buffer_a424526e7e44006525c6aa97f69a0562e}{capacity}};}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{class_engine_1_1_replay_buffer_a6f11e7e919692e6f881269be30cc7149}{index}}\ =\ 0;}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ std::mt19937\ \mbox{\hyperlink{class_engine_1_1_replay_buffer_a10551230100dcdeaa884e5ea2b0844ef}{rng}}\{\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\textcolor{keyword}{>}(std::time(\textcolor{keyword}{nullptr}))\ \};}
+\DoxyCodeLine{00063\ \ \ \ \ \};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a616a3c4e7c687981cc82ef6962d319d9}{DQNAgent}}}
+\DoxyCodeLine{00067\ \ \ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a616a3c4e7c687981cc82ef6962d319d9}{DQNAgent}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_afe6443aaaf66564e734a9db3cdfb9987}{stateSize}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a952dbde84a05e9d3d1ac0df55670578a}{actionSize}},\ \mbox{\hyperlink{class_engine_1_1_loss_function}{LossFunction}}*\ loss,\ \textcolor{keywordtype}{size\_t}\ replayCapacity\ =\ 10000)\ :\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_afe6443aaaf66564e734a9db3cdfb9987}{stateSize}}(\mbox{\hyperlink{class_engine_1_1_d_q_n_agent_afe6443aaaf66564e734a9db3cdfb9987}{stateSize}}),\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a952dbde84a05e9d3d1ac0df55670578a}{actionSize}}(\mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a952dbde84a05e9d3d1ac0df55670578a}{actionSize}}),\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a86f02e88088f72eed1a81f6801518ec0}{qNet}}(\{\ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_afe6443aaaf66564e734a9db3cdfb9987}{stateSize}},\ 32,\ 32,\ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a952dbde84a05e9d3d1ac0df55670578a}{actionSize}}\ \},\ loss),}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a8f3564a539a36993dfee6ac3bea9927b}{targetNet}}(\{\ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_afe6443aaaf66564e734a9db3cdfb9987}{stateSize}},\ 32,\ 32,\ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a952dbde84a05e9d3d1ac0df55670578a}{actionSize}}\},\ loss),}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_ac62ea30b5e79530d39da07764eca0ba2}{replayBuffer}}(replayCapacity),}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_add8f69e345d90ec14e750016315b158c}{rng}}(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{unsigned}\textcolor{keyword}{>}(std::time(\textcolor{keyword}{nullptr})))}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Initialize\ target\ network.}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a8f3564a539a36993dfee6ac3bea9927b}{targetNet}}\ =\ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a86f02e88088f72eed1a81f6801518ec0}{qNet}};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a623766f54bd3208db7a8b11f22aa2451}{Act}}(\textcolor{keyword}{const}\ std::vector<float>\&\ state,\ \textcolor{keywordtype}{float}\ epsilon)}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ std::uniform\_real\_distribution<float>\ floatDist(0.0f,\ 1.0f);}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ std::uniform\_int\_distribution<int>\ actionDist(0,\ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a952dbde84a05e9d3d1ac0df55670578a}{actionSize}}\ -\/\ 1);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (floatDist(\mbox{\hyperlink{class_engine_1_1_d_q_n_agent_add8f69e345d90ec14e750016315b158c}{rng}})\ <\ epsilon)}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ action\ =\ actionDist(\mbox{\hyperlink{class_engine_1_1_d_q_n_agent_add8f69e345d90ec14e750016315b158c}{rng}});}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ action;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<float>\ qValues\ =\ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a86f02e88088f72eed1a81f6801518ec0}{qNet}}.Predict(state);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::distance(qValues.begin(),\ std::max\_element(qValues.begin(),\ qValues.end()));}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a08aa4aaabffea1c9838a34d71422289e}{Step}}(\textcolor{keyword}{const}\ std::vector<float>\&\ state,\ \textcolor{keywordtype}{int}\ action,\ \textcolor{keywordtype}{float}\ reward,\ \textcolor{keyword}{const}\ std::vector<float>\&\ nextState,\ \textcolor{keywordtype}{bool}\ done)}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_ac62ea30b5e79530d39da07764eca0ba2}{replayBuffer}}.Add(\{\ state,\ action,\ reward,\ nextState,\ done\ \});}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a2f19e819cce8389ec40bfb1cafa9a53e}{TrainBatch}}(\textcolor{keywordtype}{float}\ gamma,\ \textcolor{keywordtype}{float}\ lr,\ \textcolor{keywordtype}{size\_t}\ batchSize)}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_engine_1_1_d_q_n_agent_ac62ea30b5e79530d39da07764eca0ba2}{replayBuffer}}.CanSample(batchSize))}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Experience>\ batch\ =\ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_ac62ea30b5e79530d39da07764eca0ba2}{replayBuffer}}.Sample(batchSize);}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_engine_1_1_experience}{Experience}}\&\ exp\ :\ batch)}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<float>\ target\ =\ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a86f02e88088f72eed1a81f6801518ec0}{qNet}}.Predict(exp.state);}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<float>\ nextQ\ =\ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a8f3564a539a36993dfee6ac3bea9927b}{targetNet}}.Predict(exp.nextState);}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ maxQ\ =\ *std::max\_element(nextQ.begin(),\ nextQ.end());}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ target[exp.action]\ =\ exp.reward\ +\ (exp.done\ ?\ 0.0f\ :\ gamma\ *\ maxQ);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a86f02e88088f72eed1a81f6801518ec0}{qNet}}.Train(exp.state,\ target,\ lr);}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a7edd10ca2023fcbbf60bc30c5efe807e}{Train}}(\textcolor{keyword}{const}\ std::vector<float>\&\ state,\ \textcolor{keywordtype}{int}\ action,\ \textcolor{keywordtype}{float}\ reward,\ \textcolor{keyword}{const}\ std::vector<float>\&\ nextState,\ \textcolor{keywordtype}{bool}\ done,\ \textcolor{keywordtype}{float}\ gamma,\ \textcolor{keywordtype}{float}\ lr)}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<float>\ target\ =\ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a86f02e88088f72eed1a81f6801518ec0}{qNet}}.Predict(state);}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<float>\ nextQ\ =\ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a86f02e88088f72eed1a81f6801518ec0}{qNet}}.Predict(nextState);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ maxNetQ\ =\ *std::max\_element(nextQ.begin(),\ nextQ.end());}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ target[action]\ =\ reward\ +\ (done\ ?\ 0.0f\ :\ gamma\ *\ maxNetQ);}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a86f02e88088f72eed1a81f6801518ec0}{qNet}}.Train(state,\ target,\ lr);}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_ac56ece03caeb198eb19357271f2b17fc}{UpdateTargetNetwork}}()}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a8f3564a539a36993dfee6ac3bea9927b}{targetNet}}\ =\ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a86f02e88088f72eed1a81f6801518ec0}{qNet}};}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_af02e6d26d4e769c321c8c224401f51d6}{SoftUpdateTarget}}(\textcolor{keywordtype}{float}\ tau)}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO.}}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//targetNet.SoftUpdateFrom(qNet,\ tau);}}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_afe6443aaaf66564e734a9db3cdfb9987}{stateSize}};}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a952dbde84a05e9d3d1ac0df55670578a}{actionSize}};}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_neural_network}{NeuralNetwork}}\ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a86f02e88088f72eed1a81f6801518ec0}{qNet}};}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_neural_network}{NeuralNetwork}}\ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a8f3564a539a36993dfee6ac3bea9927b}{targetNet}};}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_replay_buffer}{ReplayBuffer}}\ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_ac62ea30b5e79530d39da07764eca0ba2}{replayBuffer}};}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ std::mt19937\ \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_add8f69e345d90ec14e750016315b158c}{rng}};}
+\DoxyCodeLine{00159\ \ \ \ \ \};}
+\DoxyCodeLine{00160\ \}}
+
+\end{DoxyCode}

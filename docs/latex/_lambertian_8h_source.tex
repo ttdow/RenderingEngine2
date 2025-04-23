@@ -1,0 +1,32 @@
+\doxysection{Lambertian.\+h}
+\hypertarget{_lambertian_8h_source}{}\label{_lambertian_8h_source}\index{RenderingEngine/src/Lambertian.h@{RenderingEngine/src/Lambertian.h}}
+\mbox{\hyperlink{_lambertian_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_material_8h}{Material.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_ray_8h}{Ray.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_hit_record_8h}{HitRecord.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_vector3_8h}{Vector3.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_engine}{Engine}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_engine_1_1_lambertian_a460c78b91d6458c4ee03546c2bd40fcb}{Lambertian}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_engine_1_1_material}{Material}}}
+\DoxyCodeLine{00011\ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_lambertian_a460c78b91d6458c4ee03546c2bd40fcb}{Lambertian}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}}\&\ \mbox{\hyperlink{class_engine_1_1_lambertian_a28587fcd6d98f7cd10de39d61cd58b5d}{albedo}})\ :\ \mbox{\hyperlink{class_engine_1_1_lambertian_a28587fcd6d98f7cd10de39d61cd58b5d}{albedo}}(\mbox{\hyperlink{class_engine_1_1_lambertian_a28587fcd6d98f7cd10de39d61cd58b5d}{albedo}})\ \{\}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_engine_1_1_lambertian_a5be9310e99af78dcf025a4072c5deb86}{Scatter}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_engine_1_1_ray}{Ray}}\&\ in,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_engine_1_1_hit_record}{HitRecord}}\&\ record,\ \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}}\&\ attenuation,\ \mbox{\hyperlink{class_engine_1_1_ray}{Ray}}\&\ scattered)\textcolor{keyword}{\ const\ override}}
+\DoxyCodeLine{00017\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}}\ \mbox{\hyperlink{class_engine_1_1_lambertian_a28587fcd6d98f7cd10de39d61cd58b5d}{albedo}};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \};}
+\DoxyCodeLine{00026\ \}}
+
+\end{DoxyCode}

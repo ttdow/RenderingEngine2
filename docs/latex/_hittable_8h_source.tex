@@ -1,0 +1,23 @@
+\doxysection{Hittable.\+h}
+\hypertarget{_hittable_8h_source}{}\label{_hittable_8h_source}\index{RenderingEngine/src/Hittable.h@{RenderingEngine/src/Hittable.h}}
+\mbox{\hyperlink{_hittable_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_vector3_8h}{Vector3.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_ray_8h}{Ray.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_hit_record_8h}{HitRecord.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_interval_8h}{Interval.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_engine}{Engine}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_engine_1_1_hittable}{Hittable}}}
+\DoxyCodeLine{00011\ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_engine_1_1_hittable_a150320604c8d752d3186b2ed3fca1bd0}{\string~Hittable}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_engine_1_1_hittable_a9f10a7856b9927a4d0cf6a0287aaddb6}{Hit}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_engine_1_1_ray}{Ray}}\&\ ray,\ \mbox{\hyperlink{class_engine_1_1_interval}{Interval}}\ ray\_t,\ \mbox{\hyperlink{class_engine_1_1_hit_record}{HitRecord}}\&\ record)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00016\ \ \ \ \ \};}
+\DoxyCodeLine{00017\ \}}
+
+\end{DoxyCode}

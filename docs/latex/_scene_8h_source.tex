@@ -1,0 +1,49 @@
+\doxysection{Scene.\+h}
+\hypertarget{_scene_8h_source}{}\label{_scene_8h_source}\index{RenderingEngine/src/Scene.h@{RenderingEngine/src/Scene.h}}
+\mbox{\hyperlink{_scene_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}pch.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_transform_8h}{Transform.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_engine}{Engine}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_engine_1_1_scene_node_a422d8854937edb5839eea6d7d5582839}{SceneNode}}}
+\DoxyCodeLine{00010\ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{class_engine_1_1_scene_node_a80e6f7e04507cd610d5197c46dce6153}{name}};}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ std::vector<SceneNode*>\ \mbox{\hyperlink{class_engine_1_1_scene_node_ab2f9dc8bb46f27e1bc1277566e23aadd}{children}};}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_scene_node_a422d8854937edb5839eea6d7d5582839}{SceneNode}}*\ \mbox{\hyperlink{class_engine_1_1_scene_node_abe4345606f121bd53d4b7d5bbdc99e5f}{parent}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_transform}{Engine::Transform}}\ \mbox{\hyperlink{class_engine_1_1_scene_node_a2a7e1b15a9523a5423d9a4b709d70e76}{transform}};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_scene_node_a422d8854937edb5839eea6d7d5582839}{SceneNode}}();}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_scene_node_a422d8854937edb5839eea6d7d5582839}{SceneNode}}(\textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_engine_1_1_scene_node_a80e6f7e04507cd610d5197c46dce6153}{name}});}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_engine_1_1_scene_a90a0a9f8a33c09856ea3d177a759fd32}{Scene}}}
+\DoxyCodeLine{00027\ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ std::unique\_ptr<SceneNode>\ \mbox{\hyperlink{class_engine_1_1_scene_a9374764c38348927afc36f507afd3b83}{root}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_scene_a90a0a9f8a33c09856ea3d177a759fd32}{Scene}}()\ =\ \textcolor{keyword}{delete};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Default\ constructor}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_scene_a90a0a9f8a33c09856ea3d177a759fd32}{Scene}}(\textcolor{keyword}{const}\ std::string\&\ name);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Constructor}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_scene_a876a153365c543baf4233f06ab0e08f8}{\string~Scene}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Destructor}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_scene_a90a0a9f8a33c09856ea3d177a759fd32}{Scene}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_engine_1_1_scene_a90a0a9f8a33c09856ea3d177a759fd32}{Scene}}\&\ other);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Copy\ constructor}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_scene_a90a0a9f8a33c09856ea3d177a759fd32}{Scene}}\&\ \mbox{\hyperlink{class_engine_1_1_scene_a86f37cd4e36a5a1badef7eab7b0a1faa}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_engine_1_1_scene_a90a0a9f8a33c09856ea3d177a759fd32}{Scene}}\&\ other);\ \ \ \ \ \ \textcolor{comment}{//\ Copy\ assignment\ operator}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_scene_a90a0a9f8a33c09856ea3d177a759fd32}{Scene}}(\mbox{\hyperlink{class_engine_1_1_scene_a90a0a9f8a33c09856ea3d177a759fd32}{Scene}}\&\&\ other)\ \textcolor{keyword}{noexcept};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Move\ constructor}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_scene_a90a0a9f8a33c09856ea3d177a759fd32}{Scene}}\&\ \mbox{\hyperlink{class_engine_1_1_scene_a86f37cd4e36a5a1badef7eab7b0a1faa}{operator=}}(\mbox{\hyperlink{class_engine_1_1_scene_a90a0a9f8a33c09856ea3d177a759fd32}{Scene}}\&\&\ other)\ \textcolor{keyword}{noexcept};\ \textcolor{comment}{//\ Move\ assignment\ operator}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \};}
+\DoxyCodeLine{00043\ \}}
+
+\end{DoxyCode}

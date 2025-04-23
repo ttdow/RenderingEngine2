@@ -1,0 +1,61 @@
+\doxysection{Engine\+::Asset\+Loader Class Reference}
+\hypertarget{class_engine_1_1_asset_loader}{}\label{class_engine_1_1_asset_loader}\index{Engine::AssetLoader@{Engine::AssetLoader}}
+
+
+{\ttfamily \#include $<$Asset\+Loader.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_engine_1_1_scene}{Engine\+::\+Scene}} $>$ \mbox{\hyperlink{class_engine_1_1_asset_loader_aed77a6ffe69605a3f2042e6d766a615c}{Load\+GLTF}} (const std\+::string \&file\+Path)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_engine_1_1_asset_loader_af439a725a55ed57238d609873f3fb606}{Parse\+GLTF}} ()
+\item 
+static bool \mbox{\hyperlink{class_engine_1_1_asset_loader_a6b1c3c899b7e784c326e45dbd58b8288}{Load\+Extensions}} (fastgltf\+::\+Asset \&gltf)
+\item 
+static bool \mbox{\hyperlink{class_engine_1_1_asset_loader_a785ffd7e4230c9cc8f474e169d6bd14c}{Load\+Scenes}} (fastgltf\+::\+Asset \&gltf, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_engine_1_1_scene}{Engine\+::\+Scene}} $>$ \&scene)
+\item 
+static bool \mbox{\hyperlink{class_engine_1_1_asset_loader_a34f00bc736689af137d846e8030d8cda}{Load\+Nodes}} (fastgltf\+::\+Asset \&gltf)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_engine_1_1_asset_loader_a6b1c3c899b7e784c326e45dbd58b8288}\index{Engine::AssetLoader@{Engine::AssetLoader}!LoadExtensions@{LoadExtensions}}
+\index{LoadExtensions@{LoadExtensions}!Engine::AssetLoader@{Engine::AssetLoader}}
+\doxysubsubsection{\texorpdfstring{LoadExtensions()}{LoadExtensions()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_asset_loader_a6b1c3c899b7e784c326e45dbd58b8288} 
+bool Engine\+::\+Asset\+Loader\+::\+Load\+Extensions (\begin{DoxyParamCaption}\item[{fastgltf\+::\+Asset \&}]{gltf}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_asset_loader_aed77a6ffe69605a3f2042e6d766a615c}\index{Engine::AssetLoader@{Engine::AssetLoader}!LoadGLTF@{LoadGLTF}}
+\index{LoadGLTF@{LoadGLTF}!Engine::AssetLoader@{Engine::AssetLoader}}
+\doxysubsubsection{\texorpdfstring{LoadGLTF()}{LoadGLTF()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_asset_loader_aed77a6ffe69605a3f2042e6d766a615c} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_engine_1_1_scene}{Engine\+::\+Scene}} $>$ Engine\+::\+Asset\+Loader\+::\+Load\+GLTF (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_engine_1_1_asset_loader_a34f00bc736689af137d846e8030d8cda}\index{Engine::AssetLoader@{Engine::AssetLoader}!LoadNodes@{LoadNodes}}
+\index{LoadNodes@{LoadNodes}!Engine::AssetLoader@{Engine::AssetLoader}}
+\doxysubsubsection{\texorpdfstring{LoadNodes()}{LoadNodes()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_asset_loader_a34f00bc736689af137d846e8030d8cda} 
+bool Engine\+::\+Asset\+Loader\+::\+Load\+Nodes (\begin{DoxyParamCaption}\item[{fastgltf\+::\+Asset \&}]{gltf}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_asset_loader_a785ffd7e4230c9cc8f474e169d6bd14c}\index{Engine::AssetLoader@{Engine::AssetLoader}!LoadScenes@{LoadScenes}}
+\index{LoadScenes@{LoadScenes}!Engine::AssetLoader@{Engine::AssetLoader}}
+\doxysubsubsection{\texorpdfstring{LoadScenes()}{LoadScenes()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_asset_loader_a785ffd7e4230c9cc8f474e169d6bd14c} 
+bool Engine\+::\+Asset\+Loader\+::\+Load\+Scenes (\begin{DoxyParamCaption}\item[{fastgltf\+::\+Asset \&}]{gltf}{, }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_engine_1_1_scene}{Engine\+::\+Scene}} $>$ \&}]{scene}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_asset_loader_af439a725a55ed57238d609873f3fb606}\index{Engine::AssetLoader@{Engine::AssetLoader}!ParseGLTF@{ParseGLTF}}
+\index{ParseGLTF@{ParseGLTF}!Engine::AssetLoader@{Engine::AssetLoader}}
+\doxysubsubsection{\texorpdfstring{ParseGLTF()}{ParseGLTF()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_asset_loader_af439a725a55ed57238d609873f3fb606} 
+bool Engine\+::\+Asset\+Loader\+::\+Parse\+GLTF (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Rendering\+Engine/src/\mbox{\hyperlink{_asset_loader_8h}{Asset\+Loader.\+h}}\item 
+Rendering\+Engine/src/\mbox{\hyperlink{_asset_loader_8cpp}{Asset\+Loader.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,7 @@
+<map id="Engine::Lambertian" name="Engine::Lambertian">
+<area shape="rect" id="Node000001" title=" " alt="" coords="66,96,199,123"/>
+<area shape="rect" id="Node000002" href="$class_engine_1_1_material.html" title=" " alt="" coords="5,5,121,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,43,125,94,120,97,80,46"/>
+<area shape="rect" id="Node000003" href="$class_engine_1_1_vector3.html" title="A simple 3D vector class for representing and manipulating 3D vectors." alt="" coords="145,5,258,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="184,46,144,97,140,94,180,43"/>
+</map>

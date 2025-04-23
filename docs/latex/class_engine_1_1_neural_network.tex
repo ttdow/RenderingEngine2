@@ -1,0 +1,334 @@
+\doxysection{Engine\+::Neural\+Network Class Reference}
+\hypertarget{class_engine_1_1_neural_network}{}\label{class_engine_1_1_neural_network}\index{Engine::NeuralNetwork@{Engine::NeuralNetwork}}
+
+
+A simple feedforward neural network with backpropagation training.  
+
+
+
+
+{\ttfamily \#include $<$Neural\+Network.\+h$>$}
+
+
+
+Collaboration diagram for Engine\+::Neural\+Network\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{class_engine_1_1_neural_network__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_engine_1_1_neural_network_aefdff6ebe5dda97783d38b14a83cbce6}{Neural\+Network}} (const std\+::vector$<$ int $>$ \&layer\+Sizes, \mbox{\hyperlink{class_engine_1_1_loss_function}{Loss\+Function}} \texorpdfstring{$\ast$}{*}loss)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_engine_1_1_neural_network}{Neural\+Network} with the given layer sizes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_engine_1_1_neural_network_a2f8a057b1bcd4fa81a853461a26ffbb2}{Train}} (const std\+::vector$<$ float $>$ \&input, const std\+::vector$<$ float $>$ \&target, float lr)
+\begin{DoxyCompactList}\small\item\em Trains the neural network on a single example using stochastic gradient descent. \end{DoxyCompactList}\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_engine_1_1_neural_network_ac263d9cabef92a606284b79132bf1485}{Predict}} (const std\+::vector$<$ float $>$ \&input)
+\begin{DoxyCompactList}\small\item\em Predicts the output of the network given an input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_engine_1_1_neural_network_a053ead25ba2837bffe55b34cbd4b2cbf}{Linear}} (float x)
+\begin{DoxyCompactList}\small\item\em Identity activation function. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_engine_1_1_neural_network_aa15f90a96c70fc5540f7e0e13d972046}{Linear\+Derivative}} (float x)
+\begin{DoxyCompactList}\small\item\em Derivative of the identity function. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_engine_1_1_neural_network_a753528995191fecf611530aa7edfd2d3}{Sigmoid}} (float x)
+\begin{DoxyCompactList}\small\item\em Sigmoid activation function. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_engine_1_1_neural_network_a2a8014b03f564e4975ad70575530d02d}{Sigmoid\+Derivative}} (float x)
+\begin{DoxyCompactList}\small\item\em Derivative of the sigmoid function. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_engine_1_1_neural_network_afb58c26d75e7c1b73e3d0815f0a58023}{Tanh}} (float x)
+\begin{DoxyCompactList}\small\item\em Hyperbolic tangent activation function. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_engine_1_1_neural_network_a14bd73e73f9bf6a9928ac136e2070081}{Tanh\+Derivative}} (float x)
+\begin{DoxyCompactList}\small\item\em Derivative of te hyperbolic tangent function. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_engine_1_1_neural_network_a5c4550fb0ec9040a052169c2a6395438}{Re\+LU}} (float x)
+\begin{DoxyCompactList}\small\item\em Rectified Linear Unit (Re\+LU) activation function. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_engine_1_1_neural_network_a80648b86a1e9ce5454727d8e22124990}{Re\+LUDerivative}} (float x)
+\begin{DoxyCompactList}\small\item\em Derivative of the Re\+LU function. \end{DoxyCompactList}\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_engine_1_1_neural_network_a464ab66422cc42d6e67b934024d88c83}{Softmax}} (const std\+::vector$<$ float $>$ \&z)
+\begin{DoxyCompactList}\small\item\em Softmax activation function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_engine_1_1_neural_network_a00971d0d9f2003da19e8e387f811ac98}{layers}}
+\begin{DoxyCompactList}\small\item\em Layer sizes of the neural network. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ float $>$ $>$ $>$ \mbox{\hyperlink{class_engine_1_1_neural_network_abc26d24c18cd7f46eeb52ba604c01ec7}{weights}}
+\begin{DoxyCompactList}\small\item\em Weight matrices between layers. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \mbox{\hyperlink{class_engine_1_1_neural_network_a0d72d45a3e964819feb48c5ffe7700ab}{biases}}
+\begin{DoxyCompactList}\small\item\em Bias vectors for each layer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_engine_1_1_loss_function}{Loss\+Function}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_engine_1_1_neural_network_a635d092e2eb8b1c0ec6351d18019e16f}{loss\+Function}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A simple feedforward neural network with backpropagation training. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_engine_1_1_neural_network_aefdff6ebe5dda97783d38b14a83cbce6}\index{Engine::NeuralNetwork@{Engine::NeuralNetwork}!NeuralNetwork@{NeuralNetwork}}
+\index{NeuralNetwork@{NeuralNetwork}!Engine::NeuralNetwork@{Engine::NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{NeuralNetwork()}{NeuralNetwork()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_neural_network_aefdff6ebe5dda97783d38b14a83cbce6} 
+Engine\+::\+Neural\+Network\+::\+Neural\+Network (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{layer\+Sizes}{, }\item[{\mbox{\hyperlink{class_engine_1_1_loss_function}{Loss\+Function}} \texorpdfstring{$\ast$}{*}}]{loss}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \doxylink{class_engine_1_1_neural_network}{Neural\+Network} with the given layer sizes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em layer\+Sizes} & A vector of integers representing the number of neurons in each layer. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & if fewer than 2 layers are specified. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_engine_1_1_neural_network_a053ead25ba2837bffe55b34cbd4b2cbf}\index{Engine::NeuralNetwork@{Engine::NeuralNetwork}!Linear@{Linear}}
+\index{Linear@{Linear}!Engine::NeuralNetwork@{Engine::NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{Linear()}{Linear()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_neural_network_a053ead25ba2837bffe55b34cbd4b2cbf} 
+float Engine\+::\+Neural\+Network\+::\+Linear (\begin{DoxyParamCaption}\item[{float}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Identity activation function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Input value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float Output value. 
+\end{DoxyReturn}
+\Hypertarget{class_engine_1_1_neural_network_aa15f90a96c70fc5540f7e0e13d972046}\index{Engine::NeuralNetwork@{Engine::NeuralNetwork}!LinearDerivative@{LinearDerivative}}
+\index{LinearDerivative@{LinearDerivative}!Engine::NeuralNetwork@{Engine::NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{LinearDerivative()}{LinearDerivative()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_neural_network_aa15f90a96c70fc5540f7e0e13d972046} 
+float Engine\+::\+Neural\+Network\+::\+Linear\+Derivative (\begin{DoxyParamCaption}\item[{float}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Derivative of the identity function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Input value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float Derivative value. 
+\end{DoxyReturn}
+\Hypertarget{class_engine_1_1_neural_network_ac263d9cabef92a606284b79132bf1485}\index{Engine::NeuralNetwork@{Engine::NeuralNetwork}!Predict@{Predict}}
+\index{Predict@{Predict}!Engine::NeuralNetwork@{Engine::NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{Predict()}{Predict()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_neural_network_ac263d9cabef92a606284b79132bf1485} 
+std\+::vector$<$ float $>$ Engine\+::\+Neural\+Network\+::\+Predict (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{input}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Predicts the output of the network given an input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$float$>$ The output vector after forward propagation. 
+\end{DoxyReturn}
+\Hypertarget{class_engine_1_1_neural_network_a5c4550fb0ec9040a052169c2a6395438}\index{Engine::NeuralNetwork@{Engine::NeuralNetwork}!ReLU@{ReLU}}
+\index{ReLU@{ReLU}!Engine::NeuralNetwork@{Engine::NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{ReLU()}{ReLU()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_neural_network_a5c4550fb0ec9040a052169c2a6395438} 
+float Engine\+::\+Neural\+Network\+::\+Re\+LU (\begin{DoxyParamCaption}\item[{float}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Rectified Linear Unit (Re\+LU) activation function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Input value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float Output value. 
+\end{DoxyReturn}
+\Hypertarget{class_engine_1_1_neural_network_a80648b86a1e9ce5454727d8e22124990}\index{Engine::NeuralNetwork@{Engine::NeuralNetwork}!ReLUDerivative@{ReLUDerivative}}
+\index{ReLUDerivative@{ReLUDerivative}!Engine::NeuralNetwork@{Engine::NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{ReLUDerivative()}{ReLUDerivative()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_neural_network_a80648b86a1e9ce5454727d8e22124990} 
+float Engine\+::\+Neural\+Network\+::\+Re\+LUDerivative (\begin{DoxyParamCaption}\item[{float}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Derivative of the Re\+LU function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Input value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float Derivative value. 
+\end{DoxyReturn}
+\Hypertarget{class_engine_1_1_neural_network_a753528995191fecf611530aa7edfd2d3}\index{Engine::NeuralNetwork@{Engine::NeuralNetwork}!Sigmoid@{Sigmoid}}
+\index{Sigmoid@{Sigmoid}!Engine::NeuralNetwork@{Engine::NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{Sigmoid()}{Sigmoid()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_neural_network_a753528995191fecf611530aa7edfd2d3} 
+float Engine\+::\+Neural\+Network\+::\+Sigmoid (\begin{DoxyParamCaption}\item[{float}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Sigmoid activation function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Input value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float Output value. 
+\end{DoxyReturn}
+\Hypertarget{class_engine_1_1_neural_network_a2a8014b03f564e4975ad70575530d02d}\index{Engine::NeuralNetwork@{Engine::NeuralNetwork}!SigmoidDerivative@{SigmoidDerivative}}
+\index{SigmoidDerivative@{SigmoidDerivative}!Engine::NeuralNetwork@{Engine::NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{SigmoidDerivative()}{SigmoidDerivative()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_neural_network_a2a8014b03f564e4975ad70575530d02d} 
+float Engine\+::\+Neural\+Network\+::\+Sigmoid\+Derivative (\begin{DoxyParamCaption}\item[{float}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Derivative of the sigmoid function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Output value from sigmoid. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float Derivative value. 
+\end{DoxyReturn}
+\Hypertarget{class_engine_1_1_neural_network_a464ab66422cc42d6e67b934024d88c83}\index{Engine::NeuralNetwork@{Engine::NeuralNetwork}!Softmax@{Softmax}}
+\index{Softmax@{Softmax}!Engine::NeuralNetwork@{Engine::NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{Softmax()}{Softmax()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_neural_network_a464ab66422cc42d6e67b934024d88c83} 
+std\+::vector$<$ float $>$ Engine\+::\+Neural\+Network\+::\+Softmax (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{z}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Softmax activation function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em z} & Input vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$float$>$ Softmax-\/normalized vector. 
+\end{DoxyReturn}
+\Hypertarget{class_engine_1_1_neural_network_afb58c26d75e7c1b73e3d0815f0a58023}\index{Engine::NeuralNetwork@{Engine::NeuralNetwork}!Tanh@{Tanh}}
+\index{Tanh@{Tanh}!Engine::NeuralNetwork@{Engine::NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{Tanh()}{Tanh()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_neural_network_afb58c26d75e7c1b73e3d0815f0a58023} 
+float Engine\+::\+Neural\+Network\+::\+Tanh (\begin{DoxyParamCaption}\item[{float}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Hyperbolic tangent activation function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Input value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float Output value. 
+\end{DoxyReturn}
+\Hypertarget{class_engine_1_1_neural_network_a14bd73e73f9bf6a9928ac136e2070081}\index{Engine::NeuralNetwork@{Engine::NeuralNetwork}!TanhDerivative@{TanhDerivative}}
+\index{TanhDerivative@{TanhDerivative}!Engine::NeuralNetwork@{Engine::NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{TanhDerivative()}{TanhDerivative()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_neural_network_a14bd73e73f9bf6a9928ac136e2070081} 
+float Engine\+::\+Neural\+Network\+::\+Tanh\+Derivative (\begin{DoxyParamCaption}\item[{float}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Derivative of te hyperbolic tangent function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Output value from tanh. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float Derivative value. 
+\end{DoxyReturn}
+\Hypertarget{class_engine_1_1_neural_network_a2f8a057b1bcd4fa81a853461a26ffbb2}\index{Engine::NeuralNetwork@{Engine::NeuralNetwork}!Train@{Train}}
+\index{Train@{Train}!Engine::NeuralNetwork@{Engine::NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{Train()}{Train()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_neural_network_a2f8a057b1bcd4fa81a853461a26ffbb2} 
+void Engine\+::\+Neural\+Network\+::\+Train (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{input}{, }\item[{const std\+::vector$<$ float $>$ \&}]{target}{, }\item[{float}]{lr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Trains the neural network on a single example using stochastic gradient descent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input vector. \\
+\hline
+{\em target} & The target output vector. \\
+\hline
+{\em lr} & The learning rate. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_engine_1_1_neural_network_a0d72d45a3e964819feb48c5ffe7700ab}\index{Engine::NeuralNetwork@{Engine::NeuralNetwork}!biases@{biases}}
+\index{biases@{biases}!Engine::NeuralNetwork@{Engine::NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{biases}{biases}}
+{\footnotesize\ttfamily \label{class_engine_1_1_neural_network_a0d72d45a3e964819feb48c5ffe7700ab} 
+std\+::vector$<$std\+::vector$<$float$>$ $>$ Engine\+::\+Neural\+Network\+::biases\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Bias vectors for each layer. 
+
+\Hypertarget{class_engine_1_1_neural_network_a00971d0d9f2003da19e8e387f811ac98}\index{Engine::NeuralNetwork@{Engine::NeuralNetwork}!layers@{layers}}
+\index{layers@{layers}!Engine::NeuralNetwork@{Engine::NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{layers}{layers}}
+{\footnotesize\ttfamily \label{class_engine_1_1_neural_network_a00971d0d9f2003da19e8e387f811ac98} 
+std\+::vector$<$int$>$ Engine\+::\+Neural\+Network\+::layers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Layer sizes of the neural network. 
+
+\Hypertarget{class_engine_1_1_neural_network_a635d092e2eb8b1c0ec6351d18019e16f}\index{Engine::NeuralNetwork@{Engine::NeuralNetwork}!lossFunction@{lossFunction}}
+\index{lossFunction@{lossFunction}!Engine::NeuralNetwork@{Engine::NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{lossFunction}{lossFunction}}
+{\footnotesize\ttfamily \label{class_engine_1_1_neural_network_a635d092e2eb8b1c0ec6351d18019e16f} 
+\mbox{\hyperlink{class_engine_1_1_loss_function}{Loss\+Function}}\texorpdfstring{$\ast$}{*} Engine\+::\+Neural\+Network\+::loss\+Function\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_neural_network_abc26d24c18cd7f46eeb52ba604c01ec7}\index{Engine::NeuralNetwork@{Engine::NeuralNetwork}!weights@{weights}}
+\index{weights@{weights}!Engine::NeuralNetwork@{Engine::NeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{weights}{weights}}
+{\footnotesize\ttfamily \label{class_engine_1_1_neural_network_abc26d24c18cd7f46eeb52ba604c01ec7} 
+std\+::vector$<$std\+::vector$<$std\+::vector$<$float$>$ $>$ $>$ Engine\+::\+Neural\+Network\+::weights\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Weight matrices between layers. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Rendering\+Engine/src/\mbox{\hyperlink{_neural_network_8h}{Neural\+Network.\+h}}\end{DoxyCompactItemize}

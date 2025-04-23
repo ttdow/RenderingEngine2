@@ -1,0 +1,163 @@
+\doxysection{Engine\+::Vulkan\+Descriptor Class Reference}
+\hypertarget{class_engine_1_1_vulkan_descriptor}{}\label{class_engine_1_1_vulkan_descriptor}\index{Engine::VulkanDescriptor@{Engine::VulkanDescriptor}}
+
+
+{\ttfamily \#include $<$Vulkan\+Descriptor.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_a0e71e01c4678712766578165eac2f21e}{Vulkan\+Descriptor}} ()=delete
+\item 
+\mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_a4c7feb0fda5647afda6bdc1cb05ee037}{Vulkan\+Descriptor}} (Vk\+Device \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_abb29923bd887dde5341546c16b231527}{device}})
+\item 
+\mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_ac16a8d6692e848b3ceab727fbaab5472}{\texorpdfstring{$\sim$}{\string~}\+Vulkan\+Descriptor}} ()
+\item 
+void \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_a1f3d400ef6e743e8971c2dbd10d29485}{Add\+Binding}} (uint32\+\_\+t binding, Vk\+Descriptor\+Type type, uint32\+\_\+t count=1)
+\item 
+void \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_a047fa012159237fd13826f6576d8401e}{Clear\+Bindings}} ()
+\item 
+void \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_a13687ad88ff59bd1f4d446abb0081c46}{Build}} (Vk\+Shader\+Stage\+Flags shader\+Stages, void \texorpdfstring{$\ast$}{*}p\+Next=nullptr, Vk\+Descriptor\+Set\+Layout\+Create\+Flags flags=0)
+\item 
+void \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_a0b19075a33889a50be0f7bda7f4bbf2b}{Initialize\+Pool}} (uint32\+\_\+t max\+Sets)
+\item 
+void \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_a6fb569f1018518e604b0fdd31bb6efa4}{Clear\+Descriptors}} () const
+\item 
+void \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_acfc7960ce85b1fa6fb788aad7aa76a7f}{Allocate}} ()
+\item 
+Vk\+Descriptor\+Set \& \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_a8027dd12dba377292384aa83179336c5}{Get\+Set}} ()
+\item 
+Vk\+Descriptor\+Set\+Layout \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_a0a51529b0c859d9a53503d80e64999ce}{Get\+Layout}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vk\+Device \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_abb29923bd887dde5341546c16b231527}{device}}
+\item 
+Vk\+Descriptor\+Pool \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_ae3f296a8490a35010ce625c76afeaf4f}{pool}}
+\item 
+Vk\+Descriptor\+Set\+Layout \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_a7ab9193a5b7c78b87aded9e97bd0e35a}{layout}}
+\item 
+Vk\+Descriptor\+Set \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_a5625f5a4b186390255c82fcb1df3ca6c}{set}}
+\item 
+std\+::vector$<$ Vk\+Descriptor\+Set\+Layout\+Binding $>$ \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_a576da212d09ca5109d14e6d1bdadf316}{bindings}}
+\item 
+std\+::unordered\+\_\+map$<$ Vk\+Descriptor\+Type, uint32\+\_\+t $>$ \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_a44e21b861f6b21ca783650a18ef9f188}{descriptor\+Types}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_engine_1_1_vulkan_descriptor_a0e71e01c4678712766578165eac2f21e}\index{Engine::VulkanDescriptor@{Engine::VulkanDescriptor}!VulkanDescriptor@{VulkanDescriptor}}
+\index{VulkanDescriptor@{VulkanDescriptor}!Engine::VulkanDescriptor@{Engine::VulkanDescriptor}}
+\doxysubsubsection{\texorpdfstring{VulkanDescriptor()}{VulkanDescriptor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_descriptor_a0e71e01c4678712766578165eac2f21e} 
+Engine\+::\+Vulkan\+Descriptor\+::\+Vulkan\+Descriptor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{class_engine_1_1_vulkan_descriptor_a4c7feb0fda5647afda6bdc1cb05ee037}\index{Engine::VulkanDescriptor@{Engine::VulkanDescriptor}!VulkanDescriptor@{VulkanDescriptor}}
+\index{VulkanDescriptor@{VulkanDescriptor}!Engine::VulkanDescriptor@{Engine::VulkanDescriptor}}
+\doxysubsubsection{\texorpdfstring{VulkanDescriptor()}{VulkanDescriptor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_descriptor_a4c7feb0fda5647afda6bdc1cb05ee037} 
+Engine\+::\+Vulkan\+Descriptor\+::\+Vulkan\+Descriptor (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine_1_1_vulkan_descriptor_ac16a8d6692e848b3ceab727fbaab5472}\index{Engine::VulkanDescriptor@{Engine::VulkanDescriptor}!````~VulkanDescriptor@{\texorpdfstring{$\sim$}{\string~}VulkanDescriptor}}
+\index{````~VulkanDescriptor@{\texorpdfstring{$\sim$}{\string~}VulkanDescriptor}!Engine::VulkanDescriptor@{Engine::VulkanDescriptor}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}VulkanDescriptor()}{\string~VulkanDescriptor()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_descriptor_ac16a8d6692e848b3ceab727fbaab5472} 
+Engine\+::\+Vulkan\+Descriptor\+::\texorpdfstring{$\sim$}{\string~}\+Vulkan\+Descriptor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_engine_1_1_vulkan_descriptor_a1f3d400ef6e743e8971c2dbd10d29485}\index{Engine::VulkanDescriptor@{Engine::VulkanDescriptor}!AddBinding@{AddBinding}}
+\index{AddBinding@{AddBinding}!Engine::VulkanDescriptor@{Engine::VulkanDescriptor}}
+\doxysubsubsection{\texorpdfstring{AddBinding()}{AddBinding()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_descriptor_a1f3d400ef6e743e8971c2dbd10d29485} 
+void Engine\+::\+Vulkan\+Descriptor\+::\+Add\+Binding (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{binding}{, }\item[{Vk\+Descriptor\+Type}]{type}{, }\item[{uint32\+\_\+t}]{count}{ = {\ttfamily 1}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine_1_1_vulkan_descriptor_acfc7960ce85b1fa6fb788aad7aa76a7f}\index{Engine::VulkanDescriptor@{Engine::VulkanDescriptor}!Allocate@{Allocate}}
+\index{Allocate@{Allocate}!Engine::VulkanDescriptor@{Engine::VulkanDescriptor}}
+\doxysubsubsection{\texorpdfstring{Allocate()}{Allocate()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_descriptor_acfc7960ce85b1fa6fb788aad7aa76a7f} 
+void Engine\+::\+Vulkan\+Descriptor\+::\+Allocate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine_1_1_vulkan_descriptor_a13687ad88ff59bd1f4d446abb0081c46}\index{Engine::VulkanDescriptor@{Engine::VulkanDescriptor}!Build@{Build}}
+\index{Build@{Build}!Engine::VulkanDescriptor@{Engine::VulkanDescriptor}}
+\doxysubsubsection{\texorpdfstring{Build()}{Build()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_descriptor_a13687ad88ff59bd1f4d446abb0081c46} 
+void Engine\+::\+Vulkan\+Descriptor\+::\+Build (\begin{DoxyParamCaption}\item[{Vk\+Shader\+Stage\+Flags}]{shader\+Stages}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{p\+Next}{ = {\ttfamily nullptr}, }\item[{Vk\+Descriptor\+Set\+Layout\+Create\+Flags}]{flags}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine_1_1_vulkan_descriptor_a047fa012159237fd13826f6576d8401e}\index{Engine::VulkanDescriptor@{Engine::VulkanDescriptor}!ClearBindings@{ClearBindings}}
+\index{ClearBindings@{ClearBindings}!Engine::VulkanDescriptor@{Engine::VulkanDescriptor}}
+\doxysubsubsection{\texorpdfstring{ClearBindings()}{ClearBindings()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_descriptor_a047fa012159237fd13826f6576d8401e} 
+void Engine\+::\+Vulkan\+Descriptor\+::\+Clear\+Bindings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine_1_1_vulkan_descriptor_a6fb569f1018518e604b0fdd31bb6efa4}\index{Engine::VulkanDescriptor@{Engine::VulkanDescriptor}!ClearDescriptors@{ClearDescriptors}}
+\index{ClearDescriptors@{ClearDescriptors}!Engine::VulkanDescriptor@{Engine::VulkanDescriptor}}
+\doxysubsubsection{\texorpdfstring{ClearDescriptors()}{ClearDescriptors()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_descriptor_a6fb569f1018518e604b0fdd31bb6efa4} 
+void Engine\+::\+Vulkan\+Descriptor\+::\+Clear\+Descriptors (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_engine_1_1_vulkan_descriptor_a0a51529b0c859d9a53503d80e64999ce}\index{Engine::VulkanDescriptor@{Engine::VulkanDescriptor}!GetLayout@{GetLayout}}
+\index{GetLayout@{GetLayout}!Engine::VulkanDescriptor@{Engine::VulkanDescriptor}}
+\doxysubsubsection{\texorpdfstring{GetLayout()}{GetLayout()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_descriptor_a0a51529b0c859d9a53503d80e64999ce} 
+Vk\+Descriptor\+Set\+Layout Engine\+::\+Vulkan\+Descriptor\+::\+Get\+Layout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_engine_1_1_vulkan_descriptor_a8027dd12dba377292384aa83179336c5}\index{Engine::VulkanDescriptor@{Engine::VulkanDescriptor}!GetSet@{GetSet}}
+\index{GetSet@{GetSet}!Engine::VulkanDescriptor@{Engine::VulkanDescriptor}}
+\doxysubsubsection{\texorpdfstring{GetSet()}{GetSet()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_descriptor_a8027dd12dba377292384aa83179336c5} 
+Vk\+Descriptor\+Set \& Engine\+::\+Vulkan\+Descriptor\+::\+Get\+Set (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine_1_1_vulkan_descriptor_a0b19075a33889a50be0f7bda7f4bbf2b}\index{Engine::VulkanDescriptor@{Engine::VulkanDescriptor}!InitializePool@{InitializePool}}
+\index{InitializePool@{InitializePool}!Engine::VulkanDescriptor@{Engine::VulkanDescriptor}}
+\doxysubsubsection{\texorpdfstring{InitializePool()}{InitializePool()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_descriptor_a0b19075a33889a50be0f7bda7f4bbf2b} 
+void Engine\+::\+Vulkan\+Descriptor\+::\+Initialize\+Pool (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{max\+Sets}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_engine_1_1_vulkan_descriptor_a576da212d09ca5109d14e6d1bdadf316}\index{Engine::VulkanDescriptor@{Engine::VulkanDescriptor}!bindings@{bindings}}
+\index{bindings@{bindings}!Engine::VulkanDescriptor@{Engine::VulkanDescriptor}}
+\doxysubsubsection{\texorpdfstring{bindings}{bindings}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_descriptor_a576da212d09ca5109d14e6d1bdadf316} 
+std\+::vector$<$Vk\+Descriptor\+Set\+Layout\+Binding$>$ Engine\+::\+Vulkan\+Descriptor\+::bindings\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_vulkan_descriptor_a44e21b861f6b21ca783650a18ef9f188}\index{Engine::VulkanDescriptor@{Engine::VulkanDescriptor}!descriptorTypes@{descriptorTypes}}
+\index{descriptorTypes@{descriptorTypes}!Engine::VulkanDescriptor@{Engine::VulkanDescriptor}}
+\doxysubsubsection{\texorpdfstring{descriptorTypes}{descriptorTypes}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_descriptor_a44e21b861f6b21ca783650a18ef9f188} 
+std\+::unordered\+\_\+map$<$Vk\+Descriptor\+Type, uint32\+\_\+t$>$ Engine\+::\+Vulkan\+Descriptor\+::descriptor\+Types\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_vulkan_descriptor_abb29923bd887dde5341546c16b231527}\index{Engine::VulkanDescriptor@{Engine::VulkanDescriptor}!device@{device}}
+\index{device@{device}!Engine::VulkanDescriptor@{Engine::VulkanDescriptor}}
+\doxysubsubsection{\texorpdfstring{device}{device}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_descriptor_abb29923bd887dde5341546c16b231527} 
+Vk\+Device Engine\+::\+Vulkan\+Descriptor\+::device\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_vulkan_descriptor_a7ab9193a5b7c78b87aded9e97bd0e35a}\index{Engine::VulkanDescriptor@{Engine::VulkanDescriptor}!layout@{layout}}
+\index{layout@{layout}!Engine::VulkanDescriptor@{Engine::VulkanDescriptor}}
+\doxysubsubsection{\texorpdfstring{layout}{layout}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_descriptor_a7ab9193a5b7c78b87aded9e97bd0e35a} 
+Vk\+Descriptor\+Set\+Layout Engine\+::\+Vulkan\+Descriptor\+::layout\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_vulkan_descriptor_ae3f296a8490a35010ce625c76afeaf4f}\index{Engine::VulkanDescriptor@{Engine::VulkanDescriptor}!pool@{pool}}
+\index{pool@{pool}!Engine::VulkanDescriptor@{Engine::VulkanDescriptor}}
+\doxysubsubsection{\texorpdfstring{pool}{pool}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_descriptor_ae3f296a8490a35010ce625c76afeaf4f} 
+Vk\+Descriptor\+Pool Engine\+::\+Vulkan\+Descriptor\+::pool\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_vulkan_descriptor_a5625f5a4b186390255c82fcb1df3ca6c}\index{Engine::VulkanDescriptor@{Engine::VulkanDescriptor}!set@{set}}
+\index{set@{set}!Engine::VulkanDescriptor@{Engine::VulkanDescriptor}}
+\doxysubsubsection{\texorpdfstring{set}{set}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_descriptor_a5625f5a4b186390255c82fcb1df3ca6c} 
+Vk\+Descriptor\+Set Engine\+::\+Vulkan\+Descriptor\+::set\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Rendering\+Engine/src/vulkan/\mbox{\hyperlink{_vulkan_descriptor_8h}{Vulkan\+Descriptor.\+h}}\item 
+Rendering\+Engine/src/vulkan/\mbox{\hyperlink{_vulkan_descriptor_8cpp}{Vulkan\+Descriptor.\+cpp}}\end{DoxyCompactItemize}

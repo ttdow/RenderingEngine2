@@ -1,0 +1,42 @@
+\doxysection{Vulkan\+Descriptor.\+h}
+\hypertarget{_vulkan_descriptor_8h_source}{}\label{_vulkan_descriptor_8h_source}\index{RenderingEngine/src/vulkan/VulkanDescriptor.h@{RenderingEngine/src/vulkan/VulkanDescriptor.h}}
+\mbox{\hyperlink{_vulkan_descriptor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vulkan/vulkan.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_engine}{Engine}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_a0e71e01c4678712766578165eac2f21e}{VulkanDescriptor}}}
+\DoxyCodeLine{00008\ \ \ \ \ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_a0e71e01c4678712766578165eac2f21e}{VulkanDescriptor}}()\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_a0e71e01c4678712766578165eac2f21e}{VulkanDescriptor}}(VkDevice\ \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_abb29923bd887dde5341546c16b231527}{device}});}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_ac16a8d6692e848b3ceab727fbaab5472}{\string~VulkanDescriptor}}();}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_a1f3d400ef6e743e8971c2dbd10d29485}{AddBinding}}(uint32\_t\ binding,\ VkDescriptorType\ type,\ uint32\_t\ count\ =\ 1);}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_a047fa012159237fd13826f6576d8401e}{ClearBindings}}();}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_a13687ad88ff59bd1f4d446abb0081c46}{Build}}(VkShaderStageFlags\ shaderStages,\ \textcolor{keywordtype}{void}*\ pNext\ =\ \textcolor{keyword}{nullptr},\ VkDescriptorSetLayoutCreateFlags\ flags\ =\ 0);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_a0b19075a33889a50be0f7bda7f4bbf2b}{InitializePool}}(uint32\_t\ maxSets);}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_a6fb569f1018518e604b0fdd31bb6efa4}{ClearDescriptors}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_acfc7960ce85b1fa6fb788aad7aa76a7f}{Allocate}}();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ VkDescriptorSet\&\ \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_a8027dd12dba377292384aa83179336c5}{GetSet}}();}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ VkDescriptorSetLayout\ \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_a0a51529b0c859d9a53503d80e64999ce}{GetLayout}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ VkDevice\ \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_abb29923bd887dde5341546c16b231527}{device}};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ VkDescriptorPool\ \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_ae3f296a8490a35010ce625c76afeaf4f}{pool}};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ VkDescriptorSetLayout\ \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_a7ab9193a5b7c78b87aded9e97bd0e35a}{layout}};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ VkDescriptorSet\ \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_a5625f5a4b186390255c82fcb1df3ca6c}{set}};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ std::vector<VkDescriptorSetLayoutBinding>\ \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_a576da212d09ca5109d14e6d1bdadf316}{bindings}};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ std::unordered\_map<VkDescriptorType,\ uint32\_t>\ \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor_a44e21b861f6b21ca783650a18ef9f188}{descriptorTypes}};}
+\DoxyCodeLine{00035\ \ \ \ \ \};}
+\DoxyCodeLine{00036\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,41 @@
+\doxysection{Rendering\+Engine.\+h}
+\hypertarget{_rendering_engine_8h_source}{}\label{_rendering_engine_8h_source}\index{RenderingEngine/src/RenderingEngine.h@{RenderingEngine/src/RenderingEngine.h}}
+\mbox{\hyperlink{_rendering_engine_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <Windows.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_camera_8h}{Camera.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_vulkan_backend_8h}{vulkan/VulkanBackend.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_d_x12_backend_8h}{dx12/DX12Backend.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_engine}{Engine}}}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{namespace_engine_a9b8ef0d90a91152ce524f073abcd2064}{RenderingBackend}}}
+\DoxyCodeLine{00012\ \ \ \ \ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_engine_a9b8ef0d90a91152ce524f073abcd2064a96a66dd9002e2881465496643be4f0ac}{VULKAN}}\ =\ 0,}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_engine_a9b8ef0d90a91152ce524f073abcd2064a9517d49f12986c2edac9cfd8c902a920}{DX12}}\ =\ 1}
+\DoxyCodeLine{00015\ \ \ \ \ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_engine_1_1_rendering_engine_a5f1d87a8831794d27d11feed947b1205}{RenderingEngine}}}
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_rendering_engine_a5f1d87a8831794d27d11feed947b1205}{RenderingEngine}}()\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_rendering_engine_a5f1d87a8831794d27d11feed947b1205}{RenderingEngine}}(HINSTANCE\ hInstance,\ HWND\ hwnd);}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_rendering_engine_aa2e7ab59c3be7cb7de564241c70a265c}{\string~RenderingEngine}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine_1_1_rendering_engine_a715c106543e45b7ad041a497b3079f70}{Update}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ std::unique\_ptr<VulkanBackend>\ \mbox{\hyperlink{class_engine_1_1_rendering_engine_a294129d63242491c902e470ea355230e}{vulkanBackend}};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ std::unique\_ptr<DX12Backend>\ \mbox{\hyperlink{class_engine_1_1_rendering_engine_ab2f571ea30743f729b27b4518dd89fb1}{dx12Backend}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_engine_a9b8ef0d90a91152ce524f073abcd2064}{RenderingBackend}}\ \mbox{\hyperlink{class_engine_1_1_rendering_engine_ac9a7f535857cdccb2ea645e3784e86cf}{selectedBackend}}\ =\ \mbox{\hyperlink{namespace_engine_a9b8ef0d90a91152ce524f073abcd2064a9517d49f12986c2edac9cfd8c902a920}{RenderingBackend::DX12}};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_engine_1_1_rendering_engine_a2104efc31fb81ae054c10b927d836305}{imageWidth}},\ \mbox{\hyperlink{class_engine_1_1_rendering_engine_aca4bdf9ffd04a6f3f7990f396d73d34e}{imageHeight}};}
+\DoxyCodeLine{00034\ \ \ \ \ \};}
+\DoxyCodeLine{00035\ \}}
+
+\end{DoxyCode}

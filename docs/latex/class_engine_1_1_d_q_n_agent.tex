@@ -1,0 +1,140 @@
+\doxysection{Engine\+::DQNAgent Class Reference}
+\hypertarget{class_engine_1_1_d_q_n_agent}{}\label{class_engine_1_1_d_q_n_agent}\index{Engine::DQNAgent@{Engine::DQNAgent}}
+
+
+{\ttfamily \#include $<$DQNAgent.\+h$>$}
+
+
+
+Collaboration diagram for Engine\+::DQNAgent\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{class_engine_1_1_d_q_n_agent__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a616a3c4e7c687981cc82ef6962d319d9}{DQNAgent}} (int \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_afe6443aaaf66564e734a9db3cdfb9987}{state\+Size}}, int \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a952dbde84a05e9d3d1ac0df55670578a}{action\+Size}}, \mbox{\hyperlink{class_engine_1_1_loss_function}{Loss\+Function}} \texorpdfstring{$\ast$}{*}loss, size\+\_\+t replay\+Capacity=10000)
+\item 
+int \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a623766f54bd3208db7a8b11f22aa2451}{Act}} (const std\+::vector$<$ float $>$ \&state, float epsilon)
+\item 
+void \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a08aa4aaabffea1c9838a34d71422289e}{Step}} (const std\+::vector$<$ float $>$ \&state, int action, float reward, const std\+::vector$<$ float $>$ \&next\+State, bool done)
+\item 
+void \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a2f19e819cce8389ec40bfb1cafa9a53e}{Train\+Batch}} (float gamma, float lr, size\+\_\+t batch\+Size)
+\item 
+void \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a7edd10ca2023fcbbf60bc30c5efe807e}{Train}} (const std\+::vector$<$ float $>$ \&state, int action, float reward, const std\+::vector$<$ float $>$ \&next\+State, bool done, float gamma, float lr)
+\item 
+void \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_ac56ece03caeb198eb19357271f2b17fc}{Update\+Target\+Network}} ()
+\item 
+void \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_af02e6d26d4e769c321c8c224401f51d6}{Soft\+Update\+Target}} (float tau)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_afe6443aaaf66564e734a9db3cdfb9987}{state\+Size}}
+\item 
+int \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a952dbde84a05e9d3d1ac0df55670578a}{action\+Size}}
+\item 
+\mbox{\hyperlink{class_engine_1_1_neural_network}{Neural\+Network}} \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a86f02e88088f72eed1a81f6801518ec0}{q\+Net}}
+\item 
+\mbox{\hyperlink{class_engine_1_1_neural_network}{Neural\+Network}} \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_a8f3564a539a36993dfee6ac3bea9927b}{target\+Net}}
+\item 
+\mbox{\hyperlink{class_engine_1_1_replay_buffer}{Replay\+Buffer}} \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_ac62ea30b5e79530d39da07764eca0ba2}{replay\+Buffer}}
+\item 
+std\+::mt19937 \mbox{\hyperlink{class_engine_1_1_d_q_n_agent_add8f69e345d90ec14e750016315b158c}{rng}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_engine_1_1_d_q_n_agent_a616a3c4e7c687981cc82ef6962d319d9}\index{Engine::DQNAgent@{Engine::DQNAgent}!DQNAgent@{DQNAgent}}
+\index{DQNAgent@{DQNAgent}!Engine::DQNAgent@{Engine::DQNAgent}}
+\doxysubsubsection{\texorpdfstring{DQNAgent()}{DQNAgent()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_d_q_n_agent_a616a3c4e7c687981cc82ef6962d319d9} 
+Engine\+::\+DQNAgent\+::\+DQNAgent (\begin{DoxyParamCaption}\item[{int}]{state\+Size}{, }\item[{int}]{action\+Size}{, }\item[{\mbox{\hyperlink{class_engine_1_1_loss_function}{Loss\+Function}} \texorpdfstring{$\ast$}{*}}]{loss}{, }\item[{size\+\_\+t}]{replay\+Capacity}{ = {\ttfamily 10000}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_engine_1_1_d_q_n_agent_a623766f54bd3208db7a8b11f22aa2451}\index{Engine::DQNAgent@{Engine::DQNAgent}!Act@{Act}}
+\index{Act@{Act}!Engine::DQNAgent@{Engine::DQNAgent}}
+\doxysubsubsection{\texorpdfstring{Act()}{Act()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_d_q_n_agent_a623766f54bd3208db7a8b11f22aa2451} 
+int Engine\+::\+DQNAgent\+::\+Act (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{state}{, }\item[{float}]{epsilon}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_engine_1_1_d_q_n_agent_af02e6d26d4e769c321c8c224401f51d6}\index{Engine::DQNAgent@{Engine::DQNAgent}!SoftUpdateTarget@{SoftUpdateTarget}}
+\index{SoftUpdateTarget@{SoftUpdateTarget}!Engine::DQNAgent@{Engine::DQNAgent}}
+\doxysubsubsection{\texorpdfstring{SoftUpdateTarget()}{SoftUpdateTarget()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_d_q_n_agent_af02e6d26d4e769c321c8c224401f51d6} 
+void Engine\+::\+DQNAgent\+::\+Soft\+Update\+Target (\begin{DoxyParamCaption}\item[{float}]{tau}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_engine_1_1_d_q_n_agent_a08aa4aaabffea1c9838a34d71422289e}\index{Engine::DQNAgent@{Engine::DQNAgent}!Step@{Step}}
+\index{Step@{Step}!Engine::DQNAgent@{Engine::DQNAgent}}
+\doxysubsubsection{\texorpdfstring{Step()}{Step()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_d_q_n_agent_a08aa4aaabffea1c9838a34d71422289e} 
+void Engine\+::\+DQNAgent\+::\+Step (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{state}{, }\item[{int}]{action}{, }\item[{float}]{reward}{, }\item[{const std\+::vector$<$ float $>$ \&}]{next\+State}{, }\item[{bool}]{done}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_engine_1_1_d_q_n_agent_a7edd10ca2023fcbbf60bc30c5efe807e}\index{Engine::DQNAgent@{Engine::DQNAgent}!Train@{Train}}
+\index{Train@{Train}!Engine::DQNAgent@{Engine::DQNAgent}}
+\doxysubsubsection{\texorpdfstring{Train()}{Train()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_d_q_n_agent_a7edd10ca2023fcbbf60bc30c5efe807e} 
+void Engine\+::\+DQNAgent\+::\+Train (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{state}{, }\item[{int}]{action}{, }\item[{float}]{reward}{, }\item[{const std\+::vector$<$ float $>$ \&}]{next\+State}{, }\item[{bool}]{done}{, }\item[{float}]{gamma}{, }\item[{float}]{lr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_engine_1_1_d_q_n_agent_a2f19e819cce8389ec40bfb1cafa9a53e}\index{Engine::DQNAgent@{Engine::DQNAgent}!TrainBatch@{TrainBatch}}
+\index{TrainBatch@{TrainBatch}!Engine::DQNAgent@{Engine::DQNAgent}}
+\doxysubsubsection{\texorpdfstring{TrainBatch()}{TrainBatch()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_d_q_n_agent_a2f19e819cce8389ec40bfb1cafa9a53e} 
+void Engine\+::\+DQNAgent\+::\+Train\+Batch (\begin{DoxyParamCaption}\item[{float}]{gamma}{, }\item[{float}]{lr}{, }\item[{size\+\_\+t}]{batch\+Size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_engine_1_1_d_q_n_agent_ac56ece03caeb198eb19357271f2b17fc}\index{Engine::DQNAgent@{Engine::DQNAgent}!UpdateTargetNetwork@{UpdateTargetNetwork}}
+\index{UpdateTargetNetwork@{UpdateTargetNetwork}!Engine::DQNAgent@{Engine::DQNAgent}}
+\doxysubsubsection{\texorpdfstring{UpdateTargetNetwork()}{UpdateTargetNetwork()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_d_q_n_agent_ac56ece03caeb198eb19357271f2b17fc} 
+void Engine\+::\+DQNAgent\+::\+Update\+Target\+Network (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_engine_1_1_d_q_n_agent_a952dbde84a05e9d3d1ac0df55670578a}\index{Engine::DQNAgent@{Engine::DQNAgent}!actionSize@{actionSize}}
+\index{actionSize@{actionSize}!Engine::DQNAgent@{Engine::DQNAgent}}
+\doxysubsubsection{\texorpdfstring{actionSize}{actionSize}}
+{\footnotesize\ttfamily \label{class_engine_1_1_d_q_n_agent_a952dbde84a05e9d3d1ac0df55670578a} 
+int Engine\+::\+DQNAgent\+::action\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_d_q_n_agent_a86f02e88088f72eed1a81f6801518ec0}\index{Engine::DQNAgent@{Engine::DQNAgent}!qNet@{qNet}}
+\index{qNet@{qNet}!Engine::DQNAgent@{Engine::DQNAgent}}
+\doxysubsubsection{\texorpdfstring{qNet}{qNet}}
+{\footnotesize\ttfamily \label{class_engine_1_1_d_q_n_agent_a86f02e88088f72eed1a81f6801518ec0} 
+\mbox{\hyperlink{class_engine_1_1_neural_network}{Neural\+Network}} Engine\+::\+DQNAgent\+::q\+Net\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_d_q_n_agent_ac62ea30b5e79530d39da07764eca0ba2}\index{Engine::DQNAgent@{Engine::DQNAgent}!replayBuffer@{replayBuffer}}
+\index{replayBuffer@{replayBuffer}!Engine::DQNAgent@{Engine::DQNAgent}}
+\doxysubsubsection{\texorpdfstring{replayBuffer}{replayBuffer}}
+{\footnotesize\ttfamily \label{class_engine_1_1_d_q_n_agent_ac62ea30b5e79530d39da07764eca0ba2} 
+\mbox{\hyperlink{class_engine_1_1_replay_buffer}{Replay\+Buffer}} Engine\+::\+DQNAgent\+::replay\+Buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_d_q_n_agent_add8f69e345d90ec14e750016315b158c}\index{Engine::DQNAgent@{Engine::DQNAgent}!rng@{rng}}
+\index{rng@{rng}!Engine::DQNAgent@{Engine::DQNAgent}}
+\doxysubsubsection{\texorpdfstring{rng}{rng}}
+{\footnotesize\ttfamily \label{class_engine_1_1_d_q_n_agent_add8f69e345d90ec14e750016315b158c} 
+std\+::mt19937 Engine\+::\+DQNAgent\+::rng\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_d_q_n_agent_afe6443aaaf66564e734a9db3cdfb9987}\index{Engine::DQNAgent@{Engine::DQNAgent}!stateSize@{stateSize}}
+\index{stateSize@{stateSize}!Engine::DQNAgent@{Engine::DQNAgent}}
+\doxysubsubsection{\texorpdfstring{stateSize}{stateSize}}
+{\footnotesize\ttfamily \label{class_engine_1_1_d_q_n_agent_afe6443aaaf66564e734a9db3cdfb9987} 
+int Engine\+::\+DQNAgent\+::state\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_d_q_n_agent_a8f3564a539a36993dfee6ac3bea9927b}\index{Engine::DQNAgent@{Engine::DQNAgent}!targetNet@{targetNet}}
+\index{targetNet@{targetNet}!Engine::DQNAgent@{Engine::DQNAgent}}
+\doxysubsubsection{\texorpdfstring{targetNet}{targetNet}}
+{\footnotesize\ttfamily \label{class_engine_1_1_d_q_n_agent_a8f3564a539a36993dfee6ac3bea9927b} 
+\mbox{\hyperlink{class_engine_1_1_neural_network}{Neural\+Network}} Engine\+::\+DQNAgent\+::target\+Net\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Rendering\+Engine/src/\mbox{\hyperlink{_d_q_n_agent_8h}{DQNAgent.\+h}}\end{DoxyCompactItemize}

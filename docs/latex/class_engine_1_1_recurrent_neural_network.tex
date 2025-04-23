@@ -1,0 +1,288 @@
+\doxysection{Engine\+::Recurrent\+Neural\+Network Class Reference}
+\hypertarget{class_engine_1_1_recurrent_neural_network}{}\label{class_engine_1_1_recurrent_neural_network}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+
+
+{\ttfamily \#include $<$Recurrent\+Neural\+Network.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_a5760adc8876d8c81537092b5726ec3db}{Recurrent\+Neural\+Network}} (size\+\_\+t \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_aed9d5c640420624a8b714360a8928118}{input\+Size}}, size\+\_\+t \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_a034648b1a41bc5e968ef36c46bbcf08e}{hidden\+Size}}, size\+\_\+t \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_a97ec1b3c5efe7c63bc56220de1ad176e}{output\+Size}})
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_a9d0fe41aff8412c1797a9db202d926f4}{Step}} (const std\+::vector$<$ float $>$ \&x\+\_\+t)
+\item 
+void \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_acda1bbd7b022dfe8cac1a73077e06500}{Backward}} (const std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \&target\+Seq, float lr=0.\+01f)
+\item 
+void \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_a503a0f01585962e7b299bfc9af5a7782}{Reset\+History}} ()
+\item 
+void \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_a2ee3a0f7354c37234381bec7b356dea1}{Reset\+State}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_a7368fb927dbea0d419b8d2d3ef53f6d1}{Print\+Vec}} (const std\+::vector$<$ float $>$ \&v)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_aed9d5c640420624a8b714360a8928118}{input\+Size}}
+\item 
+size\+\_\+t \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_a034648b1a41bc5e968ef36c46bbcf08e}{hidden\+Size}}
+\item 
+size\+\_\+t \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_a97ec1b3c5efe7c63bc56220de1ad176e}{output\+Size}}
+\item 
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_aee9f1942bd7f684834de0231271fa770}{w\+\_\+x}}
+\item 
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_a80e0d47700fb9c174493dde0c0b6c0b1}{w\+\_\+h}}
+\item 
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_a4699727c8bde00abe965390816fea046}{w\+\_\+y}}
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_a5288d4d10a921c29eabc5791d9929a9a}{b\+\_\+h}}
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_a4f59c3de05885d0a4b1fce59fc1f6ca7}{b\+\_\+y}}
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_a546786eae664e8e2e96bac8da0390a5b}{h}}
+\item 
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_ada40c4c86cd8ab36a3e3bf4f1f556c3c}{h\+History}}
+\item 
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_af5c1adf782adfe2d9c5175610e565245}{x\+History}}
+\item 
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_af3925ee6b11b819038c81261f551e620}{pre\+Act\+History}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_afc3e7d6f13583644acd6e86a644b2d70}{Mat\+Vec\+Mul}} (const std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \&mat, const std\+::vector$<$ float $>$ \&vec)
+\item 
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_a040e5ec642a7561a5c135127f6b6ea40}{Transpose}} (const std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \&mat)
+\item 
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_aeac702893e2baf397e56f6501e803dac}{Outer\+Product}} (const std\+::vector$<$ float $>$ \&a, const std\+::vector$<$ float $>$ \&b)
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_a804d5d77c5ed27c5ef5f322a7697bdde}{Vec\+Add}} (const std\+::vector$<$ float $>$ \&a, const std\+::vector$<$ float $>$ \&b)
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_a4873bd48ac129467386393070db8b7ba}{Vec\+Sub}} (const std\+::vector$<$ float $>$ \&a, const std\+::vector$<$ float $>$ \&b)
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_a472c8e2698762dfdd7409a43c2b1d7b0}{Vec\+Hadamard}} (const std\+::vector$<$ float $>$ \&a, const std\+::vector$<$ float $>$ \&b)
+\item 
+void \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_acb1f2c74bef48fda0b5a201a19e30831}{Scale\+Vec}} (std\+::vector$<$ float $>$ \&vec, float scalar)
+\item 
+void \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_a9c735bbb1bc6937aeb79435d01ff3efe}{Scale\+Mat}} (std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \&mat, float scalar)
+\item 
+void \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_a39e32a45edbaf63347712ff7a8fcb78d}{Sub\+Mat}} (std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \&a, const std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \&b)
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_a0b4465c1adf95bcac76d3e8b935da494}{Apply\+Tanh}} (const std\+::vector$<$ float $>$ \&v)
+\item 
+float \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_a451b21f895766ad015ad94253eb6cc54}{Tanh\+Activation}} (float x)
+\item 
+float \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_a7e4a881a012a9f41cc3410b7b5d501b9}{Tanh\+Derivative}} (float x)
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_a14966522daa3ae03e7a1de1669fdd78d}{Tanh\+Vec}} (const std\+::vector$<$ float $>$ \&v)
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network_a5550702987634016ecec7c6f67ea8af5}{Tanh\+Derivative\+Vec}} (const std\+::vector$<$ float $>$ \&v)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_engine_1_1_recurrent_neural_network_a5760adc8876d8c81537092b5726ec3db}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!RecurrentNeuralNetwork@{RecurrentNeuralNetwork}}
+\index{RecurrentNeuralNetwork@{RecurrentNeuralNetwork}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{RecurrentNeuralNetwork()}{RecurrentNeuralNetwork()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_a5760adc8876d8c81537092b5726ec3db} 
+Engine\+::\+Recurrent\+Neural\+Network\+::\+Recurrent\+Neural\+Network (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{input\+Size}{, }\item[{size\+\_\+t}]{hidden\+Size}{, }\item[{size\+\_\+t}]{output\+Size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_engine_1_1_recurrent_neural_network_a0b4465c1adf95bcac76d3e8b935da494}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!ApplyTanh@{ApplyTanh}}
+\index{ApplyTanh@{ApplyTanh}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{ApplyTanh()}{ApplyTanh()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_a0b4465c1adf95bcac76d3e8b935da494} 
+std\+::vector$<$ float $>$ Engine\+::\+Recurrent\+Neural\+Network\+::\+Apply\+Tanh (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_acda1bbd7b022dfe8cac1a73077e06500}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!Backward@{Backward}}
+\index{Backward@{Backward}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{Backward()}{Backward()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_acda1bbd7b022dfe8cac1a73077e06500} 
+void Engine\+::\+Recurrent\+Neural\+Network\+::\+Backward (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \&}]{target\+Seq}{, }\item[{float}]{lr}{ = {\ttfamily 0.01f}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_afc3e7d6f13583644acd6e86a644b2d70}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!MatVecMul@{MatVecMul}}
+\index{MatVecMul@{MatVecMul}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{MatVecMul()}{MatVecMul()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_afc3e7d6f13583644acd6e86a644b2d70} 
+std\+::vector$<$ float $>$ Engine\+::\+Recurrent\+Neural\+Network\+::\+Mat\+Vec\+Mul (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \&}]{mat}{, }\item[{const std\+::vector$<$ float $>$ \&}]{vec}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_aeac702893e2baf397e56f6501e803dac}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!OuterProduct@{OuterProduct}}
+\index{OuterProduct@{OuterProduct}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{OuterProduct()}{OuterProduct()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_aeac702893e2baf397e56f6501e803dac} 
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ Engine\+::\+Recurrent\+Neural\+Network\+::\+Outer\+Product (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{a}{, }\item[{const std\+::vector$<$ float $>$ \&}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_a7368fb927dbea0d419b8d2d3ef53f6d1}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!PrintVec@{PrintVec}}
+\index{PrintVec@{PrintVec}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{PrintVec()}{PrintVec()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_a7368fb927dbea0d419b8d2d3ef53f6d1} 
+static void Engine\+::\+Recurrent\+Neural\+Network\+::\+Print\+Vec (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_a503a0f01585962e7b299bfc9af5a7782}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!ResetHistory@{ResetHistory}}
+\index{ResetHistory@{ResetHistory}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{ResetHistory()}{ResetHistory()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_a503a0f01585962e7b299bfc9af5a7782} 
+void Engine\+::\+Recurrent\+Neural\+Network\+::\+Reset\+History (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_a2ee3a0f7354c37234381bec7b356dea1}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!ResetState@{ResetState}}
+\index{ResetState@{ResetState}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{ResetState()}{ResetState()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_a2ee3a0f7354c37234381bec7b356dea1} 
+void Engine\+::\+Recurrent\+Neural\+Network\+::\+Reset\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_a9c735bbb1bc6937aeb79435d01ff3efe}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!ScaleMat@{ScaleMat}}
+\index{ScaleMat@{ScaleMat}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{ScaleMat()}{ScaleMat()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_a9c735bbb1bc6937aeb79435d01ff3efe} 
+void Engine\+::\+Recurrent\+Neural\+Network\+::\+Scale\+Mat (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \&}]{mat}{, }\item[{float}]{scalar}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_acb1f2c74bef48fda0b5a201a19e30831}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!ScaleVec@{ScaleVec}}
+\index{ScaleVec@{ScaleVec}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{ScaleVec()}{ScaleVec()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_acb1f2c74bef48fda0b5a201a19e30831} 
+void Engine\+::\+Recurrent\+Neural\+Network\+::\+Scale\+Vec (\begin{DoxyParamCaption}\item[{std\+::vector$<$ float $>$ \&}]{vec}{, }\item[{float}]{scalar}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_a9d0fe41aff8412c1797a9db202d926f4}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!Step@{Step}}
+\index{Step@{Step}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{Step()}{Step()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_a9d0fe41aff8412c1797a9db202d926f4} 
+std\+::vector$<$ float $>$ Engine\+::\+Recurrent\+Neural\+Network\+::\+Step (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{x\+\_\+t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_a39e32a45edbaf63347712ff7a8fcb78d}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!SubMat@{SubMat}}
+\index{SubMat@{SubMat}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{SubMat()}{SubMat()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_a39e32a45edbaf63347712ff7a8fcb78d} 
+void Engine\+::\+Recurrent\+Neural\+Network\+::\+Sub\+Mat (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \&}]{a}{, }\item[{const std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \&}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_a451b21f895766ad015ad94253eb6cc54}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!TanhActivation@{TanhActivation}}
+\index{TanhActivation@{TanhActivation}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{TanhActivation()}{TanhActivation()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_a451b21f895766ad015ad94253eb6cc54} 
+float Engine\+::\+Recurrent\+Neural\+Network\+::\+Tanh\+Activation (\begin{DoxyParamCaption}\item[{float}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_a7e4a881a012a9f41cc3410b7b5d501b9}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!TanhDerivative@{TanhDerivative}}
+\index{TanhDerivative@{TanhDerivative}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{TanhDerivative()}{TanhDerivative()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_a7e4a881a012a9f41cc3410b7b5d501b9} 
+float Engine\+::\+Recurrent\+Neural\+Network\+::\+Tanh\+Derivative (\begin{DoxyParamCaption}\item[{float}]{x}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_a5550702987634016ecec7c6f67ea8af5}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!TanhDerivativeVec@{TanhDerivativeVec}}
+\index{TanhDerivativeVec@{TanhDerivativeVec}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{TanhDerivativeVec()}{TanhDerivativeVec()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_a5550702987634016ecec7c6f67ea8af5} 
+std\+::vector$<$ float $>$ Engine\+::\+Recurrent\+Neural\+Network\+::\+Tanh\+Derivative\+Vec (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_a14966522daa3ae03e7a1de1669fdd78d}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!TanhVec@{TanhVec}}
+\index{TanhVec@{TanhVec}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{TanhVec()}{TanhVec()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_a14966522daa3ae03e7a1de1669fdd78d} 
+std\+::vector$<$ float $>$ Engine\+::\+Recurrent\+Neural\+Network\+::\+Tanh\+Vec (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_a040e5ec642a7561a5c135127f6b6ea40}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!Transpose@{Transpose}}
+\index{Transpose@{Transpose}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{Transpose()}{Transpose()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_a040e5ec642a7561a5c135127f6b6ea40} 
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ Engine\+::\+Recurrent\+Neural\+Network\+::\+Transpose (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \&}]{mat}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_a804d5d77c5ed27c5ef5f322a7697bdde}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!VecAdd@{VecAdd}}
+\index{VecAdd@{VecAdd}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{VecAdd()}{VecAdd()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_a804d5d77c5ed27c5ef5f322a7697bdde} 
+std\+::vector$<$ float $>$ Engine\+::\+Recurrent\+Neural\+Network\+::\+Vec\+Add (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{a}{, }\item[{const std\+::vector$<$ float $>$ \&}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_a472c8e2698762dfdd7409a43c2b1d7b0}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!VecHadamard@{VecHadamard}}
+\index{VecHadamard@{VecHadamard}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{VecHadamard()}{VecHadamard()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_a472c8e2698762dfdd7409a43c2b1d7b0} 
+std\+::vector$<$ float $>$ Engine\+::\+Recurrent\+Neural\+Network\+::\+Vec\+Hadamard (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{a}{, }\item[{const std\+::vector$<$ float $>$ \&}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_a4873bd48ac129467386393070db8b7ba}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!VecSub@{VecSub}}
+\index{VecSub@{VecSub}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{VecSub()}{VecSub()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_a4873bd48ac129467386393070db8b7ba} 
+std\+::vector$<$ float $>$ Engine\+::\+Recurrent\+Neural\+Network\+::\+Vec\+Sub (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ float $>$ \&}]{a}{, }\item[{const std\+::vector$<$ float $>$ \&}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_engine_1_1_recurrent_neural_network_a5288d4d10a921c29eabc5791d9929a9a}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!b\_h@{b\_h}}
+\index{b\_h@{b\_h}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{b\_h}{b\_h}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_a5288d4d10a921c29eabc5791d9929a9a} 
+std\+::vector$<$float$>$ Engine\+::\+Recurrent\+Neural\+Network\+::b\+\_\+h}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_a4f59c3de05885d0a4b1fce59fc1f6ca7}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!b\_y@{b\_y}}
+\index{b\_y@{b\_y}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{b\_y}{b\_y}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_a4f59c3de05885d0a4b1fce59fc1f6ca7} 
+std\+::vector$<$float$>$ Engine\+::\+Recurrent\+Neural\+Network\+::b\+\_\+y}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_a546786eae664e8e2e96bac8da0390a5b}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!h@{h}}
+\index{h@{h}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{h}{h}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_a546786eae664e8e2e96bac8da0390a5b} 
+std\+::vector$<$float$>$ Engine\+::\+Recurrent\+Neural\+Network\+::h}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_ada40c4c86cd8ab36a3e3bf4f1f556c3c}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!hHistory@{hHistory}}
+\index{hHistory@{hHistory}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{hHistory}{hHistory}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_ada40c4c86cd8ab36a3e3bf4f1f556c3c} 
+std\+::vector$<$std\+::vector$<$float$>$ $>$ Engine\+::\+Recurrent\+Neural\+Network\+::h\+History}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_a034648b1a41bc5e968ef36c46bbcf08e}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!hiddenSize@{hiddenSize}}
+\index{hiddenSize@{hiddenSize}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{hiddenSize}{hiddenSize}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_a034648b1a41bc5e968ef36c46bbcf08e} 
+size\+\_\+t Engine\+::\+Recurrent\+Neural\+Network\+::hidden\+Size}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_aed9d5c640420624a8b714360a8928118}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!inputSize@{inputSize}}
+\index{inputSize@{inputSize}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{inputSize}{inputSize}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_aed9d5c640420624a8b714360a8928118} 
+size\+\_\+t Engine\+::\+Recurrent\+Neural\+Network\+::input\+Size}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_a97ec1b3c5efe7c63bc56220de1ad176e}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!outputSize@{outputSize}}
+\index{outputSize@{outputSize}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{outputSize}{outputSize}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_a97ec1b3c5efe7c63bc56220de1ad176e} 
+size\+\_\+t Engine\+::\+Recurrent\+Neural\+Network\+::output\+Size}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_af3925ee6b11b819038c81261f551e620}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!preActHistory@{preActHistory}}
+\index{preActHistory@{preActHistory}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{preActHistory}{preActHistory}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_af3925ee6b11b819038c81261f551e620} 
+std\+::vector$<$std\+::vector$<$float$>$ $>$ Engine\+::\+Recurrent\+Neural\+Network\+::pre\+Act\+History}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_a80e0d47700fb9c174493dde0c0b6c0b1}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!w\_h@{w\_h}}
+\index{w\_h@{w\_h}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{w\_h}{w\_h}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_a80e0d47700fb9c174493dde0c0b6c0b1} 
+std\+::vector$<$std\+::vector$<$float$>$ $>$ Engine\+::\+Recurrent\+Neural\+Network\+::w\+\_\+h}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_aee9f1942bd7f684834de0231271fa770}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!w\_x@{w\_x}}
+\index{w\_x@{w\_x}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{w\_x}{w\_x}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_aee9f1942bd7f684834de0231271fa770} 
+std\+::vector$<$std\+::vector$<$float$>$ $>$ Engine\+::\+Recurrent\+Neural\+Network\+::w\+\_\+x}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_a4699727c8bde00abe965390816fea046}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!w\_y@{w\_y}}
+\index{w\_y@{w\_y}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{w\_y}{w\_y}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_a4699727c8bde00abe965390816fea046} 
+std\+::vector$<$std\+::vector$<$float$>$ $>$ Engine\+::\+Recurrent\+Neural\+Network\+::w\+\_\+y}
+
+\Hypertarget{class_engine_1_1_recurrent_neural_network_af5c1adf782adfe2d9c5175610e565245}\index{Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}!xHistory@{xHistory}}
+\index{xHistory@{xHistory}!Engine::RecurrentNeuralNetwork@{Engine::RecurrentNeuralNetwork}}
+\doxysubsubsection{\texorpdfstring{xHistory}{xHistory}}
+{\footnotesize\ttfamily \label{class_engine_1_1_recurrent_neural_network_af5c1adf782adfe2d9c5175610e565245} 
+std\+::vector$<$std\+::vector$<$float$>$ $>$ Engine\+::\+Recurrent\+Neural\+Network\+::x\+History}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Rendering\+Engine/src/\mbox{\hyperlink{_recurrent_neural_network_8h}{Recurrent\+Neural\+Network.\+h}}\end{DoxyCompactItemize}

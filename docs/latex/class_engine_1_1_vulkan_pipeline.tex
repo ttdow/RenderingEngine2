@@ -1,0 +1,137 @@
+\doxysection{Engine\+::Vulkan\+Pipeline Class Reference}
+\hypertarget{class_engine_1_1_vulkan_pipeline}{}\label{class_engine_1_1_vulkan_pipeline}\index{Engine::VulkanPipeline@{Engine::VulkanPipeline}}
+
+
+{\ttfamily \#include $<$Vulkan\+Pipeline.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_engine_1_1_vulkan_pipeline_a9b183709726c2e958ed08aae20396496}{Vulkan\+Pipeline}} ()=delete
+\item 
+\mbox{\hyperlink{class_engine_1_1_vulkan_pipeline_a21205eb81ee5a069dcc92519ee1746eb}{Vulkan\+Pipeline}} (Vk\+Device \mbox{\hyperlink{class_engine_1_1_vulkan_pipeline_a770b3d78f1d37716cd5d2b69eb513acc}{device}})
+\item 
+\mbox{\hyperlink{class_engine_1_1_vulkan_pipeline_ab9563b2ec210da34f405c45271c53244}{\texorpdfstring{$\sim$}{\string~}\+Vulkan\+Pipeline}} ()
+\item 
+void \mbox{\hyperlink{class_engine_1_1_vulkan_pipeline_a83fd2adb00a0612b663d4d4b326516ad}{Create\+Layout}} (const Vk\+Descriptor\+Set\+Layout \&set\+Layout)
+\item 
+void \mbox{\hyperlink{class_engine_1_1_vulkan_pipeline_ae3fa5a5757c0e7f32c3c7917827a1845}{Load\+Shader}} (Vk\+Shader\+Stage\+Flag\+Bits flags, Vk\+Shader\+Module \&shader)
+\item 
+void \mbox{\hyperlink{class_engine_1_1_vulkan_pipeline_a429aa41434600934108ff1e55ac5497f}{Create\+Pipeline}} ()
+\item 
+Vk\+Pipeline \mbox{\hyperlink{class_engine_1_1_vulkan_pipeline_a8161c4f5f20a35116a03213b4f96dcf9}{Get\+Pipeline}} () const
+\item 
+Vk\+Pipeline\+Layout \mbox{\hyperlink{class_engine_1_1_vulkan_pipeline_a530380f59de68f55dd4fd44d69fc8c6d}{Get\+Layout}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_engine_1_1_vulkan_pipeline_ac912044bed0d8d45006c5c4f9f7d65a4}{Load\+Shader\+Module}} (Vk\+Device \mbox{\hyperlink{class_engine_1_1_vulkan_pipeline_a770b3d78f1d37716cd5d2b69eb513acc}{device}}, const char \texorpdfstring{$\ast$}{*}file\+Path, Vk\+Shader\+Module \texorpdfstring{$\ast$}{*}shader)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vk\+Device \mbox{\hyperlink{class_engine_1_1_vulkan_pipeline_a770b3d78f1d37716cd5d2b69eb513acc}{device}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vk\+Pipeline\+Layout \mbox{\hyperlink{class_engine_1_1_vulkan_pipeline_a58e6f1d61d312fd2d4e7053455934247}{layout}}
+\item 
+Vk\+Pipeline \mbox{\hyperlink{class_engine_1_1_vulkan_pipeline_a4035e3c43cbe1896be29afa784cdedfa}{pipeline}}
+\item 
+Vk\+Pipeline\+Shader\+Stage\+Create\+Info \mbox{\hyperlink{class_engine_1_1_vulkan_pipeline_a2e728b185fc49b47bad90f170e1fb6bc}{shader\+Info}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_engine_1_1_vulkan_pipeline_a9b183709726c2e958ed08aae20396496}\index{Engine::VulkanPipeline@{Engine::VulkanPipeline}!VulkanPipeline@{VulkanPipeline}}
+\index{VulkanPipeline@{VulkanPipeline}!Engine::VulkanPipeline@{Engine::VulkanPipeline}}
+\doxysubsubsection{\texorpdfstring{VulkanPipeline()}{VulkanPipeline()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_pipeline_a9b183709726c2e958ed08aae20396496} 
+Engine\+::\+Vulkan\+Pipeline\+::\+Vulkan\+Pipeline (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{class_engine_1_1_vulkan_pipeline_a21205eb81ee5a069dcc92519ee1746eb}\index{Engine::VulkanPipeline@{Engine::VulkanPipeline}!VulkanPipeline@{VulkanPipeline}}
+\index{VulkanPipeline@{VulkanPipeline}!Engine::VulkanPipeline@{Engine::VulkanPipeline}}
+\doxysubsubsection{\texorpdfstring{VulkanPipeline()}{VulkanPipeline()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_pipeline_a21205eb81ee5a069dcc92519ee1746eb} 
+Engine\+::\+Vulkan\+Pipeline\+::\+Vulkan\+Pipeline (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine_1_1_vulkan_pipeline_ab9563b2ec210da34f405c45271c53244}\index{Engine::VulkanPipeline@{Engine::VulkanPipeline}!````~VulkanPipeline@{\texorpdfstring{$\sim$}{\string~}VulkanPipeline}}
+\index{````~VulkanPipeline@{\texorpdfstring{$\sim$}{\string~}VulkanPipeline}!Engine::VulkanPipeline@{Engine::VulkanPipeline}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}VulkanPipeline()}{\string~VulkanPipeline()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_pipeline_ab9563b2ec210da34f405c45271c53244} 
+Engine\+::\+Vulkan\+Pipeline\+::\texorpdfstring{$\sim$}{\string~}\+Vulkan\+Pipeline (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_engine_1_1_vulkan_pipeline_a83fd2adb00a0612b663d4d4b326516ad}\index{Engine::VulkanPipeline@{Engine::VulkanPipeline}!CreateLayout@{CreateLayout}}
+\index{CreateLayout@{CreateLayout}!Engine::VulkanPipeline@{Engine::VulkanPipeline}}
+\doxysubsubsection{\texorpdfstring{CreateLayout()}{CreateLayout()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_pipeline_a83fd2adb00a0612b663d4d4b326516ad} 
+void Engine\+::\+Vulkan\+Pipeline\+::\+Create\+Layout (\begin{DoxyParamCaption}\item[{const Vk\+Descriptor\+Set\+Layout \&}]{set\+Layout}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine_1_1_vulkan_pipeline_a429aa41434600934108ff1e55ac5497f}\index{Engine::VulkanPipeline@{Engine::VulkanPipeline}!CreatePipeline@{CreatePipeline}}
+\index{CreatePipeline@{CreatePipeline}!Engine::VulkanPipeline@{Engine::VulkanPipeline}}
+\doxysubsubsection{\texorpdfstring{CreatePipeline()}{CreatePipeline()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_pipeline_a429aa41434600934108ff1e55ac5497f} 
+void Engine\+::\+Vulkan\+Pipeline\+::\+Create\+Pipeline (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine_1_1_vulkan_pipeline_a530380f59de68f55dd4fd44d69fc8c6d}\index{Engine::VulkanPipeline@{Engine::VulkanPipeline}!GetLayout@{GetLayout}}
+\index{GetLayout@{GetLayout}!Engine::VulkanPipeline@{Engine::VulkanPipeline}}
+\doxysubsubsection{\texorpdfstring{GetLayout()}{GetLayout()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_pipeline_a530380f59de68f55dd4fd44d69fc8c6d} 
+Vk\+Pipeline\+Layout Engine\+::\+Vulkan\+Pipeline\+::\+Get\+Layout (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_engine_1_1_vulkan_pipeline_a8161c4f5f20a35116a03213b4f96dcf9}\index{Engine::VulkanPipeline@{Engine::VulkanPipeline}!GetPipeline@{GetPipeline}}
+\index{GetPipeline@{GetPipeline}!Engine::VulkanPipeline@{Engine::VulkanPipeline}}
+\doxysubsubsection{\texorpdfstring{GetPipeline()}{GetPipeline()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_pipeline_a8161c4f5f20a35116a03213b4f96dcf9} 
+Vk\+Pipeline Engine\+::\+Vulkan\+Pipeline\+::\+Get\+Pipeline (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_engine_1_1_vulkan_pipeline_ae3fa5a5757c0e7f32c3c7917827a1845}\index{Engine::VulkanPipeline@{Engine::VulkanPipeline}!LoadShader@{LoadShader}}
+\index{LoadShader@{LoadShader}!Engine::VulkanPipeline@{Engine::VulkanPipeline}}
+\doxysubsubsection{\texorpdfstring{LoadShader()}{LoadShader()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_pipeline_ae3fa5a5757c0e7f32c3c7917827a1845} 
+void Engine\+::\+Vulkan\+Pipeline\+::\+Load\+Shader (\begin{DoxyParamCaption}\item[{Vk\+Shader\+Stage\+Flag\+Bits}]{flags}{, }\item[{Vk\+Shader\+Module \&}]{shader}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine_1_1_vulkan_pipeline_ac912044bed0d8d45006c5c4f9f7d65a4}\index{Engine::VulkanPipeline@{Engine::VulkanPipeline}!LoadShaderModule@{LoadShaderModule}}
+\index{LoadShaderModule@{LoadShaderModule}!Engine::VulkanPipeline@{Engine::VulkanPipeline}}
+\doxysubsubsection{\texorpdfstring{LoadShaderModule()}{LoadShaderModule()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_pipeline_ac912044bed0d8d45006c5c4f9f7d65a4} 
+bool Engine\+::\+Vulkan\+Pipeline\+::\+Load\+Shader\+Module (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{file\+Path}{, }\item[{Vk\+Shader\+Module \texorpdfstring{$\ast$}{*}}]{shader}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_engine_1_1_vulkan_pipeline_a770b3d78f1d37716cd5d2b69eb513acc}\index{Engine::VulkanPipeline@{Engine::VulkanPipeline}!device@{device}}
+\index{device@{device}!Engine::VulkanPipeline@{Engine::VulkanPipeline}}
+\doxysubsubsection{\texorpdfstring{device}{device}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_pipeline_a770b3d78f1d37716cd5d2b69eb513acc} 
+Vk\+Device Engine\+::\+Vulkan\+Pipeline\+::device}
+
+\Hypertarget{class_engine_1_1_vulkan_pipeline_a58e6f1d61d312fd2d4e7053455934247}\index{Engine::VulkanPipeline@{Engine::VulkanPipeline}!layout@{layout}}
+\index{layout@{layout}!Engine::VulkanPipeline@{Engine::VulkanPipeline}}
+\doxysubsubsection{\texorpdfstring{layout}{layout}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_pipeline_a58e6f1d61d312fd2d4e7053455934247} 
+Vk\+Pipeline\+Layout Engine\+::\+Vulkan\+Pipeline\+::layout\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_vulkan_pipeline_a4035e3c43cbe1896be29afa784cdedfa}\index{Engine::VulkanPipeline@{Engine::VulkanPipeline}!pipeline@{pipeline}}
+\index{pipeline@{pipeline}!Engine::VulkanPipeline@{Engine::VulkanPipeline}}
+\doxysubsubsection{\texorpdfstring{pipeline}{pipeline}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_pipeline_a4035e3c43cbe1896be29afa784cdedfa} 
+Vk\+Pipeline Engine\+::\+Vulkan\+Pipeline\+::pipeline\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_vulkan_pipeline_a2e728b185fc49b47bad90f170e1fb6bc}\index{Engine::VulkanPipeline@{Engine::VulkanPipeline}!shaderInfo@{shaderInfo}}
+\index{shaderInfo@{shaderInfo}!Engine::VulkanPipeline@{Engine::VulkanPipeline}}
+\doxysubsubsection{\texorpdfstring{shaderInfo}{shaderInfo}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_pipeline_a2e728b185fc49b47bad90f170e1fb6bc} 
+Vk\+Pipeline\+Shader\+Stage\+Create\+Info Engine\+::\+Vulkan\+Pipeline\+::shader\+Info\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Rendering\+Engine/src/vulkan/\mbox{\hyperlink{_vulkan_pipeline_8h}{Vulkan\+Pipeline.\+h}}\item 
+Rendering\+Engine/src/vulkan/\mbox{\hyperlink{_vulkan_pipeline_8cpp}{Vulkan\+Pipeline.\+cpp}}\end{DoxyCompactItemize}

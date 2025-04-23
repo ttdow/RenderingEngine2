@@ -1,0 +1,64 @@
+\doxysection{Animation.\+h}
+\hypertarget{_animation_8h_source}{}\label{_animation_8h_source}\index{RenderingEngine/src/fluid/Animation.h@{RenderingEngine/src/fluid/Animation.h}}
+\mbox{\hyperlink{_animation_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}pch.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_engine}{Engine}}}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_engine_1_1_frame}{Frame}}}
+\DoxyCodeLine{00008\ \ \ \ \ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_engine_1_1_frame_ab50bc2a83894bd3dd53e36e265b7794e}{index}}\ =\ 0;}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_engine_1_1_frame_ab3ebbd93f6f059222b4a246e0be20c9e}{timeIntervalInSeconds}}\ =\ 1.0\ /\ 60.0;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{struct_engine_1_1_frame_ad18875617929bbc2fafa469469df5a84}{TimeInSeconds}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00013\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_engine_1_1_frame_ab50bc2a83894bd3dd53e36e265b7794e}{index}}\ *\ \mbox{\hyperlink{struct_engine_1_1_frame_ab3ebbd93f6f059222b4a246e0be20c9e}{timeIntervalInSeconds}};}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_engine_1_1_frame_ae9ef01841cfbda4e43e81669f46f3ab3}{Advance}}()}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_engine_1_1_frame_ab50bc2a83894bd3dd53e36e265b7794e}{index}}++;}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_engine_1_1_frame_acca1eed338d7a22789efae572f3dd671}{Advance}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ delta)}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_engine_1_1_frame_ab50bc2a83894bd3dd53e36e265b7794e}{index}}\ +=\ delta;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00026\ \ \ \ \ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_engine_1_1_animation}{Animation}}}
+\DoxyCodeLine{00029\ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine_1_1_animation_a5be70ccb34e49ec2be27687100277761}{Update}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_engine_1_1_frame}{Frame}}\&\ frame)}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Some\ pre-\/processing\ here.}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_animation_af0ef1cb7a44f507ada49bf574208a947}{OnUpdate}}(frame);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Some\ post-\/processing\ here.}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine_1_1_animation_af0ef1cb7a44f507ada49bf574208a947}{OnUpdate}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_engine_1_1_frame}{Frame}}\&\ frame)\ =\ 0;}
+\DoxyCodeLine{00043\ \ \ \ \ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_engine_1_1_sine_animation}{SineAnimation}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_engine_1_1_animation}{Animation}}}
+\DoxyCodeLine{00046\ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_engine_1_1_sine_animation_ad7be9316ed208c2fbcff073fbf90800a}{x}}\ =\ 0.0;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine_1_1_sine_animation_ab65f0db0216d192a5ff60b62f7bb3ee9}{OnUpdate}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_engine_1_1_frame}{Frame}}\&\ frame)\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00054\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_sine_animation_ad7be9316ed208c2fbcff073fbf90800a}{x}}\ =\ std::sin(frame.\mbox{\hyperlink{struct_engine_1_1_frame_ad18875617929bbc2fafa469469df5a84}{TimeInSeconds}}());}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \};}
+\DoxyCodeLine{00058\ \}}
+
+\end{DoxyCode}

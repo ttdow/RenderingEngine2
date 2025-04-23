@@ -1,0 +1,37 @@
+\doxysection{Camera.\+h}
+\hypertarget{_camera_8h_source}{}\label{_camera_8h_source}\index{RenderingEngine/src/Camera.h@{RenderingEngine/src/Camera.h}}
+\mbox{\hyperlink{_camera_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_vector3_8h}{Vector3.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_ray_8h}{Ray.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_hittable_8h}{Hittable.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_random_8h}{Random.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_engine}{Engine}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_engine_1_1_camera_ae8f19f950f76387fa1bfa2d72f703a2e}{Camera}}}
+\DoxyCodeLine{00011\ \ \ \ \ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_camera_ae8f19f950f76387fa1bfa2d72f703a2e}{Camera}}()\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_camera_ae8f19f950f76387fa1bfa2d72f703a2e}{Camera}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_engine_1_1_camera_a3b7a4cef8f4bdc27bbb4c8dd2223fa0a}{imageWidth}},\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_engine_1_1_camera_acf87fc348b2a9897954a714864210aeb}{aspectRatio}});}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_ray}{Ray}}\ \mbox{\hyperlink{class_engine_1_1_camera_ae664a03cb9ed8dbcd9b7268a0d614082}{GetRay}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_ray}{Ray}}\ \mbox{\hyperlink{class_engine_1_1_camera_a5d8f8e49802046f93bbad69493bca8c0}{GetJitteredRay}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_engine_1_1_camera_acf87fc348b2a9897954a714864210aeb}{aspectRatio}};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_engine_1_1_camera_a3b7a4cef8f4bdc27bbb4c8dd2223fa0a}{imageWidth}},\ \mbox{\hyperlink{class_engine_1_1_camera_a131f996c4bb37cfb259fde6a6f85fad1}{imageHeight}};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}}\ \mbox{\hyperlink{class_engine_1_1_camera_a185aad691f8ae8752f698c618ff423f5}{center}};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}}\ \mbox{\hyperlink{class_engine_1_1_camera_a6aa35747ccd314a17e4ea4efc70361e1}{pixel00Location}};}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}}\ \mbox{\hyperlink{class_engine_1_1_camera_ad0559ce4c215e5b5feb7dccb42f77fde}{pixelDelta\_u}};}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}}\ \mbox{\hyperlink{class_engine_1_1_camera_a9b9320c6b047b948d3fc7314880f4d5e}{pixelDelta\_v}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_engine_1_1_camera_a2a7ad3ae208e76c6c318babd1c474dfc}{Initialize}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \};}
+\DoxyCodeLine{00031\ \}}
+
+\end{DoxyCode}

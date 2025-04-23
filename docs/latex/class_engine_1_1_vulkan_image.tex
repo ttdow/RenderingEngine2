@@ -1,0 +1,142 @@
+\doxysection{Engine\+::Vulkan\+Image Class Reference}
+\hypertarget{class_engine_1_1_vulkan_image}{}\label{class_engine_1_1_vulkan_image}\index{Engine::VulkanImage@{Engine::VulkanImage}}
+
+
+{\ttfamily \#include $<$Vulkan\+Image.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_engine_1_1_vulkan_image_a93a28368c30deba9cc9e7ae14398ec3c}{Vulkan\+Image}} ()=delete
+\item 
+\mbox{\hyperlink{class_engine_1_1_vulkan_image_ae6e80fd472730425f2fea73a013600ce}{Vulkan\+Image}} (Vk\+Device \mbox{\hyperlink{class_engine_1_1_vulkan_image_a3debd33cd0085c90a03cdc6bcdb8e3d5}{device}}, Vma\+Allocator \mbox{\hyperlink{class_engine_1_1_vulkan_image_a561e3222a10dbaf14b58ab3fc3d87a31}{allocator}}, Vk\+Format \mbox{\hyperlink{class_engine_1_1_vulkan_image_aef65298bef6e7ee4d61879605cc517b7}{format}}, Vk\+Extent2D \mbox{\hyperlink{class_engine_1_1_vulkan_image_a39b32bbd098ce3ae01302c66807d5e60}{extent}}, Vk\+Image\+Usage\+Flags usage\+Flags, Vk\+Image\+Aspect\+Flags aspect\+Flags)
+\item 
+\mbox{\hyperlink{class_engine_1_1_vulkan_image_a331ef8e5571c9dabfaa6ebc7e8382422}{\texorpdfstring{$\sim$}{\string~}\+Vulkan\+Image}} ()
+\item 
+Vk\+Image \mbox{\hyperlink{class_engine_1_1_vulkan_image_a1a5de3f9e1809df25bdca96f2bf9eeb4}{Get\+Image}} () const
+\item 
+Vk\+Image\+View \mbox{\hyperlink{class_engine_1_1_vulkan_image_a7bb109f9cad1d35df6f310d1ad5360f2}{Get\+View}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_engine_1_1_vulkan_image_a90230561d2b0f83175d39b3745f1820f}{Copy\+Image\+To\+Image}} (Vk\+Command\+Buffer cmd, Vk\+Image src, Vk\+Image dst, Vk\+Extent2D src\+Size, Vk\+Extent2D dst\+Size)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vk\+Image \mbox{\hyperlink{class_engine_1_1_vulkan_image_a7bb9636a99086ade2077c764a4f0bc89}{image}}
+\item 
+Vk\+Image\+View \mbox{\hyperlink{class_engine_1_1_vulkan_image_a3ab1e90e68d40b55125ec19204599d83}{view}}
+\item 
+Vk\+Device \mbox{\hyperlink{class_engine_1_1_vulkan_image_a3debd33cd0085c90a03cdc6bcdb8e3d5}{device}}
+\item 
+Vma\+Allocator \mbox{\hyperlink{class_engine_1_1_vulkan_image_a561e3222a10dbaf14b58ab3fc3d87a31}{allocator}}
+\item 
+Vma\+Allocation \mbox{\hyperlink{class_engine_1_1_vulkan_image_af2f34d9c8411b28aea19c95a510019ea}{allocation}}
+\item 
+Vma\+Allocation\+Info \mbox{\hyperlink{class_engine_1_1_vulkan_image_a803bf2ff1335b703f5d0ea97cccbceee}{allocation\+Info}}
+\item 
+Vk\+Format \mbox{\hyperlink{class_engine_1_1_vulkan_image_aef65298bef6e7ee4d61879605cc517b7}{format}}
+\item 
+Vk\+Extent2D \mbox{\hyperlink{class_engine_1_1_vulkan_image_a39b32bbd098ce3ae01302c66807d5e60}{extent}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_engine_1_1_vulkan_image_a93a28368c30deba9cc9e7ae14398ec3c}\index{Engine::VulkanImage@{Engine::VulkanImage}!VulkanImage@{VulkanImage}}
+\index{VulkanImage@{VulkanImage}!Engine::VulkanImage@{Engine::VulkanImage}}
+\doxysubsubsection{\texorpdfstring{VulkanImage()}{VulkanImage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_image_a93a28368c30deba9cc9e7ae14398ec3c} 
+Engine\+::\+Vulkan\+Image\+::\+Vulkan\+Image (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\Hypertarget{class_engine_1_1_vulkan_image_ae6e80fd472730425f2fea73a013600ce}\index{Engine::VulkanImage@{Engine::VulkanImage}!VulkanImage@{VulkanImage}}
+\index{VulkanImage@{VulkanImage}!Engine::VulkanImage@{Engine::VulkanImage}}
+\doxysubsubsection{\texorpdfstring{VulkanImage()}{VulkanImage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_image_ae6e80fd472730425f2fea73a013600ce} 
+Engine\+::\+Vulkan\+Image\+::\+Vulkan\+Image (\begin{DoxyParamCaption}\item[{Vk\+Device}]{device}{, }\item[{Vma\+Allocator}]{allocator}{, }\item[{Vk\+Format}]{format}{, }\item[{Vk\+Extent2D}]{extent}{, }\item[{Vk\+Image\+Usage\+Flags}]{usage\+Flags}{, }\item[{Vk\+Image\+Aspect\+Flags}]{aspect\+Flags}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_engine_1_1_vulkan_image_a331ef8e5571c9dabfaa6ebc7e8382422}\index{Engine::VulkanImage@{Engine::VulkanImage}!````~VulkanImage@{\texorpdfstring{$\sim$}{\string~}VulkanImage}}
+\index{````~VulkanImage@{\texorpdfstring{$\sim$}{\string~}VulkanImage}!Engine::VulkanImage@{Engine::VulkanImage}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}VulkanImage()}{\string~VulkanImage()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_image_a331ef8e5571c9dabfaa6ebc7e8382422} 
+Engine\+::\+Vulkan\+Image\+::\texorpdfstring{$\sim$}{\string~}\+Vulkan\+Image (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_engine_1_1_vulkan_image_a90230561d2b0f83175d39b3745f1820f}\index{Engine::VulkanImage@{Engine::VulkanImage}!CopyImageToImage@{CopyImageToImage}}
+\index{CopyImageToImage@{CopyImageToImage}!Engine::VulkanImage@{Engine::VulkanImage}}
+\doxysubsubsection{\texorpdfstring{CopyImageToImage()}{CopyImageToImage()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_image_a90230561d2b0f83175d39b3745f1820f} 
+void Engine\+::\+Vulkan\+Image\+::\+Copy\+Image\+To\+Image (\begin{DoxyParamCaption}\item[{Vk\+Command\+Buffer}]{cmd}{, }\item[{Vk\+Image}]{src}{, }\item[{Vk\+Image}]{dst}{, }\item[{Vk\+Extent2D}]{src\+Size}{, }\item[{Vk\+Extent2D}]{dst\+Size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_engine_1_1_vulkan_image_a1a5de3f9e1809df25bdca96f2bf9eeb4}\index{Engine::VulkanImage@{Engine::VulkanImage}!GetImage@{GetImage}}
+\index{GetImage@{GetImage}!Engine::VulkanImage@{Engine::VulkanImage}}
+\doxysubsubsection{\texorpdfstring{GetImage()}{GetImage()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_image_a1a5de3f9e1809df25bdca96f2bf9eeb4} 
+Vk\+Image Engine\+::\+Vulkan\+Image\+::\+Get\+Image (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_engine_1_1_vulkan_image_a7bb109f9cad1d35df6f310d1ad5360f2}\index{Engine::VulkanImage@{Engine::VulkanImage}!GetView@{GetView}}
+\index{GetView@{GetView}!Engine::VulkanImage@{Engine::VulkanImage}}
+\doxysubsubsection{\texorpdfstring{GetView()}{GetView()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_image_a7bb109f9cad1d35df6f310d1ad5360f2} 
+Vk\+Image\+View Engine\+::\+Vulkan\+Image\+::\+Get\+View (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_engine_1_1_vulkan_image_af2f34d9c8411b28aea19c95a510019ea}\index{Engine::VulkanImage@{Engine::VulkanImage}!allocation@{allocation}}
+\index{allocation@{allocation}!Engine::VulkanImage@{Engine::VulkanImage}}
+\doxysubsubsection{\texorpdfstring{allocation}{allocation}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_image_af2f34d9c8411b28aea19c95a510019ea} 
+Vma\+Allocation Engine\+::\+Vulkan\+Image\+::allocation\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_vulkan_image_a803bf2ff1335b703f5d0ea97cccbceee}\index{Engine::VulkanImage@{Engine::VulkanImage}!allocationInfo@{allocationInfo}}
+\index{allocationInfo@{allocationInfo}!Engine::VulkanImage@{Engine::VulkanImage}}
+\doxysubsubsection{\texorpdfstring{allocationInfo}{allocationInfo}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_image_a803bf2ff1335b703f5d0ea97cccbceee} 
+Vma\+Allocation\+Info Engine\+::\+Vulkan\+Image\+::allocation\+Info\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_vulkan_image_a561e3222a10dbaf14b58ab3fc3d87a31}\index{Engine::VulkanImage@{Engine::VulkanImage}!allocator@{allocator}}
+\index{allocator@{allocator}!Engine::VulkanImage@{Engine::VulkanImage}}
+\doxysubsubsection{\texorpdfstring{allocator}{allocator}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_image_a561e3222a10dbaf14b58ab3fc3d87a31} 
+Vma\+Allocator Engine\+::\+Vulkan\+Image\+::allocator\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_vulkan_image_a3debd33cd0085c90a03cdc6bcdb8e3d5}\index{Engine::VulkanImage@{Engine::VulkanImage}!device@{device}}
+\index{device@{device}!Engine::VulkanImage@{Engine::VulkanImage}}
+\doxysubsubsection{\texorpdfstring{device}{device}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_image_a3debd33cd0085c90a03cdc6bcdb8e3d5} 
+Vk\+Device Engine\+::\+Vulkan\+Image\+::device\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_vulkan_image_a39b32bbd098ce3ae01302c66807d5e60}\index{Engine::VulkanImage@{Engine::VulkanImage}!extent@{extent}}
+\index{extent@{extent}!Engine::VulkanImage@{Engine::VulkanImage}}
+\doxysubsubsection{\texorpdfstring{extent}{extent}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_image_a39b32bbd098ce3ae01302c66807d5e60} 
+Vk\+Extent2D Engine\+::\+Vulkan\+Image\+::extent\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_vulkan_image_aef65298bef6e7ee4d61879605cc517b7}\index{Engine::VulkanImage@{Engine::VulkanImage}!format@{format}}
+\index{format@{format}!Engine::VulkanImage@{Engine::VulkanImage}}
+\doxysubsubsection{\texorpdfstring{format}{format}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_image_aef65298bef6e7ee4d61879605cc517b7} 
+Vk\+Format Engine\+::\+Vulkan\+Image\+::format\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_vulkan_image_a7bb9636a99086ade2077c764a4f0bc89}\index{Engine::VulkanImage@{Engine::VulkanImage}!image@{image}}
+\index{image@{image}!Engine::VulkanImage@{Engine::VulkanImage}}
+\doxysubsubsection{\texorpdfstring{image}{image}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_image_a7bb9636a99086ade2077c764a4f0bc89} 
+Vk\+Image Engine\+::\+Vulkan\+Image\+::image\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_engine_1_1_vulkan_image_a3ab1e90e68d40b55125ec19204599d83}\index{Engine::VulkanImage@{Engine::VulkanImage}!view@{view}}
+\index{view@{view}!Engine::VulkanImage@{Engine::VulkanImage}}
+\doxysubsubsection{\texorpdfstring{view}{view}}
+{\footnotesize\ttfamily \label{class_engine_1_1_vulkan_image_a3ab1e90e68d40b55125ec19204599d83} 
+Vk\+Image\+View Engine\+::\+Vulkan\+Image\+::view\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Rendering\+Engine/src/vulkan/\mbox{\hyperlink{_vulkan_image_8h}{Vulkan\+Image.\+h}}\item 
+Rendering\+Engine/src/vulkan/\mbox{\hyperlink{_vulkan_image_8cpp}{Vulkan\+Image.\+cpp}}\end{DoxyCompactItemize}

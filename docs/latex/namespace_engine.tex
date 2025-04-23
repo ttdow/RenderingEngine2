@@ -1,0 +1,399 @@
+\doxysection{Engine Namespace Reference}
+\hypertarget{namespace_engine}{}\label{namespace_engine}\index{Engine@{Engine}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_animation}{Animation}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_asset_loader}{Asset\+Loader}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_camera}{Camera}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_d_q_n_agent}{DQNAgent}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_d_x12_backend}{DX12\+Backend}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_entity}{Entity}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_environment}{Environment}}
+\item 
+struct \mbox{\hyperlink{struct_engine_1_1_experience}{Experience}}
+\item 
+struct \mbox{\hyperlink{struct_engine_1_1_frame}{Frame}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_hit_record}{Hit\+Record}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_hittable}{Hittable}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_hittable_list}{Hittable\+List}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_interval}{Interval}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_lambertian}{Lambertian}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_loss_function}{Loss\+Function}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_material}{Material}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_m_s_e_loss}{MSELoss}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_neural_network}{Neural\+Network}}
+\begin{DoxyCompactList}\small\item\em A simple feedforward neural network with backpropagation training. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_engine_1_1_particle_system_data3}{Particle\+System\+Data3}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_particle_system_solver3}{Particle\+System\+Solver3}}
+\item 
+struct \mbox{\hyperlink{struct_engine_1_1_queue_family_indices}{Queue\+Family\+Indices}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_random}{Random}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_ray}{Ray}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_recurrent_neural_network}{Recurrent\+Neural\+Network}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_rendering_engine}{Rendering\+Engine}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_replay_buffer}{Replay\+Buffer}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_scene}{Scene}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_scene_node}{Scene\+Node}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_simple_neural_network}{Simple\+Neural\+Network}}
+\begin{DoxyCompactList}\small\item\em Simple feed-\/forward neural network class. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_engine_1_1_sine_animation}{Sine\+Animation}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_sphere}{Sphere}}
+\item 
+struct \mbox{\hyperlink{struct_engine_1_1_swapchain_support_details}{Swapchain\+Support\+Details}}
+\item 
+struct \mbox{\hyperlink{struct_engine_1_1_training_example}{Training\+Example}}
+\begin{DoxyCompactList}\small\item\em Represents a single training example for a neural network. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_engine_1_1_transform}{Transform}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_vector2}{Vector2}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_vector2___s_i_m_d}{Vector2\+\_\+\+SIMD}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}}
+\begin{DoxyCompactList}\small\item\em A simple 3D vector class for representing and manipulating 3D vectors. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_engine_1_1_vulkan_backend}{Vulkan\+Backend}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_vulkan_descriptor}{Vulkan\+Descriptor}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_vulkan_image}{Vulkan\+Image}}
+\item 
+class \mbox{\hyperlink{class_engine_1_1_vulkan_pipeline}{Vulkan\+Pipeline}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_engine_a9b8ef0d90a91152ce524f073abcd2064}{Rendering\+Backend}} \{ \mbox{\hyperlink{namespace_engine_a9b8ef0d90a91152ce524f073abcd2064a96a66dd9002e2881465496643be4f0ac}{VULKAN}} = 0
+, \mbox{\hyperlink{namespace_engine_a9b8ef0d90a91152ce524f073abcd2064a9517d49f12986c2edac9cfd8c902a920}{DX12}} = 1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespace_engine_aeaa83dce9801dae38d86941c30684357}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_engine_1_1_vector2}{Vector2}} \&v)
+\item 
+std\+::ostream \& \mbox{\hyperlink{namespace_engine_a4504d05474cdde7466407a1d57c6f2e2}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&v)
+\begin{DoxyCompactList}\small\item\em Streams a vector to an output stream. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \mbox{\hyperlink{namespace_engine_a3daa1f8b36522824ef725df90568abbe}{operator+}} (const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&u, const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&v)
+\begin{DoxyCompactList}\small\item\em Adds two vectors. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \mbox{\hyperlink{namespace_engine_ac0866c3094a9a4ff2f5a452de444b9cc}{operator+}} (double t, const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&v)
+\begin{DoxyCompactList}\small\item\em Adds a scalar to all components of the vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \mbox{\hyperlink{namespace_engine_a303c49a68674fe3f42185e0096f8431e}{operator+}} (const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&v, double t)
+\begin{DoxyCompactList}\small\item\em Adds a scalar to all components of the vector.    \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \mbox{\hyperlink{namespace_engine_aebae6813cc21ae0d98f4af18af78ced6}{operator-\/}} (const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&u, const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&v)
+\begin{DoxyCompactList}\small\item\em Subtracts one vector from another. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \mbox{\hyperlink{namespace_engine_aaab68de60d9bf02f1185a6018e5560c4}{operator-\/}} (const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&v, double t)
+\begin{DoxyCompactList}\small\item\em Subtracts a scalar from all components of the vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \mbox{\hyperlink{namespace_engine_a7e33c4c875e1b55ba44859a5c2daa596}{operator\texorpdfstring{$\ast$}{*}}} (const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&u, const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&v)
+\begin{DoxyCompactList}\small\item\em Component-\/wise multiplication of two vectors. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \mbox{\hyperlink{namespace_engine_ae871add2dd441b500deea583588fdfc4}{operator\texorpdfstring{$\ast$}{*}}} (double t, const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&v)
+\begin{DoxyCompactList}\small\item\em Multiplies all components of a vector by a scalar. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \mbox{\hyperlink{namespace_engine_a8f00b555b97b84c8696ae67a3021e74b}{operator\texorpdfstring{$\ast$}{*}}} (const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&v, double t)
+\begin{DoxyCompactList}\small\item\em Multiplies all components of a vector by a scalar.    \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \mbox{\hyperlink{namespace_engine_ac577b92f20107fbd10057d33206f7b88}{operator/}} (const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&v, double t)
+\begin{DoxyCompactList}\small\item\em Divides all components of a vector by a scalar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr DXGI\+\_\+\+SAMPLE\+\_\+\+DESC \mbox{\hyperlink{namespace_engine_ab50c72835ebb51580c034b2c6de596d6}{NO\+\_\+\+AA}} = \{ .Count = 1, .Quality = 0 \}
+\item 
+constexpr D3\+D12\+\_\+\+RESOURCE\+\_\+\+DESC \mbox{\hyperlink{namespace_engine_a2116e5accde8fc4f28d0f9a8314b62ee}{BASIC\+\_\+\+BUFFER\+\_\+\+DESC}}
+\item 
+constexpr D3\+D12\+\_\+\+HEAP\+\_\+\+PROPERTIES \mbox{\hyperlink{namespace_engine_accf7360ad68f4fe1c9e2a0e6dc92d9ec}{UPLOAD\+\_\+\+HEAP}} = \{ .Type = D3\+D12\+\_\+\+HEAP\+\_\+\+TYPE\+\_\+\+UPLOAD \}
+\item 
+constexpr D3\+D12\+\_\+\+HEAP\+\_\+\+PROPERTIES \mbox{\hyperlink{namespace_engine_a2564e65b09f1e2b7135f3543570e3770}{DEFAULT\+\_\+\+HEAP}} = \{ .Type = D3\+D12\+\_\+\+HEAP\+\_\+\+TYPE\+\_\+\+DEFAULT \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespace_engine_a9b8ef0d90a91152ce524f073abcd2064}\index{Engine@{Engine}!RenderingBackend@{RenderingBackend}}
+\index{RenderingBackend@{RenderingBackend}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{RenderingBackend}{RenderingBackend}}
+{\footnotesize\ttfamily \label{namespace_engine_a9b8ef0d90a91152ce524f073abcd2064} 
+enum \mbox{\hyperlink{namespace_engine_a9b8ef0d90a91152ce524f073abcd2064}{Engine\+::\+Rendering\+Backend}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VULKAN@{VULKAN}!Engine@{Engine}}\index{Engine@{Engine}!VULKAN@{VULKAN}}}\Hypertarget{namespace_engine_a9b8ef0d90a91152ce524f073abcd2064a96a66dd9002e2881465496643be4f0ac}\label{namespace_engine_a9b8ef0d90a91152ce524f073abcd2064a96a66dd9002e2881465496643be4f0ac} 
+VULKAN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DX12@{DX12}!Engine@{Engine}}\index{Engine@{Engine}!DX12@{DX12}}}\Hypertarget{namespace_engine_a9b8ef0d90a91152ce524f073abcd2064a9517d49f12986c2edac9cfd8c902a920}\label{namespace_engine_a9b8ef0d90a91152ce524f073abcd2064a9517d49f12986c2edac9cfd8c902a920} 
+DX12&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_engine_a7e33c4c875e1b55ba44859a5c2daa596}\index{Engine@{Engine}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{namespace_engine_a7e33c4c875e1b55ba44859a5c2daa596} 
+\mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} Engine\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&}]{u}{, }\item[{const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Component-\/wise multiplication of two vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & First vector. \\
+\hline
+{\em v} & Second vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resulting vector. 
+\end{DoxyReturn}
+\Hypertarget{namespace_engine_a8f00b555b97b84c8696ae67a3021e74b}\index{Engine@{Engine}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{namespace_engine_a8f00b555b97b84c8696ae67a3021e74b} 
+\mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} Engine\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&}]{v}{, }\item[{double}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Multiplies all components of a vector by a scalar.    
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Scalar multiplier. \\
+\hline
+{\em v} & Vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resulting vector.    
+\end{DoxyReturn}
+\Hypertarget{namespace_engine_ae871add2dd441b500deea583588fdfc4}\index{Engine@{Engine}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{namespace_engine_ae871add2dd441b500deea583588fdfc4} 
+\mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} Engine\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{double}]{t}{, }\item[{const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Multiplies all components of a vector by a scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Scalar multiplier. \\
+\hline
+{\em v} & Vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resulting vector. 
+\end{DoxyReturn}
+\Hypertarget{namespace_engine_a3daa1f8b36522824ef725df90568abbe}\index{Engine@{Engine}!operator+@{operator+}}
+\index{operator+@{operator+}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{namespace_engine_a3daa1f8b36522824ef725df90568abbe} 
+\mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} Engine\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&}]{u}{, }\item[{const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds two vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & First vector. \\
+\hline
+{\em v} & Second vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resulting vector. 
+\end{DoxyReturn}
+\Hypertarget{namespace_engine_a303c49a68674fe3f42185e0096f8431e}\index{Engine@{Engine}!operator+@{operator+}}
+\index{operator+@{operator+}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{namespace_engine_a303c49a68674fe3f42185e0096f8431e} 
+\mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} Engine\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&}]{v}{, }\item[{double}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a scalar to all components of the vector.    
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Scalar to add. \\
+\hline
+{\em v} & Vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resulting vector.    
+\end{DoxyReturn}
+\Hypertarget{namespace_engine_ac0866c3094a9a4ff2f5a452de444b9cc}\index{Engine@{Engine}!operator+@{operator+}}
+\index{operator+@{operator+}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{namespace_engine_ac0866c3094a9a4ff2f5a452de444b9cc} 
+\mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} Engine\+::operator+ (\begin{DoxyParamCaption}\item[{double}]{t}{, }\item[{const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a scalar to all components of the vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Scalar to add. \\
+\hline
+{\em v} & Vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resulting vector. 
+\end{DoxyReturn}
+\Hypertarget{namespace_engine_aebae6813cc21ae0d98f4af18af78ced6}\index{Engine@{Engine}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{namespace_engine_aebae6813cc21ae0d98f4af18af78ced6} 
+\mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} Engine\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&}]{u}{, }\item[{const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Subtracts one vector from another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & First vector. \\
+\hline
+{\em v} & Vector to subtract. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resulting vector. 
+\end{DoxyReturn}
+\Hypertarget{namespace_engine_aaab68de60d9bf02f1185a6018e5560c4}\index{Engine@{Engine}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{namespace_engine_aaab68de60d9bf02f1185a6018e5560c4} 
+\mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} Engine\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&}]{v}{, }\item[{double}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Subtracts a scalar from all components of the vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Vector. \\
+\hline
+{\em t} & Scalar to subtract. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resulting vector. 
+\end{DoxyReturn}
+\Hypertarget{namespace_engine_ac577b92f20107fbd10057d33206f7b88}\index{Engine@{Engine}!operator/@{operator/}}
+\index{operator/@{operator/}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily \label{namespace_engine_ac577b92f20107fbd10057d33206f7b88} 
+\mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} Engine\+::operator/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&}]{v}{, }\item[{double}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Divides all components of a vector by a scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Vector. \\
+\hline
+{\em t} & Scalar divisor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resulting vector. 
+\end{DoxyReturn}
+\Hypertarget{namespace_engine_aeaa83dce9801dae38d86941c30684357}\index{Engine@{Engine}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{namespace_engine_aeaa83dce9801dae38d86941c30684357} 
+std\+::ostream \& Engine\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os}{, }\item[{const \mbox{\hyperlink{class_engine_1_1_vector2}{Vector2}} \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{namespace_engine_a4504d05474cdde7466407a1d57c6f2e2}\index{Engine@{Engine}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{namespace_engine_a4504d05474cdde7466407a1d57c6f2e2} 
+std\+::ostream \& Engine\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out}{, }\item[{const \mbox{\hyperlink{class_engine_1_1_vector3}{Vector3}} \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Streams a vector to an output stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & The output stream. \\
+\hline
+{\em v} & The vector to print. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the output stream. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespace_engine_a2116e5accde8fc4f28d0f9a8314b62ee}\index{Engine@{Engine}!BASIC\_BUFFER\_DESC@{BASIC\_BUFFER\_DESC}}
+\index{BASIC\_BUFFER\_DESC@{BASIC\_BUFFER\_DESC}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{BASIC\_BUFFER\_DESC}{BASIC\_BUFFER\_DESC}}
+{\footnotesize\ttfamily \label{namespace_engine_a2116e5accde8fc4f28d0f9a8314b62ee} 
+D3\+D12\+\_\+\+RESOURCE\+\_\+\+DESC Engine\+::\+BASIC\+\_\+\+BUFFER\+\_\+\+DESC\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .Dimension\ =\ D3D12\_RESOURCE\_DIMENSION\_BUFFER,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .Width\ =\ 0,\ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .Height\ =\ 1,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .DepthOrArraySize\ =\ 1,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .MipLevels\ =\ 1,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .SampleDesc\ =\ \mbox{\hyperlink{namespace_engine_ab50c72835ebb51580c034b2c6de596d6}{NO\_AA}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ .Layout\ =\ D3D12\_TEXTURE\_LAYOUT\_ROW\_MAJOR}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{namespace_engine_a2564e65b09f1e2b7135f3543570e3770}\index{Engine@{Engine}!DEFAULT\_HEAP@{DEFAULT\_HEAP}}
+\index{DEFAULT\_HEAP@{DEFAULT\_HEAP}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_HEAP}{DEFAULT\_HEAP}}
+{\footnotesize\ttfamily \label{namespace_engine_a2564e65b09f1e2b7135f3543570e3770} 
+D3\+D12\+\_\+\+HEAP\+\_\+\+PROPERTIES Engine\+::\+DEFAULT\+\_\+\+HEAP = \{ .Type = D3\+D12\+\_\+\+HEAP\+\_\+\+TYPE\+\_\+\+DEFAULT \}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\Hypertarget{namespace_engine_ab50c72835ebb51580c034b2c6de596d6}\index{Engine@{Engine}!NO\_AA@{NO\_AA}}
+\index{NO\_AA@{NO\_AA}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{NO\_AA}{NO\_AA}}
+{\footnotesize\ttfamily \label{namespace_engine_ab50c72835ebb51580c034b2c6de596d6} 
+DXGI\+\_\+\+SAMPLE\+\_\+\+DESC Engine\+::\+NO\+\_\+\+AA = \{ .Count = 1, .Quality = 0 \}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\Hypertarget{namespace_engine_accf7360ad68f4fe1c9e2a0e6dc92d9ec}\index{Engine@{Engine}!UPLOAD\_HEAP@{UPLOAD\_HEAP}}
+\index{UPLOAD\_HEAP@{UPLOAD\_HEAP}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{UPLOAD\_HEAP}{UPLOAD\_HEAP}}
+{\footnotesize\ttfamily \label{namespace_engine_accf7360ad68f4fe1c9e2a0e6dc92d9ec} 
+D3\+D12\+\_\+\+HEAP\+\_\+\+PROPERTIES Engine\+::\+UPLOAD\+\_\+\+HEAP = \{ .Type = D3\+D12\+\_\+\+HEAP\+\_\+\+TYPE\+\_\+\+UPLOAD \}\hspace{0.3cm}{\ttfamily [constexpr]}}
+
