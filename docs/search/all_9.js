@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['neuralnetwork_0',['NeuralNetwork',['../class_engine_1_1_neural_network.html',1,'Engine::NeuralNetwork'],['../class_engine_1_1_neural_network.html#aefdff6ebe5dda97783d38b14a83cbce6',1,'Engine::NeuralNetwork::NeuralNetwork()']]],
-  ['normalize_1',['Normalize',['../class_engine_1_1_vector3.html#a45f162488e139e3d25e5728e6309fa21',1,'Engine::Vector3::Normalize()'],['../class_engine_1_1_vector3.html#a23529414efb3188955b16a130faf704a',1,'Engine::Vector3::Normalize(const Vector3 &amp;v)']]]
+  ['kbuffersize_0',['kBufferSize',['../class_engine_1_1_vulkan_backend.html#aec385f8905b02c5a92f178b629565446',1,'Engine::VulkanBackend']]],
+  ['kgrayscaletable_1',['kGrayScaleTable',['../class_engine_1_1_vulkan_backend.html#a122bb524b7efcbfd890a02432d308193',1,'Engine::VulkanBackend']]],
+  ['kgrayscaletablesize_2',['kGrayScaleTableSize',['../class_engine_1_1_vulkan_backend.html#a7727cf09eb7235866873f0a0aaad6666',1,'Engine::VulkanBackend']]]
 ];

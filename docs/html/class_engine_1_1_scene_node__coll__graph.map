@@ -1,6 +1,0 @@
-<map id="Engine::SceneNode" name="Engine::SceneNode">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,96,143,123"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="159,101,169,109,161,117,144,120,143,115,159,112,164,109,156,105"/>
-<area shape="rect" id="Node000002" href="$class_engine_1_1_transform.html" title=" " alt="" coords="10,5,138,32"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="77,48,77,95,71,95,71,48"/>
-</map>

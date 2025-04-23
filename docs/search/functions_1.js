@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['dot_0',['Dot',['../class_engine_1_1_vector3.html#abfd79a6317dfeeaa44d11ed3ed97017f',1,'Engine::Vector3']]],
-  ['draw_1',['Draw',['../class_engine_1_1_d_x12_backend.html#a3cd4ba6993c9dc72a68aba4572271a0b',1,'Engine::DX12Backend']]]
+  ['backward_0',['Backward',['../class_engine_1_1_recurrent_neural_network.html#acda1bbd7b022dfe8cac1a73077e06500',1,'Engine::RecurrentNeuralNetwork']]],
+  ['build_1',['Build',['../class_engine_1_1_vulkan_descriptor.html#a13687ad88ff59bd1f4d446abb0081c46',1,'Engine::VulkanDescriptor']]]
 ];

@@ -1,12 +1,21 @@
 var searchData=
 [
-  ['operator_2a_3d_0',['operator*=',['../class_engine_1_1_vector3.html#aa74046c97ae7cad4013e7740af1ae754',1,'Engine::Vector3']]],
-  ['operator_2b_1',['operator+',['../class_engine_1_1_vector3.html#ace4d4811d7d92aeaa28ff8d3b536f690',1,'Engine::Vector3']]],
-  ['operator_2b_3d_2',['operator+=',['../class_engine_1_1_vector3.html#abdb113656a1ef667a2b5357b89161b9f',1,'Engine::Vector3']]],
-  ['operator_2d_3',['operator-',['../class_engine_1_1_vector3.html#ad959e2b7bb38895ceafde456da9b0d28',1,'Engine::Vector3']]],
-  ['operator_2f_3d_4',['operator/=',['../class_engine_1_1_vector3.html#aadc2c3188574942743d60e963987a7a8',1,'Engine::Vector3']]],
-  ['operator_3d_5',['operator=',['../class_engine_1_1_vector3.html#a02332e18d9884fbfa4a3b4b570768c3d',1,'Engine::Vector3::operator=(const Vector3 &amp;other)'],['../class_engine_1_1_vector3.html#ac43f46c7e8e82f5dba278dd494fc2a07',1,'Engine::Vector3::operator=(Vector3 &amp;&amp;other) noexcept']]],
-  ['operator_3d_3d_6',['operator==',['../class_engine_1_1_vector3.html#a4de30c8f53025b3b30810fa7786d01af',1,'Engine::Vector3']]],
-  ['operator_5b_5d_7',['operator[]',['../class_engine_1_1_vector3.html#a78e2673b8f63d789bb4336d0be9869e1',1,'Engine::Vector3::operator[](int i) const'],['../class_engine_1_1_vector3.html#a3c3808d1767c8be8e81a9c25a0ec508e',1,'Engine::Vector3::operator[](int i)']]],
-  ['output_5fbias_8',['output_bias',['../class_engine_1_1_simple_neural_network.html#a0154400a5bcff35a1ba4a70e09f3f5e8',1,'Engine::SimpleNeuralNetwork']]]
+  ['lambertian_0',['Lambertian',['../class_engine_1_1_lambertian.html',1,'Engine::Lambertian'],['../class_engine_1_1_lambertian.html#a460c78b91d6458c4ee03546c2bd40fcb',1,'Engine::Lambertian::Lambertian()']]],
+  ['lambertian_2eh_1',['Lambertian.h',['../_lambertian_8h.html',1,'']]],
+  ['layers_2',['layers',['../class_engine_1_1_neural_network.html#a00971d0d9f2003da19e8e387f811ac98',1,'Engine::NeuralNetwork']]],
+  ['layout_3',['layout',['../class_engine_1_1_vulkan_descriptor.html#a7ab9193a5b7c78b87aded9e97bd0e35a',1,'Engine::VulkanDescriptor::layout'],['../class_engine_1_1_vulkan_pipeline.html#a58e6f1d61d312fd2d4e7053455934247',1,'Engine::VulkanPipeline::layout']]],
+  ['length_4',['Length',['../class_engine_1_1_vector3.html#a216209c113496d9565ec960c9ac1a321',1,'Engine::Vector3']]],
+  ['length2_5',['Length2',['../class_engine_1_1_vector3.html#a445942ea6c01a6f000da980df86aee0b',1,'Engine::Vector3']]],
+  ['lerp_6',['Lerp',['../class_engine_1_1_vector3.html#a38131f85b101ba0328e4b7909d45320c',1,'Engine::Vector3']]],
+  ['linear_7',['Linear',['../class_engine_1_1_neural_network.html#a053ead25ba2837bffe55b34cbd4b2cbf',1,'Engine::NeuralNetwork']]],
+  ['linearderivative_8',['LinearDerivative',['../class_engine_1_1_neural_network.html#aa15f90a96c70fc5540f7e0e13d972046',1,'Engine::NeuralNetwork']]],
+  ['loadextensions_9',['LoadExtensions',['../class_engine_1_1_asset_loader.html#a6b1c3c899b7e784c326e45dbd58b8288',1,'Engine::AssetLoader']]],
+  ['loadgltf_10',['LoadGLTF',['../class_engine_1_1_asset_loader.html#aed77a6ffe69605a3f2042e6d766a615c',1,'Engine::AssetLoader']]],
+  ['loadnodes_11',['LoadNodes',['../class_engine_1_1_asset_loader.html#a34f00bc736689af137d846e8030d8cda',1,'Engine::AssetLoader']]],
+  ['loadscenes_12',['LoadScenes',['../class_engine_1_1_asset_loader.html#a785ffd7e4230c9cc8f474e169d6bd14c',1,'Engine::AssetLoader']]],
+  ['loadshader_13',['LoadShader',['../class_engine_1_1_vulkan_pipeline.html#ae3fa5a5757c0e7f32c3c7917827a1845',1,'Engine::VulkanPipeline']]],
+  ['loadshadermodule_14',['LoadShaderModule',['../class_engine_1_1_vulkan_pipeline.html#ac912044bed0d8d45006c5c4f9f7d65a4',1,'Engine::VulkanPipeline']]],
+  ['lossfunction_15',['LossFunction',['../class_engine_1_1_loss_function.html',1,'Engine']]],
+  ['lossfunction_16',['lossFunction',['../class_engine_1_1_neural_network.html#a635d092e2eb8b1c0ec6351d18019e16f',1,'Engine::NeuralNetwork']]],
+  ['lossfunction_2eh_17',['LossFunction.h',['../_loss_function_8h.html',1,'']]]
 ];

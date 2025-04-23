@@ -106,66 +106,1295 @@ $(function(){initNavTree('class_engine_1_1_vulkan_backend.html',''); initResizab
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_engine_1_1_vulkan_backend-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Engine::VulkanBackend Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_vulkan_backend_8h_source.html">VulkanBackend.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Engine::VulkanBackend:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_engine_1_1_vulkan_backend__coll__graph.png" border="0" usemap="#a_engine_1_1_vulkan_backend_coll__map" alt="Collaboration graph"/></div>
+<map name="a_engine_1_1_vulkan_backend_coll__map" id="a_engine_1_1_vulkan_backend_coll__map">
+<area shape="rect" title=" " alt="" coords="124,112,283,139"/>
+<area shape="rect" href="struct_engine_1_1_queue_family_indices.html" title=" " alt="" coords="5,13,194,40"/>
+<area shape="poly" title=" " alt="" coords="123,49,160,86,188,109,185,114,156,90,119,53"/>
+<area shape="rect" href="struct_engine_1_1_swapchain_support_details.html" title=" " alt="" coords="218,5,397,48"/>
+<area shape="poly" title=" " alt="" coords="298,64,280,90,262,104,243,114,240,109,259,99,276,86,293,61"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5b89991209882bddf47ff64ffc7a79f6" id="r_a5b89991209882bddf47ff64ffc7a79f6"><td class="memItemLeft" align="right" valign="top"><a id="a5b89991209882bddf47ff64ffc7a79f6" name="a5b89991209882bddf47ff64ffc7a79f6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>TrainDQN</b> ()</td></tr>
+<tr class="memitem:a5b89991209882bddf47ff64ffc7a79f6" id="r_a5b89991209882bddf47ff64ffc7a79f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b89991209882bddf47ff64ffc7a79f6">TrainDQN</a> ()</td></tr>
 <tr class="separator:a5b89991209882bddf47ff64ffc7a79f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a585e817aa434418973b4244df590b363" id="r_a585e817aa434418973b4244df590b363"><td class="memItemLeft" align="right" valign="top"><a id="a585e817aa434418973b4244df590b363" name="a585e817aa434418973b4244df590b363"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AccumulateWaveToHeightField</b> (const double x, const double waveLength, const double maxHeight, std::array&lt; double, kBufferSize &gt; &amp;heightField)</td></tr>
+<tr class="memitem:a585e817aa434418973b4244df590b363" id="r_a585e817aa434418973b4244df590b363"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a585e817aa434418973b4244df590b363">AccumulateWaveToHeightField</a> (const double x, const double waveLength, const double maxHeight, std::array&lt; double, <a class="el" href="#aec385f8905b02c5a92f178b629565446">kBufferSize</a> &gt; &amp;heightField)</td></tr>
 <tr class="separator:a585e817aa434418973b4244df590b363"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30d85fafba1b50e984ee830551c7cd2a" id="r_a30d85fafba1b50e984ee830551c7cd2a"><td class="memItemLeft" align="right" valign="top"><a id="a30d85fafba1b50e984ee830551c7cd2a" name="a30d85fafba1b50e984ee830551c7cd2a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateWave</b> (const double timeInterval, double &amp;x, double &amp;speed)</td></tr>
+<tr class="memitem:a30d85fafba1b50e984ee830551c7cd2a" id="r_a30d85fafba1b50e984ee830551c7cd2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30d85fafba1b50e984ee830551c7cd2a">UpdateWave</a> (const double timeInterval, double &amp;x, double &amp;speed)</td></tr>
 <tr class="separator:a30d85fafba1b50e984ee830551c7cd2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a569235b09f7ed47c46ab4969dc3eaf18" id="r_a569235b09f7ed47c46ab4969dc3eaf18"><td class="memItemLeft" align="right" valign="top"><a id="a569235b09f7ed47c46ab4969dc3eaf18" name="a569235b09f7ed47c46ab4969dc3eaf18"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawFluid</b> (const std::array&lt; double, kBufferSize &gt; &amp;heightField) const</td></tr>
+<tr class="memitem:a569235b09f7ed47c46ab4969dc3eaf18" id="r_a569235b09f7ed47c46ab4969dc3eaf18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a569235b09f7ed47c46ab4969dc3eaf18">DrawFluid</a> (const std::array&lt; double, <a class="el" href="#aec385f8905b02c5a92f178b629565446">kBufferSize</a> &gt; &amp;heightField) const</td></tr>
 <tr class="separator:a569235b09f7ed47c46ab4969dc3eaf18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c6ee0b6cb5ad7518d3a2d9ef73d26fb" id="r_a1c6ee0b6cb5ad7518d3a2d9ef73d26fb"><td class="memItemLeft" align="right" valign="top"><a id="a1c6ee0b6cb5ad7518d3a2d9ef73d26fb" name="a1c6ee0b6cb5ad7518d3a2d9ef73d26fb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Fluid</b> ()</td></tr>
+<tr class="memitem:a1c6ee0b6cb5ad7518d3a2d9ef73d26fb" id="r_a1c6ee0b6cb5ad7518d3a2d9ef73d26fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c6ee0b6cb5ad7518d3a2d9ef73d26fb">Fluid</a> ()</td></tr>
 <tr class="separator:a1c6ee0b6cb5ad7518d3a2d9ef73d26fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89484039ab4c3eb615da86d9f7309ae3" id="r_a89484039ab4c3eb615da86d9f7309ae3"><td class="memItemLeft" align="right" valign="top"><a id="a89484039ab4c3eb615da86d9f7309ae3" name="a89484039ab4c3eb615da86d9f7309ae3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Draw</b> ()</td></tr>
+<tr class="memitem:a89484039ab4c3eb615da86d9f7309ae3" id="r_a89484039ab4c3eb615da86d9f7309ae3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89484039ab4c3eb615da86d9f7309ae3">Draw</a> ()</td></tr>
 <tr class="separator:a89484039ab4c3eb615da86d9f7309ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a774f3e65110529757602cc9553f25342" id="r_a774f3e65110529757602cc9553f25342"><td class="memItemLeft" align="right" valign="top"><a id="a774f3e65110529757602cc9553f25342" name="a774f3e65110529757602cc9553f25342"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>VulkanBackend</b> (HINSTANCE hInstance, HWND hwnd)</td></tr>
+<tr class="memitem:a6e765d4b3762f88d96a5ea8b3c8f9dfb" id="r_a6e765d4b3762f88d96a5ea8b3c8f9dfb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e765d4b3762f88d96a5ea8b3c8f9dfb">VulkanBackend</a> ()=delete</td></tr>
+<tr class="separator:a6e765d4b3762f88d96a5ea8b3c8f9dfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a774f3e65110529757602cc9553f25342" id="r_a774f3e65110529757602cc9553f25342"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a774f3e65110529757602cc9553f25342">VulkanBackend</a> (HINSTANCE hInstance, HWND hwnd)</td></tr>
 <tr class="separator:a774f3e65110529757602cc9553f25342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afffd3ec28366f11bcde6f892b7b43e2d" id="r_afffd3ec28366f11bcde6f892b7b43e2d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afffd3ec28366f11bcde6f892b7b43e2d">~VulkanBackend</a> ()</td></tr>
+<tr class="separator:afffd3ec28366f11bcde6f892b7b43e2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a5eb21e3d7d6154f31559cabbdb9646a9" id="r_a5eb21e3d7d6154f31559cabbdb9646a9"><td class="memItemLeft" align="right" valign="top"><a id="a5eb21e3d7d6154f31559cabbdb9646a9" name="a5eb21e3d7d6154f31559cabbdb9646a9"></a>
-VkDevice&#160;</td><td class="memItemRight" valign="bottom"><b>device</b></td></tr>
+<tr class="memitem:a5eb21e3d7d6154f31559cabbdb9646a9" id="r_a5eb21e3d7d6154f31559cabbdb9646a9"><td class="memItemLeft" align="right" valign="top">VkDevice&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5eb21e3d7d6154f31559cabbdb9646a9">device</a></td></tr>
 <tr class="separator:a5eb21e3d7d6154f31559cabbdb9646a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7286161a7b80cb11cfc35e75a6b2dc37" id="r_a7286161a7b80cb11cfc35e75a6b2dc37"><td class="memItemLeft" align="right" valign="top"><a id="a7286161a7b80cb11cfc35e75a6b2dc37" name="a7286161a7b80cb11cfc35e75a6b2dc37"></a>
-VmaAllocator&#160;</td><td class="memItemRight" valign="bottom"><b>allocator</b></td></tr>
+<tr class="memitem:a7286161a7b80cb11cfc35e75a6b2dc37" id="r_a7286161a7b80cb11cfc35e75a6b2dc37"><td class="memItemLeft" align="right" valign="top">VmaAllocator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7286161a7b80cb11cfc35e75a6b2dc37">allocator</a></td></tr>
 <tr class="separator:a7286161a7b80cb11cfc35e75a6b2dc37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a122bb524b7efcbfd890a02432d308193" id="r_a122bb524b7efcbfd890a02432d308193"><td class="memItemLeft" align="right" valign="top"><a id="a122bb524b7efcbfd890a02432d308193" name="a122bb524b7efcbfd890a02432d308193"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>kGrayScaleTable</b> = &quot;.:-=+*#%@&quot;</td></tr>
+<tr class="memitem:a122bb524b7efcbfd890a02432d308193" id="r_a122bb524b7efcbfd890a02432d308193"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a122bb524b7efcbfd890a02432d308193">kGrayScaleTable</a> = &quot;.:-=+*#%@&quot;</td></tr>
 <tr class="separator:a122bb524b7efcbfd890a02432d308193"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:aec385f8905b02c5a92f178b629565446" id="r_aec385f8905b02c5a92f178b629565446"><td class="memItemLeft" align="right" valign="top"><a id="aec385f8905b02c5a92f178b629565446" name="aec385f8905b02c5a92f178b629565446"></a>
-static const size_t&#160;</td><td class="memItemRight" valign="bottom"><b>kBufferSize</b> = 80</td></tr>
+<tr class="memitem:aec385f8905b02c5a92f178b629565446" id="r_aec385f8905b02c5a92f178b629565446"><td class="memItemLeft" align="right" valign="top">static const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec385f8905b02c5a92f178b629565446">kBufferSize</a> = 80</td></tr>
 <tr class="separator:aec385f8905b02c5a92f178b629565446"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7727cf09eb7235866873f0a0aaad6666" id="r_a7727cf09eb7235866873f0a0aaad6666"><td class="memItemLeft" align="right" valign="top"><a id="a7727cf09eb7235866873f0a0aaad6666" name="a7727cf09eb7235866873f0a0aaad6666"></a>
-static const size_t&#160;</td><td class="memItemRight" valign="bottom"><b>kGrayScaleTableSize</b> = sizeof(kGrayScaleTable) / sizeof(char)</td></tr>
+<tr class="memitem:a7727cf09eb7235866873f0a0aaad6666" id="r_a7727cf09eb7235866873f0a0aaad6666"><td class="memItemLeft" align="right" valign="top">static const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7727cf09eb7235866873f0a0aaad6666">kGrayScaleTableSize</a> = sizeof(<a class="el" href="#a122bb524b7efcbfd890a02432d308193">kGrayScaleTable</a>) / sizeof(char)</td></tr>
 <tr class="separator:a7727cf09eb7235866873f0a0aaad6666"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ad5674c948929aa3accdde3c3ff1e7107" id="r_ad5674c948929aa3accdde3c3ff1e7107"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5674c948929aa3accdde3c3ff1e7107">RateDeviceSuitability</a> (VkPhysicalDevice <a class="el" href="#a5eb21e3d7d6154f31559cabbdb9646a9">device</a>)</td></tr>
+<tr class="separator:ad5674c948929aa3accdde3c3ff1e7107"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac92ad0ffba7757e32dd5ea06c573bd9e" id="r_ac92ad0ffba7757e32dd5ea06c573bd9e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_engine_1_1_queue_family_indices.html">QueueFamilyIndices</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac92ad0ffba7757e32dd5ea06c573bd9e">FindQueueFamilies</a> (VkPhysicalDevice <a class="el" href="#a5eb21e3d7d6154f31559cabbdb9646a9">device</a>) const</td></tr>
+<tr class="separator:ac92ad0ffba7757e32dd5ea06c573bd9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ffe399dfc7d10282d416a5ed038c071" id="r_a7ffe399dfc7d10282d416a5ed038c071"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_engine_1_1_swapchain_support_details.html">SwapchainSupportDetails</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ffe399dfc7d10282d416a5ed038c071">QuerySwapchainSupport</a> (VkPhysicalDevice <a class="el" href="#a5eb21e3d7d6154f31559cabbdb9646a9">device</a>) const</td></tr>
+<tr class="separator:a7ffe399dfc7d10282d416a5ed038c071"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4592b6aaccb0d5d533d724b1319d9cc4" id="r_a4592b6aaccb0d5d533d724b1319d9cc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4592b6aaccb0d5d533d724b1319d9cc4">TransitionImage</a> (VkCommandBuffer cmd, VkImage image, VkImageLayout currentLayout, VkImageLayout newLayout)</td></tr>
+<tr class="separator:a4592b6aaccb0d5d533d724b1319d9cc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aa4646a24d255470c3fdf43c521a687bc" id="r_aa4646a24d255470c3fdf43c521a687bc"><td class="memItemLeft" align="right" valign="top">VkInstance&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4646a24d255470c3fdf43c521a687bc">instance</a></td></tr>
+<tr class="separator:aa4646a24d255470c3fdf43c521a687bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6977e23f52dd40fbbc1c662278b3b866" id="r_a6977e23f52dd40fbbc1c662278b3b866"><td class="memItemLeft" align="right" valign="top">VkSurfaceKHR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6977e23f52dd40fbbc1c662278b3b866">surface</a></td></tr>
+<tr class="separator:a6977e23f52dd40fbbc1c662278b3b866"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7fdf983d5f45ee65dd7b84d02777c7a" id="r_ac7fdf983d5f45ee65dd7b84d02777c7a"><td class="memItemLeft" align="right" valign="top">VkPhysicalDevice&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7fdf983d5f45ee65dd7b84d02777c7a">physicalDevice</a></td></tr>
+<tr class="separator:ac7fdf983d5f45ee65dd7b84d02777c7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb0dbfa5c83cf58f05ffc8246bc3e273" id="r_adb0dbfa5c83cf58f05ffc8246bc3e273"><td class="memItemLeft" align="right" valign="top">VkSwapchainKHR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb0dbfa5c83cf58f05ffc8246bc3e273">swapchain</a></td></tr>
+<tr class="separator:adb0dbfa5c83cf58f05ffc8246bc3e273"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9c4d7dc9d59c36ad182dab9fa68e00f" id="r_ae9c4d7dc9d59c36ad182dab9fa68e00f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; VkImage &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9c4d7dc9d59c36ad182dab9fa68e00f">swapchainImages</a></td></tr>
+<tr class="separator:ae9c4d7dc9d59c36ad182dab9fa68e00f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac681725bb600c22d03f7c6f47c970ca8" id="r_ac681725bb600c22d03f7c6f47c970ca8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; VkImageView &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac681725bb600c22d03f7c6f47c970ca8">swapchainImageViews</a></td></tr>
+<tr class="separator:ac681725bb600c22d03f7c6f47c970ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37f4fd23c589ff3329dc599d9620e4f4" id="r_a37f4fd23c589ff3329dc599d9620e4f4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; VkCommandPool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37f4fd23c589ff3329dc599d9620e4f4">swapchainCmdPools</a></td></tr>
+<tr class="separator:a37f4fd23c589ff3329dc599d9620e4f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a966cf567d44d7ebe7f511489e0f519" id="r_a3a966cf567d44d7ebe7f511489e0f519"><td class="memItemLeft" align="right" valign="top">std::vector&lt; VkCommandBuffer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a966cf567d44d7ebe7f511489e0f519">swapchainCmdBuffers</a></td></tr>
+<tr class="separator:a3a966cf567d44d7ebe7f511489e0f519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a981e552970f3e77e92eeacda15adbd68" id="r_a981e552970f3e77e92eeacda15adbd68"><td class="memItemLeft" align="right" valign="top">std::vector&lt; VkFence &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a981e552970f3e77e92eeacda15adbd68">swapchainFences</a></td></tr>
+<tr class="separator:a981e552970f3e77e92eeacda15adbd68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a154576c96c8f3558c5a7e31b6d1a7034" id="r_a154576c96c8f3558c5a7e31b6d1a7034"><td class="memItemLeft" align="right" valign="top">std::vector&lt; VkSemaphore &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a154576c96c8f3558c5a7e31b6d1a7034">swapchainSemaphores</a></td></tr>
+<tr class="separator:a154576c96c8f3558c5a7e31b6d1a7034"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbd7dc5d0ff5d270d1097d168dee30fb" id="r_adbd7dc5d0ff5d270d1097d168dee30fb"><td class="memItemLeft" align="right" valign="top">std::vector&lt; VkSemaphore &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbd7dc5d0ff5d270d1097d168dee30fb">renderSemaphores</a></td></tr>
+<tr class="separator:adbd7dc5d0ff5d270d1097d168dee30fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf225c381e6d112ab738d17f88c1c4d0" id="r_abf225c381e6d112ab738d17f88c1c4d0"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf225c381e6d112ab738d17f88c1c4d0">currentFrame</a></td></tr>
+<tr class="separator:abf225c381e6d112ab738d17f88c1c4d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa34204fd23dd314a893a6a0eb07fd8da" id="r_aa34204fd23dd314a893a6a0eb07fd8da"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa34204fd23dd314a893a6a0eb07fd8da">frameNumber</a></td></tr>
+<tr class="separator:aa34204fd23dd314a893a6a0eb07fd8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af02f93aa602cde319cfbafcd4fe91e97" id="r_af02f93aa602cde319cfbafcd4fe91e97"><td class="memItemLeft" align="right" valign="top">VkCommandPool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af02f93aa602cde319cfbafcd4fe91e97">immCmdPool</a></td></tr>
+<tr class="separator:af02f93aa602cde319cfbafcd4fe91e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f9314bcae96f06b254b231c54a88c93" id="r_a8f9314bcae96f06b254b231c54a88c93"><td class="memItemLeft" align="right" valign="top">VkCommandBuffer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f9314bcae96f06b254b231c54a88c93">immCmdBuffer</a></td></tr>
+<tr class="separator:a8f9314bcae96f06b254b231c54a88c93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad86839a5f37f46708bda86035f1b66a8" id="r_ad86839a5f37f46708bda86035f1b66a8"><td class="memItemLeft" align="right" valign="top">VkFence&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad86839a5f37f46708bda86035f1b66a8">immFence</a></td></tr>
+<tr class="separator:ad86839a5f37f46708bda86035f1b66a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54a9ee3aa583ebd2de80af6dbc5e6142" id="r_a54a9ee3aa583ebd2de80af6dbc5e6142"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_engine_1_1_vulkan_image.html">VulkanImage</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54a9ee3aa583ebd2de80af6dbc5e6142">offscreenFramebuffer</a></td></tr>
+<tr class="separator:a54a9ee3aa583ebd2de80af6dbc5e6142"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57b2d4d6924946c118a827f41825d37c" id="r_a57b2d4d6924946c118a827f41825d37c"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_engine_1_1_vulkan_descriptor.html">VulkanDescriptor</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57b2d4d6924946c118a827f41825d37c">computeDescriptor</a></td></tr>
+<tr class="separator:a57b2d4d6924946c118a827f41825d37c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35fe1d118a9ca115695e9cba1236d8c7" id="r_a35fe1d118a9ca115695e9cba1236d8c7"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_engine_1_1_vulkan_pipeline.html">VulkanPipeline</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35fe1d118a9ca115695e9cba1236d8c7">computePipeline</a></td></tr>
+<tr class="separator:a35fe1d118a9ca115695e9cba1236d8c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0af29f78c2e5c28760d5d60930c9c857" id="r_a0af29f78c2e5c28760d5d60930c9c857"><td class="memItemLeft" align="right" valign="top">VkQueue&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0af29f78c2e5c28760d5d60930c9c857">graphicsQueue</a></td></tr>
+<tr class="separator:a0af29f78c2e5c28760d5d60930c9c857"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2881a785eda514a58a292debf4e6ee64" id="r_a2881a785eda514a58a292debf4e6ee64"><td class="memItemLeft" align="right" valign="top">VkQueue&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2881a785eda514a58a292debf4e6ee64">computeQueue</a></td></tr>
+<tr class="separator:a2881a785eda514a58a292debf4e6ee64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a684e808d81be3a4367cb53a849953c25" id="r_a684e808d81be3a4367cb53a849953c25"><td class="memItemLeft" align="right" valign="top">VkQueue&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a684e808d81be3a4367cb53a849953c25">transferQueue</a></td></tr>
+<tr class="separator:a684e808d81be3a4367cb53a849953c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4ca94982a2984a9c4ca55c0841e2599" id="r_ae4ca94982a2984a9c4ca55c0841e2599"><td class="memItemLeft" align="right" valign="top">VkQueue&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4ca94982a2984a9c4ca55c0841e2599">presentQueue</a></td></tr>
+<tr class="separator:ae4ca94982a2984a9c4ca55c0841e2599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17e7bceec59eb716571846f5be1aeac3" id="r_a17e7bceec59eb716571846f5be1aeac3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_engine_1_1_queue_family_indices.html">QueueFamilyIndices</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17e7bceec59eb716571846f5be1aeac3">queueFamilyIndices</a></td></tr>
+<tr class="separator:a17e7bceec59eb716571846f5be1aeac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a237b0afcebabdd22a01922218fd66ec4" id="r_a237b0afcebabdd22a01922218fd66ec4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_engine_1_1_swapchain_support_details.html">SwapchainSupportDetails</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a237b0afcebabdd22a01922218fd66ec4">swapchainSupportDetails</a></td></tr>
+<tr class="separator:a237b0afcebabdd22a01922218fd66ec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af14c0f70a2e1eb3becb2ae3a4c50636f" id="r_af14c0f70a2e1eb3becb2ae3a4c50636f"><td class="memItemLeft" align="right" valign="top">VkPhysicalDeviceProperties&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af14c0f70a2e1eb3becb2ae3a4c50636f">physicalDeviceProperties</a></td></tr>
+<tr class="separator:af14c0f70a2e1eb3becb2ae3a4c50636f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a344b58588a82225afcc2d44f62c93f8d" id="r_a344b58588a82225afcc2d44f62c93f8d"><td class="memItemLeft" align="right" valign="top">VkPhysicalDeviceFeatures&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a344b58588a82225afcc2d44f62c93f8d">physicalDeviceFeatures</a></td></tr>
+<tr class="separator:a344b58588a82225afcc2d44f62c93f8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adff0a6c0e86991abaf5a04cede82dc7e" id="r_adff0a6c0e86991abaf5a04cede82dc7e"><td class="memItemLeft" align="right" valign="top">VkPhysicalDeviceMemoryProperties&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adff0a6c0e86991abaf5a04cede82dc7e">physicalDeviceMemoryProperties</a></td></tr>
+<tr class="separator:adff0a6c0e86991abaf5a04cede82dc7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba9e09f0fdad79ea849eafdadeb8754d" id="r_aba9e09f0fdad79ea849eafdadeb8754d"><td class="memItemLeft" align="right" valign="top">VkPhysicalDeviceRayTracingPipelinePropertiesKHR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba9e09f0fdad79ea849eafdadeb8754d">physicalDeviceRTProperties</a></td></tr>
+<tr class="separator:aba9e09f0fdad79ea849eafdadeb8754d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5bb145ac17501fe89e37748be398a3c" id="r_ae5bb145ac17501fe89e37748be398a3c"><td class="memItemLeft" align="right" valign="top">VkPhysicalDeviceProperties2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5bb145ac17501fe89e37748be398a3c">physicalDeviceProperties2</a></td></tr>
+<tr class="separator:ae5bb145ac17501fe89e37748be398a3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf52e47ee7b93878ac9dd5a413c643be" id="r_adf52e47ee7b93878ac9dd5a413c643be"><td class="memItemLeft" align="right" valign="top">VkFormat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf52e47ee7b93878ac9dd5a413c643be">imageFormat</a></td></tr>
+<tr class="separator:adf52e47ee7b93878ac9dd5a413c643be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa1739b4fa3e08103add132668804be8" id="r_aaa1739b4fa3e08103add132668804be8"><td class="memItemLeft" align="right" valign="top">VkExtent2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa1739b4fa3e08103add132668804be8">imageExtent</a></td></tr>
+<tr class="separator:aaa1739b4fa3e08103add132668804be8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f3bc588419d3a24865ddb834cf41c8c" id="r_a5f3bc588419d3a24865ddb834cf41c8c"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f3bc588419d3a24865ddb834cf41c8c">framebufferCount</a></td></tr>
+<tr class="separator:a5f3bc588419d3a24865ddb834cf41c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34777763936efa39af6f0436f5b07aff" id="r_a34777763936efa39af6f0436f5b07aff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34777763936efa39af6f0436f5b07aff">hardwareRaytracingSupported</a></td></tr>
+<tr class="separator:a34777763936efa39af6f0436f5b07aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a6e765d4b3762f88d96a5ea8b3c8f9dfb" name="a6e765d4b3762f88d96a5ea8b3c8f9dfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e765d4b3762f88d96a5ea8b3c8f9dfb">&#9670;&#160;</a></span>VulkanBackend() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Engine::VulkanBackend::VulkanBackend </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a774f3e65110529757602cc9553f25342" name="a774f3e65110529757602cc9553f25342"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a774f3e65110529757602cc9553f25342">&#9670;&#160;</a></span>VulkanBackend() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Engine::VulkanBackend::VulkanBackend </td>
+          <td>(</td>
+          <td class="paramtype">HINSTANCE</td>          <td class="paramname"><span class="paramname"><em>hInstance</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HWND</td>          <td class="paramname"><span class="paramname"><em>hwnd</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afffd3ec28366f11bcde6f892b7b43e2d" name="afffd3ec28366f11bcde6f892b7b43e2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afffd3ec28366f11bcde6f892b7b43e2d">&#9670;&#160;</a></span>~VulkanBackend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Engine::VulkanBackend::~VulkanBackend </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a585e817aa434418973b4244df590b363" name="a585e817aa434418973b4244df590b363"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a585e817aa434418973b4244df590b363">&#9670;&#160;</a></span>AccumulateWaveToHeightField()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::VulkanBackend::AccumulateWaveToHeightField </td>
+          <td>(</td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>waveLength</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>maxHeight</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::array&lt; double, <a class="el" href="#aec385f8905b02c5a92f178b629565446">kBufferSize</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>heightField</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89484039ab4c3eb615da86d9f7309ae3" name="a89484039ab4c3eb615da86d9f7309ae3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89484039ab4c3eb615da86d9f7309ae3">&#9670;&#160;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::VulkanBackend::Draw </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a569235b09f7ed47c46ab4969dc3eaf18" name="a569235b09f7ed47c46ab4969dc3eaf18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a569235b09f7ed47c46ab4969dc3eaf18">&#9670;&#160;</a></span>DrawFluid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::VulkanBackend::DrawFluid </td>
+          <td>(</td>
+          <td class="paramtype">const std::array&lt; double, <a class="el" href="#aec385f8905b02c5a92f178b629565446">kBufferSize</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>heightField</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac92ad0ffba7757e32dd5ea06c573bd9e" name="ac92ad0ffba7757e32dd5ea06c573bd9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac92ad0ffba7757e32dd5ea06c573bd9e">&#9670;&#160;</a></span>FindQueueFamilies()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_engine_1_1_queue_family_indices.html">QueueFamilyIndices</a> Engine::VulkanBackend::FindQueueFamilies </td>
+          <td>(</td>
+          <td class="paramtype">VkPhysicalDevice</td>          <td class="paramname"><span class="paramname"><em>device</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c6ee0b6cb5ad7518d3a2d9ef73d26fb" name="a1c6ee0b6cb5ad7518d3a2d9ef73d26fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c6ee0b6cb5ad7518d3a2d9ef73d26fb">&#9670;&#160;</a></span>Fluid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::VulkanBackend::Fluid </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ffe399dfc7d10282d416a5ed038c071" name="a7ffe399dfc7d10282d416a5ed038c071"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ffe399dfc7d10282d416a5ed038c071">&#9670;&#160;</a></span>QuerySwapchainSupport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_engine_1_1_swapchain_support_details.html">SwapchainSupportDetails</a> Engine::VulkanBackend::QuerySwapchainSupport </td>
+          <td>(</td>
+          <td class="paramtype">VkPhysicalDevice</td>          <td class="paramname"><span class="paramname"><em>device</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5674c948929aa3accdde3c3ff1e7107" name="ad5674c948929aa3accdde3c3ff1e7107"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5674c948929aa3accdde3c3ff1e7107">&#9670;&#160;</a></span>RateDeviceSuitability()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Engine::VulkanBackend::RateDeviceSuitability </td>
+          <td>(</td>
+          <td class="paramtype">VkPhysicalDevice</td>          <td class="paramname"><span class="paramname"><em>device</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5b89991209882bddf47ff64ffc7a79f6" name="a5b89991209882bddf47ff64ffc7a79f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b89991209882bddf47ff64ffc7a79f6">&#9670;&#160;</a></span>TrainDQN()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::VulkanBackend::TrainDQN </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4592b6aaccb0d5d533d724b1319d9cc4" name="a4592b6aaccb0d5d533d724b1319d9cc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4592b6aaccb0d5d533d724b1319d9cc4">&#9670;&#160;</a></span>TransitionImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::VulkanBackend::TransitionImage </td>
+          <td>(</td>
+          <td class="paramtype">VkCommandBuffer</td>          <td class="paramname"><span class="paramname"><em>cmd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">VkImage</td>          <td class="paramname"><span class="paramname"><em>image</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">VkImageLayout</td>          <td class="paramname"><span class="paramname"><em>currentLayout</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">VkImageLayout</td>          <td class="paramname"><span class="paramname"><em>newLayout</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a30d85fafba1b50e984ee830551c7cd2a" name="a30d85fafba1b50e984ee830551c7cd2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30d85fafba1b50e984ee830551c7cd2a">&#9670;&#160;</a></span>UpdateWave()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::VulkanBackend::UpdateWave </td>
+          <td>(</td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>timeInterval</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;</td>          <td class="paramname"><span class="paramname"><em>speed</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a7286161a7b80cb11cfc35e75a6b2dc37" name="a7286161a7b80cb11cfc35e75a6b2dc37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7286161a7b80cb11cfc35e75a6b2dc37">&#9670;&#160;</a></span>allocator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VmaAllocator Engine::VulkanBackend::allocator</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57b2d4d6924946c118a827f41825d37c" name="a57b2d4d6924946c118a827f41825d37c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57b2d4d6924946c118a827f41825d37c">&#9670;&#160;</a></span>computeDescriptor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="class_engine_1_1_vulkan_descriptor.html">VulkanDescriptor</a>&gt; Engine::VulkanBackend::computeDescriptor</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35fe1d118a9ca115695e9cba1236d8c7" name="a35fe1d118a9ca115695e9cba1236d8c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35fe1d118a9ca115695e9cba1236d8c7">&#9670;&#160;</a></span>computePipeline</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="class_engine_1_1_vulkan_pipeline.html">VulkanPipeline</a>&gt; Engine::VulkanBackend::computePipeline</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2881a785eda514a58a292debf4e6ee64" name="a2881a785eda514a58a292debf4e6ee64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2881a785eda514a58a292debf4e6ee64">&#9670;&#160;</a></span>computeQueue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VkQueue Engine::VulkanBackend::computeQueue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf225c381e6d112ab738d17f88c1c4d0" name="abf225c381e6d112ab738d17f88c1c4d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf225c381e6d112ab738d17f88c1c4d0">&#9670;&#160;</a></span>currentFrame</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t Engine::VulkanBackend::currentFrame</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5eb21e3d7d6154f31559cabbdb9646a9" name="a5eb21e3d7d6154f31559cabbdb9646a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5eb21e3d7d6154f31559cabbdb9646a9">&#9670;&#160;</a></span>device</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VkDevice Engine::VulkanBackend::device</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f3bc588419d3a24865ddb834cf41c8c" name="a5f3bc588419d3a24865ddb834cf41c8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f3bc588419d3a24865ddb834cf41c8c">&#9670;&#160;</a></span>framebufferCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t Engine::VulkanBackend::framebufferCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa34204fd23dd314a893a6a0eb07fd8da" name="aa34204fd23dd314a893a6a0eb07fd8da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa34204fd23dd314a893a6a0eb07fd8da">&#9670;&#160;</a></span>frameNumber</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t Engine::VulkanBackend::frameNumber</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0af29f78c2e5c28760d5d60930c9c857" name="a0af29f78c2e5c28760d5d60930c9c857"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0af29f78c2e5c28760d5d60930c9c857">&#9670;&#160;</a></span>graphicsQueue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VkQueue Engine::VulkanBackend::graphicsQueue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34777763936efa39af6f0436f5b07aff" name="a34777763936efa39af6f0436f5b07aff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34777763936efa39af6f0436f5b07aff">&#9670;&#160;</a></span>hardwareRaytracingSupported</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Engine::VulkanBackend::hardwareRaytracingSupported</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa1739b4fa3e08103add132668804be8" name="aaa1739b4fa3e08103add132668804be8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa1739b4fa3e08103add132668804be8">&#9670;&#160;</a></span>imageExtent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VkExtent2D Engine::VulkanBackend::imageExtent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf52e47ee7b93878ac9dd5a413c643be" name="adf52e47ee7b93878ac9dd5a413c643be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf52e47ee7b93878ac9dd5a413c643be">&#9670;&#160;</a></span>imageFormat</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VkFormat Engine::VulkanBackend::imageFormat</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f9314bcae96f06b254b231c54a88c93" name="a8f9314bcae96f06b254b231c54a88c93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f9314bcae96f06b254b231c54a88c93">&#9670;&#160;</a></span>immCmdBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VkCommandBuffer Engine::VulkanBackend::immCmdBuffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af02f93aa602cde319cfbafcd4fe91e97" name="af02f93aa602cde319cfbafcd4fe91e97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af02f93aa602cde319cfbafcd4fe91e97">&#9670;&#160;</a></span>immCmdPool</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VkCommandPool Engine::VulkanBackend::immCmdPool</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad86839a5f37f46708bda86035f1b66a8" name="ad86839a5f37f46708bda86035f1b66a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad86839a5f37f46708bda86035f1b66a8">&#9670;&#160;</a></span>immFence</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VkFence Engine::VulkanBackend::immFence</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa4646a24d255470c3fdf43c521a687bc" name="aa4646a24d255470c3fdf43c521a687bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4646a24d255470c3fdf43c521a687bc">&#9670;&#160;</a></span>instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VkInstance Engine::VulkanBackend::instance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec385f8905b02c5a92f178b629565446" name="aec385f8905b02c5a92f178b629565446"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec385f8905b02c5a92f178b629565446">&#9670;&#160;</a></span>kBufferSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const size_t Engine::VulkanBackend::kBufferSize = 80</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a122bb524b7efcbfd890a02432d308193" name="a122bb524b7efcbfd890a02432d308193"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a122bb524b7efcbfd890a02432d308193">&#9670;&#160;</a></span>kGrayScaleTable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* Engine::VulkanBackend::kGrayScaleTable = &quot;.:-=+*#%@&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7727cf09eb7235866873f0a0aaad6666" name="a7727cf09eb7235866873f0a0aaad6666"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7727cf09eb7235866873f0a0aaad6666">&#9670;&#160;</a></span>kGrayScaleTableSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const size_t Engine::VulkanBackend::kGrayScaleTableSize = sizeof(<a class="el" href="#a122bb524b7efcbfd890a02432d308193">kGrayScaleTable</a>) / sizeof(char)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54a9ee3aa583ebd2de80af6dbc5e6142" name="a54a9ee3aa583ebd2de80af6dbc5e6142"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54a9ee3aa583ebd2de80af6dbc5e6142">&#9670;&#160;</a></span>offscreenFramebuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="class_engine_1_1_vulkan_image.html">VulkanImage</a>&gt; Engine::VulkanBackend::offscreenFramebuffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7fdf983d5f45ee65dd7b84d02777c7a" name="ac7fdf983d5f45ee65dd7b84d02777c7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7fdf983d5f45ee65dd7b84d02777c7a">&#9670;&#160;</a></span>physicalDevice</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VkPhysicalDevice Engine::VulkanBackend::physicalDevice</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a344b58588a82225afcc2d44f62c93f8d" name="a344b58588a82225afcc2d44f62c93f8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a344b58588a82225afcc2d44f62c93f8d">&#9670;&#160;</a></span>physicalDeviceFeatures</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VkPhysicalDeviceFeatures Engine::VulkanBackend::physicalDeviceFeatures</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adff0a6c0e86991abaf5a04cede82dc7e" name="adff0a6c0e86991abaf5a04cede82dc7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adff0a6c0e86991abaf5a04cede82dc7e">&#9670;&#160;</a></span>physicalDeviceMemoryProperties</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VkPhysicalDeviceMemoryProperties Engine::VulkanBackend::physicalDeviceMemoryProperties</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af14c0f70a2e1eb3becb2ae3a4c50636f" name="af14c0f70a2e1eb3becb2ae3a4c50636f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af14c0f70a2e1eb3becb2ae3a4c50636f">&#9670;&#160;</a></span>physicalDeviceProperties</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VkPhysicalDeviceProperties Engine::VulkanBackend::physicalDeviceProperties</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae5bb145ac17501fe89e37748be398a3c" name="ae5bb145ac17501fe89e37748be398a3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5bb145ac17501fe89e37748be398a3c">&#9670;&#160;</a></span>physicalDeviceProperties2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VkPhysicalDeviceProperties2 Engine::VulkanBackend::physicalDeviceProperties2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aba9e09f0fdad79ea849eafdadeb8754d" name="aba9e09f0fdad79ea849eafdadeb8754d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba9e09f0fdad79ea849eafdadeb8754d">&#9670;&#160;</a></span>physicalDeviceRTProperties</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VkPhysicalDeviceRayTracingPipelinePropertiesKHR Engine::VulkanBackend::physicalDeviceRTProperties</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae4ca94982a2984a9c4ca55c0841e2599" name="ae4ca94982a2984a9c4ca55c0841e2599"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4ca94982a2984a9c4ca55c0841e2599">&#9670;&#160;</a></span>presentQueue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VkQueue Engine::VulkanBackend::presentQueue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17e7bceec59eb716571846f5be1aeac3" name="a17e7bceec59eb716571846f5be1aeac3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17e7bceec59eb716571846f5be1aeac3">&#9670;&#160;</a></span>queueFamilyIndices</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_engine_1_1_queue_family_indices.html">QueueFamilyIndices</a> Engine::VulkanBackend::queueFamilyIndices</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adbd7dc5d0ff5d270d1097d168dee30fb" name="adbd7dc5d0ff5d270d1097d168dee30fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbd7dc5d0ff5d270d1097d168dee30fb">&#9670;&#160;</a></span>renderSemaphores</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;VkSemaphore&gt; Engine::VulkanBackend::renderSemaphores</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6977e23f52dd40fbbc1c662278b3b866" name="a6977e23f52dd40fbbc1c662278b3b866"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6977e23f52dd40fbbc1c662278b3b866">&#9670;&#160;</a></span>surface</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VkSurfaceKHR Engine::VulkanBackend::surface</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb0dbfa5c83cf58f05ffc8246bc3e273" name="adb0dbfa5c83cf58f05ffc8246bc3e273"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb0dbfa5c83cf58f05ffc8246bc3e273">&#9670;&#160;</a></span>swapchain</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VkSwapchainKHR Engine::VulkanBackend::swapchain</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a966cf567d44d7ebe7f511489e0f519" name="a3a966cf567d44d7ebe7f511489e0f519"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a966cf567d44d7ebe7f511489e0f519">&#9670;&#160;</a></span>swapchainCmdBuffers</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;VkCommandBuffer&gt; Engine::VulkanBackend::swapchainCmdBuffers</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a37f4fd23c589ff3329dc599d9620e4f4" name="a37f4fd23c589ff3329dc599d9620e4f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37f4fd23c589ff3329dc599d9620e4f4">&#9670;&#160;</a></span>swapchainCmdPools</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;VkCommandPool&gt; Engine::VulkanBackend::swapchainCmdPools</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a981e552970f3e77e92eeacda15adbd68" name="a981e552970f3e77e92eeacda15adbd68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a981e552970f3e77e92eeacda15adbd68">&#9670;&#160;</a></span>swapchainFences</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;VkFence&gt; Engine::VulkanBackend::swapchainFences</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae9c4d7dc9d59c36ad182dab9fa68e00f" name="ae9c4d7dc9d59c36ad182dab9fa68e00f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9c4d7dc9d59c36ad182dab9fa68e00f">&#9670;&#160;</a></span>swapchainImages</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;VkImage&gt; Engine::VulkanBackend::swapchainImages</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac681725bb600c22d03f7c6f47c970ca8" name="ac681725bb600c22d03f7c6f47c970ca8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac681725bb600c22d03f7c6f47c970ca8">&#9670;&#160;</a></span>swapchainImageViews</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;VkImageView&gt; Engine::VulkanBackend::swapchainImageViews</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a154576c96c8f3558c5a7e31b6d1a7034" name="a154576c96c8f3558c5a7e31b6d1a7034"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a154576c96c8f3558c5a7e31b6d1a7034">&#9670;&#160;</a></span>swapchainSemaphores</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;VkSemaphore&gt; Engine::VulkanBackend::swapchainSemaphores</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a237b0afcebabdd22a01922218fd66ec4" name="a237b0afcebabdd22a01922218fd66ec4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a237b0afcebabdd22a01922218fd66ec4">&#9670;&#160;</a></span>swapchainSupportDetails</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_engine_1_1_swapchain_support_details.html">SwapchainSupportDetails</a> Engine::VulkanBackend::swapchainSupportDetails</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a684e808d81be3a4367cb53a849953c25" name="a684e808d81be3a4367cb53a849953c25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a684e808d81be3a4367cb53a849953c25">&#9670;&#160;</a></span>transferQueue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VkQueue Engine::VulkanBackend::transferQueue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>RenderingEngine/src/vulkan/<a class="el" href="_vulkan_backend_8h_source.html">VulkanBackend.h</a></li>
-<li>RenderingEngine/src/vulkan/<b>VulkanBackend.cpp</b></li>
+<li>RenderingEngine/src/vulkan/<a class="el" href="_vulkan_backend_8cpp.html">VulkanBackend.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Engine</b></li><li class="navelem"><a class="el" href="class_engine_1_1_vulkan_backend.html">VulkanBackend</a></li>
+    <li class="navelem"><a class="el" href="namespace_engine.html">Engine</a></li><li class="navelem"><a class="el" href="class_engine_1_1_vulkan_backend.html">VulkanBackend</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

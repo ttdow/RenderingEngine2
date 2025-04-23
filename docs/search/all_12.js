@@ -1,4 +1,28 @@
 var searchData=
 [
-  ['x_0',['x',['../class_engine_1_1_vector3.html#af202be7c18758615267e78144ee63e5b',1,'Engine::Vector3']]]
+  ['t_0',['t',['../class_engine_1_1_hit_record.html#abfdaddddac3b12bf325b620db0d072cd',1,'Engine::HitRecord']]],
+  ['tanh_1',['Tanh',['../class_engine_1_1_neural_network.html#afb58c26d75e7c1b73e3d0815f0a58023',1,'Engine::NeuralNetwork::Tanh()'],['../class_engine_1_1_simple_neural_network.html#ad9601fee010da92b29dbd72aa86914bd',1,'Engine::SimpleNeuralNetwork::Tanh()']]],
+  ['tanhactivation_2',['TanhActivation',['../class_engine_1_1_recurrent_neural_network.html#a451b21f895766ad015ad94253eb6cc54',1,'Engine::RecurrentNeuralNetwork']]],
+  ['tanhderivative_3',['TanhDerivative',['../class_engine_1_1_neural_network.html#a14bd73e73f9bf6a9928ac136e2070081',1,'Engine::NeuralNetwork::TanhDerivative()'],['../class_engine_1_1_recurrent_neural_network.html#a7e4a881a012a9f41cc3410b7b5d501b9',1,'Engine::RecurrentNeuralNetwork::TanhDerivative()'],['../class_engine_1_1_simple_neural_network.html#a60061d5ae84c92915810cd8d4a0ede00',1,'Engine::SimpleNeuralNetwork::TanhDerivative()']]],
+  ['tanhderivativevec_4',['TanhDerivativeVec',['../class_engine_1_1_recurrent_neural_network.html#a5550702987634016ecec7c6f67ea8af5',1,'Engine::RecurrentNeuralNetwork']]],
+  ['tanhvec_5',['TanhVec',['../class_engine_1_1_recurrent_neural_network.html#a14966522daa3ae03e7a1de1669fdd78d',1,'Engine::RecurrentNeuralNetwork']]],
+  ['target_6',['target',['../struct_engine_1_1_training_example.html#a160e914f96d29f0e4df03ce6cc2a7c98',1,'Engine::TrainingExample']]],
+  ['targetnet_7',['targetNet',['../class_engine_1_1_d_q_n_agent.html#a8f3564a539a36993dfee6ac3bea9927b',1,'Engine::DQNAgent']]],
+  ['timeinseconds_8',['TimeInSeconds',['../struct_engine_1_1_frame.html#ad18875617929bbc2fafa469469df5a84',1,'Engine::Frame']]],
+  ['timeintervalinseconds_9',['timeIntervalInSeconds',['../struct_engine_1_1_frame.html#ab3ebbd93f6f059222b4a246e0be20c9e',1,'Engine::Frame']]],
+  ['tlas_10',['tlas',['../class_engine_1_1_d_x12_backend.html#a639605ca206027840a1132892dab8fdf',1,'Engine::DX12Backend']]],
+  ['tlasupdatescratch_11',['tlasUpdateScratch',['../class_engine_1_1_d_x12_backend.html#a971ad2b40ae1026b025ccea7d5125b07',1,'Engine::DX12Backend']]],
+  ['tostring_12',['ToString',['../class_engine_1_1_vector3.html#ab531a6ce7d5cc4ca1a86933cd9eff50f',1,'Engine::Vector3']]],
+  ['train_13',['Train',['../class_engine_1_1_d_q_n_agent.html#a7edd10ca2023fcbbf60bc30c5efe807e',1,'Engine::DQNAgent::Train()'],['../class_engine_1_1_neural_network.html#a2f8a057b1bcd4fa81a853461a26ffbb2',1,'Engine::NeuralNetwork::Train()'],['../class_engine_1_1_simple_neural_network.html#ac20d52ab154b5b8fed044cc72a7d72d1',1,'Engine::SimpleNeuralNetwork::Train()']]],
+  ['trainbatch_14',['TrainBatch',['../class_engine_1_1_d_q_n_agent.html#a2f19e819cce8389ec40bfb1cafa9a53e',1,'Engine::DQNAgent']]],
+  ['traindqn_15',['TrainDQN',['../class_engine_1_1_vulkan_backend.html#a5b89991209882bddf47ff64ffc7a79f6',1,'Engine::VulkanBackend']]],
+  ['trainingexample_16',['TrainingExample',['../struct_engine_1_1_training_example.html',1,'Engine']]],
+  ['transferfamily_17',['transferFamily',['../struct_engine_1_1_queue_family_indices.html#a48ef733fe35f191fd9a5e9aefe8b073f',1,'Engine::QueueFamilyIndices']]],
+  ['transferqueue_18',['transferQueue',['../class_engine_1_1_vulkan_backend.html#a684e808d81be3a4367cb53a849953c25',1,'Engine::VulkanBackend']]],
+  ['transform_19',['Transform',['../class_engine_1_1_transform.html',1,'Engine::Transform'],['../class_engine_1_1_transform.html#abad70d3eb3f56128226dc05ec3a0346a',1,'Engine::Transform::Transform()']]],
+  ['transform_20',['transform',['../class_engine_1_1_scene_node.html#a2a7e1b15a9523a5423d9a4b709d70e76',1,'Engine::SceneNode']]],
+  ['transform_2ecpp_21',['Transform.cpp',['../_transform_8cpp.html',1,'']]],
+  ['transform_2eh_22',['Transform.h',['../_transform_8h.html',1,'']]],
+  ['transitionimage_23',['TransitionImage',['../class_engine_1_1_vulkan_backend.html#a4592b6aaccb0d5d533d724b1319d9cc4',1,'Engine::VulkanBackend']]],
+  ['transpose_24',['Transpose',['../class_engine_1_1_recurrent_neural_network.html#a040e5ec642a7561a5c135127f6b6ea40',1,'Engine::RecurrentNeuralNetwork']]]
 ];

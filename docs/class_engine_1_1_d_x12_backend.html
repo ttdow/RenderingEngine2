@@ -104,20 +104,212 @@ $(function(){initNavTree('class_engine_1_1_d_x12_backend.html',''); initResizabl
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_engine_1_1_d_x12_backend-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Engine::DX12Backend Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_d_x12_backend_8h_source.html">DX12Backend.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad3bc4687c859b6547c2a4d2f15c8d7dd" id="r_ad3bc4687c859b6547c2a4d2f15c8d7dd"><td class="memItemLeft" align="right" valign="top"><a id="ad3bc4687c859b6547c2a4d2f15c8d7dd" name="ad3bc4687c859b6547c2a4d2f15c8d7dd"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>DX12Backend</b> (HINSTANCE hInstance, const HWND &amp;hwnd)</td></tr>
+<tr class="memitem:af1e4d106b164d5ec5dbd09782846d8f5" id="r_af1e4d106b164d5ec5dbd09782846d8f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1e4d106b164d5ec5dbd09782846d8f5">DX12Backend</a> ()=delete</td></tr>
+<tr class="separator:af1e4d106b164d5ec5dbd09782846d8f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3bc4687c859b6547c2a4d2f15c8d7dd" id="r_ad3bc4687c859b6547c2a4d2f15c8d7dd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3bc4687c859b6547c2a4d2f15c8d7dd">DX12Backend</a> (HINSTANCE hInstance, const HWND &amp;hwnd)</td></tr>
 <tr class="separator:ad3bc4687c859b6547c2a4d2f15c8d7dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bdd9ff69b12bed726b22d89cc4b0fba" id="r_a6bdd9ff69b12bed726b22d89cc4b0fba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bdd9ff69b12bed726b22d89cc4b0fba">~DX12Backend</a> ()</td></tr>
+<tr class="separator:a6bdd9ff69b12bed726b22d89cc4b0fba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cd4ba6993c9dc72a68aba4572271a0b" id="r_a3cd4ba6993c9dc72a68aba4572271a0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3cd4ba6993c9dc72a68aba4572271a0b">Draw</a> ()</td></tr>
 <tr class="memdesc:a3cd4ba6993c9dc72a68aba4572271a0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes a full ray tracing rendering pass and presents the result to the screen.  <br /></td></tr>
 <tr class="separator:a3cd4ba6993c9dc72a68aba4572271a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a27280920a4503b96c1052f3621e29e25" id="r_a27280920a4503b96c1052f3621e29e25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27280920a4503b96c1052f3621e29e25">InitDevice</a> ()</td></tr>
+<tr class="memdesc:a27280920a4503b96c1052f3621e29e25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the Direct3D 12 device and command infrastructure.  <br /></td></tr>
+<tr class="separator:a27280920a4503b96c1052f3621e29e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add18cbc75a5de3700ec8f52fd4244b88" id="r_add18cbc75a5de3700ec8f52fd4244b88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add18cbc75a5de3700ec8f52fd4244b88">InitSurfaces</a> (const HWND &amp;hwnd)</td></tr>
+<tr class="memdesc:add18cbc75a5de3700ec8f52fd4244b88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the swapchain and UAV descriptor heap for the rendering surface.  <br /></td></tr>
+<tr class="separator:add18cbc75a5de3700ec8f52fd4244b88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c9eeb0276259e2e10781e70e30183eb" id="r_a2c9eeb0276259e2e10781e70e30183eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c9eeb0276259e2e10781e70e30183eb">InitCommand</a> ()</td></tr>
+<tr class="separator:a2c9eeb0276259e2e10781e70e30183eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ae18477a9a5f3cea0be273dd9facd57" id="r_a4ae18477a9a5f3cea0be273dd9facd57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ae18477a9a5f3cea0be273dd9facd57">InitMeshes</a> ()</td></tr>
+<tr class="memdesc:a4ae18477a9a5f3cea0be273dd9facd57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes mesh vertex and index buffers for use in rendering.  <br /></td></tr>
+<tr class="separator:a4ae18477a9a5f3cea0be273dd9facd57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af377fb66483cab91b9ec4a66fb545b80" id="r_af377fb66483cab91b9ec4a66fb545b80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af377fb66483cab91b9ec4a66fb545b80">InitBLAS</a> ()</td></tr>
+<tr class="memdesc:af377fb66483cab91b9ec4a66fb545b80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the Bottom-Level Acceleration Structures (BLAS) used for ray tracing.  <br /></td></tr>
+<tr class="separator:af377fb66483cab91b9ec4a66fb545b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0e79ccdce88d0914d30338d1f2317c4" id="r_aa0e79ccdce88d0914d30338d1f2317c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0e79ccdce88d0914d30338d1f2317c4">InitScene</a> ()</td></tr>
+<tr class="memdesc:aa0e79ccdce88d0914d30338d1f2317c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes geometry instances that will be used to build the top-level acceleration structure (TLAS).  <br /></td></tr>
+<tr class="separator:aa0e79ccdce88d0914d30338d1f2317c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1695331938aa4a4de4df29ca1e0f7ad4" id="r_a1695331938aa4a4de4df29ca1e0f7ad4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1695331938aa4a4de4df29ca1e0f7ad4">InitTLAS</a> ()</td></tr>
+<tr class="memdesc:a1695331938aa4a4de4df29ca1e0f7ad4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the Top-Level Acceleration Structure (TLAS) used for ray tracing.  <br /></td></tr>
+<tr class="separator:a1695331938aa4a4de4df29ca1e0f7ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fdf4447620a5a032959786bc19327ea" id="r_a2fdf4447620a5a032959786bc19327ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fdf4447620a5a032959786bc19327ea">InitRootSignature</a> ()</td></tr>
+<tr class="memdesc:a2fdf4447620a5a032959786bc19327ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the root signature for the ray tracing pipeline.  <br /></td></tr>
+<tr class="separator:a2fdf4447620a5a032959786bc19327ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64b1d337cf80a1cad38748dc1a295a03" id="r_a64b1d337cf80a1cad38748dc1a295a03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64b1d337cf80a1cad38748dc1a295a03">InitPipeline</a> ()</td></tr>
+<tr class="memdesc:a64b1d337cf80a1cad38748dc1a295a03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the ray tracing pipeline and shader table.  <br /></td></tr>
+<tr class="separator:a64b1d337cf80a1cad38748dc1a295a03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6eae98cea43017ecbe059fa9ed9dbbc" id="r_ad6eae98cea43017ecbe059fa9ed9dbbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6eae98cea43017ecbe059fa9ed9dbbc">Update</a> ()</td></tr>
+<tr class="memdesc:ad6eae98cea43017ecbe059fa9ed9dbbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates object transformations and rebuilds the Top-Level Acceleration Structure (TLAS) for the current frame.  <br /></td></tr>
+<tr class="separator:ad6eae98cea43017ecbe059fa9ed9dbbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d3f37e0cfbbac7926d8f7f39750df32" id="r_a8d3f37e0cfbbac7926d8f7f39750df32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d3f37e0cfbbac7926d8f7f39750df32">WaitForGPU</a> ()</td></tr>
+<tr class="memdesc:a8d3f37e0cfbbac7926d8f7f39750df32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Blocks the GPU until the GPU has completed all submitted work.  <br /></td></tr>
+<tr class="separator:a8d3f37e0cfbbac7926d8f7f39750df32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc47b54b618300d5aad4a68f703e95e8" id="r_abc47b54b618300d5aad4a68f703e95e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc47b54b618300d5aad4a68f703e95e8">Resize</a> (const HWND &amp;hwnd)</td></tr>
+<tr class="memdesc:abc47b54b618300d5aad4a68f703e95e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resizes the swapchain and recreates the render target UAV to match the new window size.  <br /></td></tr>
+<tr class="separator:abc47b54b618300d5aad4a68f703e95e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6337f35d9a7a3317a593233d2b9b827d" id="r_a6337f35d9a7a3317a593233d2b9b827d"><td class="memItemLeft" align="right" valign="top">ID3D12Resource *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6337f35d9a7a3317a593233d2b9b827d">MakeAccelerationStructure</a> (const D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_INPUTS &amp;inputs, UINT64 *updateScratchSize=nullptr)</td></tr>
+<tr class="memdesc:a6337f35d9a7a3317a593233d2b9b827d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds a ray tracing acceleration structure (BLAS or TLAS) from the given input geometry.  <br /></td></tr>
+<tr class="separator:a6337f35d9a7a3317a593233d2b9b827d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63f77b081d4916299151b3dd90130153" id="r_a63f77b081d4916299151b3dd90130153"><td class="memItemLeft" align="right" valign="top">ID3D12Resource *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63f77b081d4916299151b3dd90130153">MakeBLAS</a> (ID3D12Resource *vertexBuffer, UINT vertexFloats, ID3D12Resource *indexBuffer=nullptr, UINT indices=0)</td></tr>
+<tr class="memdesc:a63f77b081d4916299151b3dd90130153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a Bottom-Level Acceleration Structure (BLAS) from vertex and optional index buffers.  <br /></td></tr>
+<tr class="separator:a63f77b081d4916299151b3dd90130153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4754663bd7399762fd506bbff1221e8d" id="r_a4754663bd7399762fd506bbff1221e8d"><td class="memItemLeft" align="right" valign="top">ID3D12Resource *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4754663bd7399762fd506bbff1221e8d">MakeTLAS</a> (ID3D12Resource *<a class="el" href="#ac755d3acf91c3ce9b565214f8f1de33f">instances</a>, UINT numInstances, UINT64 *updateScratchSize=nullptr)</td></tr>
+<tr class="memdesc:a4754663bd7399762fd506bbff1221e8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a Top-Level Acceleration Structure (TLAS) from a set of geometry instances.  <br /></td></tr>
+<tr class="separator:a4754663bd7399762fd506bbff1221e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f304c1df19ca3a7b22815e7cf5a8152" id="r_a2f304c1df19ca3a7b22815e7cf5a8152"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f304c1df19ca3a7b22815e7cf5a8152">UpdateTransforms</a> ()</td></tr>
+<tr class="memdesc:a2f304c1df19ca3a7b22815e7cf5a8152"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the world transform matrices for each instance in the scene.  <br /></td></tr>
+<tr class="separator:a2f304c1df19ca3a7b22815e7cf5a8152"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a8df11d8e67cbf8ce844a7310f3968179" id="r_a8df11d8e67cbf8ce844a7310f3968179"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8df11d8e67cbf8ce844a7310f3968179">value</a></td></tr>
+<tr class="separator:a8df11d8e67cbf8ce844a7310f3968179"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dab4090ff47004e5409ad3bf863b5c7" id="r_a3dab4090ff47004e5409ad3bf863b5c7"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3dab4090ff47004e5409ad3bf863b5c7">frameIndex</a></td></tr>
+<tr class="separator:a3dab4090ff47004e5409ad3bf863b5c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addd382290de986153e9c19e86c486057" id="r_addd382290de986153e9c19e86c486057"><td class="memItemLeft" align="right" valign="top">HANDLE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addd382290de986153e9c19e86c486057">fenceEvent</a></td></tr>
+<tr class="separator:addd382290de986153e9c19e86c486057"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d54d9d8cbcd67be144711df19150e1d" id="r_a3d54d9d8cbcd67be144711df19150e1d"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d54d9d8cbcd67be144711df19150e1d">fenceValue</a></td></tr>
+<tr class="separator:a3d54d9d8cbcd67be144711df19150e1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab64a46307464ebd634e17d590a1f4f5c" id="r_ab64a46307464ebd634e17d590a1f4f5c"><td class="memItemLeft" align="right" valign="top">IDXGIFactory4 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab64a46307464ebd634e17d590a1f4f5c">factory</a> = nullptr</td></tr>
+<tr class="separator:ab64a46307464ebd634e17d590a1f4f5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cc6c71653e62877a41adca03da0eafb" id="r_a2cc6c71653e62877a41adca03da0eafb"><td class="memItemLeft" align="right" valign="top">ID3D12Debug1 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cc6c71653e62877a41adca03da0eafb">debugController</a> = nullptr</td></tr>
+<tr class="separator:a2cc6c71653e62877a41adca03da0eafb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2878d2c7f3e102f19c143cd80b9538e6" id="r_a2878d2c7f3e102f19c143cd80b9538e6"><td class="memItemLeft" align="right" valign="top">ID3D12Device5 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2878d2c7f3e102f19c143cd80b9538e6">device</a> = nullptr</td></tr>
+<tr class="separator:a2878d2c7f3e102f19c143cd80b9538e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8715177fcc73744c1962844c4ee0a37f" id="r_a8715177fcc73744c1962844c4ee0a37f"><td class="memItemLeft" align="right" valign="top">ID3D12DebugDevice *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8715177fcc73744c1962844c4ee0a37f">debugDevice</a> = nullptr</td></tr>
+<tr class="separator:a8715177fcc73744c1962844c4ee0a37f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab814b45d2dacb8bce9ba80644a634b0c" id="r_ab814b45d2dacb8bce9ba80644a634b0c"><td class="memItemLeft" align="right" valign="top">ID3D12CommandQueue *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab814b45d2dacb8bce9ba80644a634b0c">cmdQueue</a> = nullptr</td></tr>
+<tr class="separator:ab814b45d2dacb8bce9ba80644a634b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76cbd304d2b2d03824413e0c8a431353" id="r_a76cbd304d2b2d03824413e0c8a431353"><td class="memItemLeft" align="right" valign="top">ID3D12Fence *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76cbd304d2b2d03824413e0c8a431353">fence</a> = nullptr</td></tr>
+<tr class="separator:a76cbd304d2b2d03824413e0c8a431353"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b32da2a15500488087e7a9047401ef1" id="r_a5b32da2a15500488087e7a9047401ef1"><td class="memItemLeft" align="right" valign="top">IDXGISwapChain3 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b32da2a15500488087e7a9047401ef1">swapchain</a> = nullptr</td></tr>
+<tr class="separator:a5b32da2a15500488087e7a9047401ef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a868803ce01b39352e5cb1ef392e4d8ec" id="r_a868803ce01b39352e5cb1ef392e4d8ec"><td class="memItemLeft" align="right" valign="top">ID3D12DescriptorHeap *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a868803ce01b39352e5cb1ef392e4d8ec">uavHeap</a> = nullptr</td></tr>
+<tr class="separator:a868803ce01b39352e5cb1ef392e4d8ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97034abc8de8fef0337bdbe72a4524c6" id="r_a97034abc8de8fef0337bdbe72a4524c6"><td class="memItemLeft" align="right" valign="top">ID3D12Resource *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97034abc8de8fef0337bdbe72a4524c6">renderTarget</a> = nullptr</td></tr>
+<tr class="separator:a97034abc8de8fef0337bdbe72a4524c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa165e8a81a5daa4d39149f7bac9d12c1" id="r_aa165e8a81a5daa4d39149f7bac9d12c1"><td class="memItemLeft" align="right" valign="top">ID3D12CommandAllocator *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa165e8a81a5daa4d39149f7bac9d12c1">cmdAlloc</a> = nullptr</td></tr>
+<tr class="separator:aa165e8a81a5daa4d39149f7bac9d12c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62a97927da7e3d6bffeddea471640408" id="r_a62a97927da7e3d6bffeddea471640408"><td class="memItemLeft" align="right" valign="top">ID3D12GraphicsCommandList4 *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62a97927da7e3d6bffeddea471640408">cmdList</a> = nullptr</td></tr>
+<tr class="separator:a62a97927da7e3d6bffeddea471640408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf339ca9d14f736c873f2edd9616bd8f" id="r_adf339ca9d14f736c873f2edd9616bd8f"><td class="memItemLeft" align="right" valign="top">ID3D12Resource *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf339ca9d14f736c873f2edd9616bd8f">quadVB</a> = nullptr</td></tr>
+<tr class="separator:adf339ca9d14f736c873f2edd9616bd8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2de46bea514b1cbd21934731d7ae8610" id="r_a2de46bea514b1cbd21934731d7ae8610"><td class="memItemLeft" align="right" valign="top">ID3D12Resource *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2de46bea514b1cbd21934731d7ae8610">cubeVB</a> = nullptr</td></tr>
+<tr class="separator:a2de46bea514b1cbd21934731d7ae8610"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a445481d524858b2b078c3570c22bc179" id="r_a445481d524858b2b078c3570c22bc179"><td class="memItemLeft" align="right" valign="top">ID3D12Resource *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a445481d524858b2b078c3570c22bc179">cubeIB</a> = nullptr</td></tr>
+<tr class="separator:a445481d524858b2b078c3570c22bc179"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa273a4af45ee011434d32154bbccabba" id="r_aa273a4af45ee011434d32154bbccabba"><td class="memItemLeft" align="right" valign="top">ID3D12Resource *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa273a4af45ee011434d32154bbccabba">quadBlas</a> = nullptr</td></tr>
+<tr class="separator:aa273a4af45ee011434d32154bbccabba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a921c5d673f26e20a3870d500f247c85b" id="r_a921c5d673f26e20a3870d500f247c85b"><td class="memItemLeft" align="right" valign="top">ID3D12Resource *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a921c5d673f26e20a3870d500f247c85b">cubeBlas</a> = nullptr</td></tr>
+<tr class="separator:a921c5d673f26e20a3870d500f247c85b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac755d3acf91c3ce9b565214f8f1de33f" id="r_ac755d3acf91c3ce9b565214f8f1de33f"><td class="memItemLeft" align="right" valign="top">ID3D12Resource *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac755d3acf91c3ce9b565214f8f1de33f">instances</a> = nullptr</td></tr>
+<tr class="separator:ac755d3acf91c3ce9b565214f8f1de33f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadbe7e9d3e3094ff8a23e5604dd3bc4f" id="r_aadbe7e9d3e3094ff8a23e5604dd3bc4f"><td class="memItemLeft" align="right" valign="top">D3D12_RAYTRACING_INSTANCE_DESC *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aadbe7e9d3e3094ff8a23e5604dd3bc4f">instanceData</a> = nullptr</td></tr>
+<tr class="separator:aadbe7e9d3e3094ff8a23e5604dd3bc4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a639605ca206027840a1132892dab8fdf" id="r_a639605ca206027840a1132892dab8fdf"><td class="memItemLeft" align="right" valign="top">ID3D12Resource *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a639605ca206027840a1132892dab8fdf">tlas</a> = nullptr</td></tr>
+<tr class="separator:a639605ca206027840a1132892dab8fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a971ad2b40ae1026b025ccea7d5125b07" id="r_a971ad2b40ae1026b025ccea7d5125b07"><td class="memItemLeft" align="right" valign="top">ID3D12Resource *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a971ad2b40ae1026b025ccea7d5125b07">tlasUpdateScratch</a> = nullptr</td></tr>
+<tr class="separator:a971ad2b40ae1026b025ccea7d5125b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93d0a8910b0616e248ad1f1a2d3dc4e2" id="r_a93d0a8910b0616e248ad1f1a2d3dc4e2"><td class="memItemLeft" align="right" valign="top">ID3D12RootSignature *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93d0a8910b0616e248ad1f1a2d3dc4e2">rootSignature</a> = nullptr</td></tr>
+<tr class="separator:a93d0a8910b0616e248ad1f1a2d3dc4e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac48b2c88e36c6ac08bcb8826d1ff120c" id="r_ac48b2c88e36c6ac08bcb8826d1ff120c"><td class="memItemLeft" align="right" valign="top">ID3D12StateObject *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac48b2c88e36c6ac08bcb8826d1ff120c">pso</a> = nullptr</td></tr>
+<tr class="separator:ac48b2c88e36c6ac08bcb8826d1ff120c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a015cfa669c7a2ecc538c9a2f413fb2a1" id="r_a015cfa669c7a2ecc538c9a2f413fb2a1"><td class="memItemLeft" align="right" valign="top">ID3D12Resource *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a015cfa669c7a2ecc538c9a2f413fb2a1">shaderIDs</a> = nullptr</td></tr>
+<tr class="separator:a015cfa669c7a2ecc538c9a2f413fb2a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:aea8cb8691133bbae60e5e58edcf9df5a" id="r_aea8cb8691133bbae60e5e58edcf9df5a"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea8cb8691133bbae60e5e58edcf9df5a">quadVtx</a> [18]</td></tr>
+<tr class="separator:aea8cb8691133bbae60e5e58edcf9df5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77b4ada216da566421b4f32424c5ff7f" id="r_a77b4ada216da566421b4f32424c5ff7f"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77b4ada216da566421b4f32424c5ff7f">cubeVtx</a> [24]</td></tr>
+<tr class="separator:a77b4ada216da566421b4f32424c5ff7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57cf2482e349cb6c381c528e3c2c6a2c" id="r_a57cf2482e349cb6c381c528e3c2c6a2c"><td class="memItemLeft" align="right" valign="top">static constexpr short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57cf2482e349cb6c381c528e3c2c6a2c">cubeIdx</a> [36]</td></tr>
+<tr class="separator:a57cf2482e349cb6c381c528e3c2c6a2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36e7004e640b46f559dbb46ad1e72c3e" id="r_a36e7004e640b46f559dbb46ad1e72c3e"><td class="memItemLeft" align="right" valign="top">static constexpr UINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36e7004e640b46f559dbb46ad1e72c3e">NUM_INSTANCES</a> = 3</td></tr>
+<tr class="separator:a36e7004e640b46f559dbb46ad1e72c3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31caf8ed6c525931a8e466f8f21e19a0" id="r_a31caf8ed6c525931a8e466f8f21e19a0"><td class="memItemLeft" align="right" valign="top">static constexpr uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31caf8ed6c525931a8e466f8f21e19a0">NUM_SHADER_IDS</a> = 3</td></tr>
+<tr class="separator:a31caf8ed6c525931a8e466f8f21e19a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="af1e4d106b164d5ec5dbd09782846d8f5" name="af1e4d106b164d5ec5dbd09782846d8f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1e4d106b164d5ec5dbd09782846d8f5">&#9670;&#160;</a></span>DX12Backend() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Engine::DX12Backend::DX12Backend </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad3bc4687c859b6547c2a4d2f15c8d7dd" name="ad3bc4687c859b6547c2a4d2f15c8d7dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3bc4687c859b6547c2a4d2f15c8d7dd">&#9670;&#160;</a></span>DX12Backend() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Engine::DX12Backend::DX12Backend </td>
+          <td>(</td>
+          <td class="paramtype">HINSTANCE</td>          <td class="paramname"><span class="paramname"><em>hInstance</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const HWND &amp;</td>          <td class="paramname"><span class="paramname"><em>hwnd</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6bdd9ff69b12bed726b22d89cc4b0fba" name="a6bdd9ff69b12bed726b22d89cc4b0fba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bdd9ff69b12bed726b22d89cc4b0fba">&#9670;&#160;</a></span>~DX12Backend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Engine::DX12Backend::~DX12Backend </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a3cd4ba6993c9dc72a68aba4572271a0b" name="a3cd4ba6993c9dc72a68aba4572271a0b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3cd4ba6993c9dc72a68aba4572271a0b">&#9670;&#160;</a></span>Draw()</h2>
@@ -146,16 +338,1354 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="af377fb66483cab91b9ec4a66fb545b80" name="af377fb66483cab91b9ec4a66fb545b80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af377fb66483cab91b9ec4a66fb545b80">&#9670;&#160;</a></span>InitBLAS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::DX12Backend::InitBLAS </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes the Bottom-Level Acceleration Structures (BLAS) used for ray tracing. </p>
+<p>This function builds individual BLAS objects for the quad and cube meshes. These BLAS objects are used as geometry inputs when constructing a top-level acceleration structure (TLAS) for ray tracing.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if either BLAS fails to build. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2c9eeb0276259e2e10781e70e30183eb" name="a2c9eeb0276259e2e10781e70e30183eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c9eeb0276259e2e10781e70e30183eb">&#9670;&#160;</a></span>InitCommand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::DX12Backend::InitCommand </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a27280920a4503b96c1052f3621e29e25" name="a27280920a4503b96c1052f3621e29e25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27280920a4503b96c1052f3621e29e25">&#9670;&#160;</a></span>InitDevice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::DX12Backend::InitDevice </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes the Direct3D 12 device and command infrastructure. </p>
+<p>This function:</p><ul>
+<li>Enables the D3D12 debug layer (in debug builds).</li>
+<li>Enumerates the DXGI adapters and selects the WARP adapter (software rasterizer).</li>
+<li>Creates the Direct3D 12 device with a minimum required feature level.</li>
+<li>Checks supported feature levels for diagnostics.</li>
+<li>Creates a command queue and synchronization fence.</li>
+</ul>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if any step fails. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4ae18477a9a5f3cea0be273dd9facd57" name="a4ae18477a9a5f3cea0be273dd9facd57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ae18477a9a5f3cea0be273dd9facd57">&#9670;&#160;</a></span>InitMeshes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::DX12Backend::InitMeshes </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes mesh vertex and index buffers for use in rendering. </p>
+<p>This function creates GPU resources for vertex and index data, uploads the data to those buffers using the upload heap, and stores the resulting resource pointers.</p>
+<p>It uses a helper lambda, MakeAndCopy, to avoid duplication across different mesh buffers.</p>
+<p>The buffers are created in the upload heap ('D3D12_HEAP_TYPE_UPLOAD'), which allows CPU-writable, GPU-readable memory - ideal for small or static data uploads.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if buffer creation or mapping fails. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a64b1d337cf80a1cad38748dc1a295a03" name="a64b1d337cf80a1cad38748dc1a295a03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64b1d337cf80a1cad38748dc1a295a03">&#9670;&#160;</a></span>InitPipeline()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::DX12Backend::InitPipeline </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes the ray tracing pipeline and shader table. </p>
+<p>This function creates a D3D12 ray tracing pipeline using a shader library compiled to DXIL, defines a hit group, sets up payload and attribute size limits, and configures recursion depth. After the pipeline state object (PSO) is created, it allocates and fills a shader identifier table used to dispatch rays.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if any part of the pipeline or shader table fails to initialize. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2fdf4447620a5a032959786bc19327ea" name="a2fdf4447620a5a032959786bc19327ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fdf4447620a5a032959786bc19327ea">&#9670;&#160;</a></span>InitRootSignature()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::DX12Backend::InitRootSignature </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes the root signature for the ray tracing pipeline. </p>
+<p>This root signature consists of:</p><ul>
+<li>One UAV descriptor table (for writing outputs such as a raytraced image).</li>
+<li>One SRV root descriptor (for accessing the TLAS directly via a GPU virtual address).</li>
+</ul>
+<p>The root signature is serialized and then used to create the runtime root signature object.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if serialization or creation fails. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa0e79ccdce88d0914d30338d1f2317c4" name="aa0e79ccdce88d0914d30338d1f2317c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0e79ccdce88d0914d30338d1f2317c4">&#9670;&#160;</a></span>InitScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::DX12Backend::InitScene </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes geometry instances that will be used to build the top-level acceleration structure (TLAS). </p>
+<p>Allocates an upload buffer to hold an array of D3D12_RAYTRACING_INSTANCE_DESC structs, one per instance. Each descriptor defines the instance's transform, ID, mask, and reference to a BLAS.</p>
+<p>This function also initializes instance IDs, masks, and BLAS pointers. <a class="el" href="class_engine_1_1_transform.html">Transform</a> matrices are filled in by <a class="el" href="#a2f304c1df19ca3a7b22815e7cf5a8152" title="Updates the world transform matrices for each instance in the scene.">UpdateTransforms()</a>.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if the instance buffer cannot be created. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="add18cbc75a5de3700ec8f52fd4244b88" name="add18cbc75a5de3700ec8f52fd4244b88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add18cbc75a5de3700ec8f52fd4244b88">&#9670;&#160;</a></span>InitSurfaces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::DX12Backend::InitSurfaces </td>
+          <td>(</td>
+          <td class="paramtype">const HWND &amp;</td>          <td class="paramname"><span class="paramname"><em>hwnd</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes the swapchain and UAV descriptor heap for the rendering surface. </p>
+<p>This function:</p><ul>
+<li>Creates a DXGI swapchain (via 'CreateSwapChainForHwnd') using the given window handle.</li>
+<li>Upgrades the swapchain to IDXGISwapChain3 for enhanced functionality.</li>
+<li>Initializes a descriptor heap for UAVs (used for ray tracing output).</li>
+<li>Releases the factory once no longer needed.</li>
+<li>Calls <a class="el" href="#abc47b54b618300d5aad4a68f703e95e8" title="Resizes the swapchain and recreates the render target UAV to match the new window size.">Resize()</a> to create the initial render target based on the current window size.</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hwnd</td><td>Handle to the target window. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if swapchain or descriptor heap creation fails. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1695331938aa4a4de4df29ca1e0f7ad4" name="a1695331938aa4a4de4df29ca1e0f7ad4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1695331938aa4a4de4df29ca1e0f7ad4">&#9670;&#160;</a></span>InitTLAS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::DX12Backend::InitTLAS </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initializes the Top-Level Acceleration Structure (TLAS) used for ray tracing. </p>
+<p>This function builds the initial TLAS from the provided instance descriptors and allocates additional scratch memory required to perform future TLAS updates.</p>
+<p>A special workaround is included to handle an issue in WARP where the reported update scratch size may be smaller than required.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if TLAS creation or scratch memory allocation fails. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6337f35d9a7a3317a593233d2b9b827d" name="a6337f35d9a7a3317a593233d2b9b827d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6337f35d9a7a3317a593233d2b9b827d">&#9670;&#160;</a></span>MakeAccelerationStructure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D12Resource * Engine::DX12Backend::MakeAccelerationStructure </td>
+          <td>(</td>
+          <td class="paramtype">const D3D12_BUILD_RAYTRACING_ACCELERATION_STRUCTURE_INPUTS &amp;</td>          <td class="paramname"><span class="paramname"><em>inputs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT64 *</td>          <td class="paramname"><span class="paramname"><em>updateScratchSize</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Builds a ray tracing acceleration structure (BLAS or TLAS) from the given input geometry. </p>
+<p>This function calculates required buffer sizes using GetRaytracingAccelerationStructurePrebuildInfo, allocates GPU buffers for the result and scratch data, builds the acceleration structure, and executes the build on the GPU using a command list.</p>
+<p>After execution, it waits for the GPU to complete the build and returns a pointer to the resulting acceleration structure buffer.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inputs</td><td>Structure describing the geometry and type of acceleration structure to build. </td></tr>
+    <tr><td class="paramname">updateScratchSize</td><td>(Optional) Out parameter that receives the scratch size needed for AS updates. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the created GPU resource containing the built acceleration structure.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if resource creation or command execution fails. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a63f77b081d4916299151b3dd90130153" name="a63f77b081d4916299151b3dd90130153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63f77b081d4916299151b3dd90130153">&#9670;&#160;</a></span>MakeBLAS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D12Resource * Engine::DX12Backend::MakeBLAS </td>
+          <td>(</td>
+          <td class="paramtype">ID3D12Resource *</td>          <td class="paramname"><span class="paramname"><em>vertexBuffer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT</td>          <td class="paramname"><span class="paramname"><em>vertexFloats</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ID3D12Resource *</td>          <td class="paramname"><span class="paramname"><em>indexBuffer</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT</td>          <td class="paramname"><span class="paramname"><em>indices</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a Bottom-Level Acceleration Structure (BLAS) from vertex and optional index buffers. </p>
+<p>This function constructs a D3D12 geometry descriptor using vertex and optional index buffers, and builds a bottom-level acceleration structure from it using ray tacing APIs.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertexBuffer</td><td>A pointer to a GPU resource containing vertex data. </td></tr>
+    <tr><td class="paramname">vertexFloats</td><td>The number of floats in the vertex buffer (typically vertex count * 3). </td></tr>
+    <tr><td class="paramname">indexBuffer</td><td>(Optional) A pointer to a GPU resource containing index data. </td></tr>
+    <tr><td class="paramname">indices</td><td>(Optional) The number of indices in the index buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the created BLAS resource, or nullptr on failure. </dd></dl>
+
+</div>
+</div>
+<a id="a4754663bd7399762fd506bbff1221e8d" name="a4754663bd7399762fd506bbff1221e8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4754663bd7399762fd506bbff1221e8d">&#9670;&#160;</a></span>MakeTLAS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D12Resource * Engine::DX12Backend::MakeTLAS </td>
+          <td>(</td>
+          <td class="paramtype">ID3D12Resource *</td>          <td class="paramname"><span class="paramname"><em>instances</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT</td>          <td class="paramname"><span class="paramname"><em>numInstances</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT64 *</td>          <td class="paramname"><span class="paramname"><em>updateScratchSize</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a Top-Level Acceleration Structure (TLAS) from a set of geometry instances. </p>
+<p>The TLAS is built using an input resource containing D3D12_RAYTRACING_INSTANCE_DESC entries, which reference BLAS structures and include world transforms.</p>
+<p>This function requests the TLAS by updateable by using the corresponding build flag, and returns the resulting acceleration structure GPU resource.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">instances</td><td>A GPU resource containing instance descriptors (in upload heap). </td></tr>
+    <tr><td class="paramname">numInstances</td><td>The number of instances in the buffer. </td></tr>
+    <tr><td class="paramname">updateScratchSize</td><td>(Optional) Output parameter to receive scratch size for updates. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the TLAS resource.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if the acceleration structure cannot be created. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abc47b54b618300d5aad4a68f703e95e8" name="abc47b54b618300d5aad4a68f703e95e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc47b54b618300d5aad4a68f703e95e8">&#9670;&#160;</a></span>Resize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::DX12Backend::Resize </td>
+          <td>(</td>
+          <td class="paramtype">const HWND &amp;</td>          <td class="paramname"><span class="paramname"><em>hwnd</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Resizes the swapchain and recreates the render target UAV to match the new window size. </p>
+<p>This function:</p><ul>
+<li>Queries the client area of the window for updated width and height.</li>
+<li>Waits for GPU completion before resizing.</li>
+<li>Resizes the swapchain's internal buffers.</li>
+<li>Releases and recreates the render target texture.</li>
+<li>Rebinds the new render target to a UAV descriptor in the heap.</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hwnd</td><td>Handle to the window to query for size. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if the render target creation fails. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad6eae98cea43017ecbe059fa9ed9dbbc" name="ad6eae98cea43017ecbe059fa9ed9dbbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6eae98cea43017ecbe059fa9ed9dbbc">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::DX12Backend::Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates object transformations and rebuilds the Top-Level Acceleration Structure (TLAS) for the current frame. </p>
+<p>This function is typically called once per frame. It first updates the instance transformation matrices, then rebuilds the TLAS using the updated instance data. It uses the D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAGE_PREFORM_UPDATE flag to reuse the existing TLAS resource, and inserts a UAV barrier to ensure memory visibility. </p>
+
+</div>
+</div>
+<a id="a2f304c1df19ca3a7b22815e7cf5a8152" name="a2f304c1df19ca3a7b22815e7cf5a8152"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f304c1df19ca3a7b22815e7cf5a8152">&#9670;&#160;</a></span>UpdateTransforms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::DX12Backend::UpdateTransforms </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates the world transform matrices for each instance in the scene. </p>
+<p>Converts world-space matrices to the required 3x4 row-major format (DirectX::XMFLOAT3X4), and writes them directly into the mapped instance descriptor buffer.</p>
+<p>This function uses animated or static transformations to demonstrate dynamic instance movement. </p>
+
+</div>
+</div>
+<a id="a8d3f37e0cfbbac7926d8f7f39750df32" name="a8d3f37e0cfbbac7926d8f7f39750df32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d3f37e0cfbbac7926d8f7f39750df32">&#9670;&#160;</a></span>WaitForGPU()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::DX12Backend::WaitForGPU </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Blocks the GPU until the GPU has completed all submitted work. </p>
+<p>This functions ensures synchronization between the CPU and GPU by signaling a fence and waiting until the GPU has processed all commands up to the current fence value.</p>
+<p>This is accomplished by calling ID3D12Fence::SetEventOnCompletion with a null handle, which causes the function to block until the GPU reaches the specified fence value. No Windows event or additional synchronization primitive is required.</p>
+<p>This is typically used to flush the GPU pipeline or ensure that submitted GPU work is complete before proceeding with resource updates or frame teardown.</p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>if signalling or waiting on the fence fails. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aa165e8a81a5daa4d39149f7bac9d12c1" name="aa165e8a81a5daa4d39149f7bac9d12c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa165e8a81a5daa4d39149f7bac9d12c1">&#9670;&#160;</a></span>cmdAlloc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D12CommandAllocator* Engine::DX12Backend::cmdAlloc = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a62a97927da7e3d6bffeddea471640408" name="a62a97927da7e3d6bffeddea471640408"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62a97927da7e3d6bffeddea471640408">&#9670;&#160;</a></span>cmdList</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D12GraphicsCommandList4* Engine::DX12Backend::cmdList = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab814b45d2dacb8bce9ba80644a634b0c" name="ab814b45d2dacb8bce9ba80644a634b0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab814b45d2dacb8bce9ba80644a634b0c">&#9670;&#160;</a></span>cmdQueue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D12CommandQueue* Engine::DX12Backend::cmdQueue = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a921c5d673f26e20a3870d500f247c85b" name="a921c5d673f26e20a3870d500f247c85b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a921c5d673f26e20a3870d500f247c85b">&#9670;&#160;</a></span>cubeBlas</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D12Resource* Engine::DX12Backend::cubeBlas = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a445481d524858b2b078c3570c22bc179" name="a445481d524858b2b078c3570c22bc179"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a445481d524858b2b078c3570c22bc179">&#9670;&#160;</a></span>cubeIB</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D12Resource* Engine::DX12Backend::cubeIB = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57cf2482e349cb6c381c528e3c2c6a2c" name="a57cf2482e349cb6c381c528e3c2c6a2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57cf2482e349cb6c381c528e3c2c6a2c">&#9670;&#160;</a></span>cubeIdx</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short Engine::DX12Backend::cubeIdx[36]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">        {</div>
+<div class="line">            4, 6, 0, 2, 0, 6, 0, 1, 4, 5, 4, 1,</div>
+<div class="line">            0, 2, 1, 3, 1, 2, 1, 3, 5, 7, 5, 3,</div>
+<div class="line">            2, 6, 3, 7, 3, 6, 4, 5, 6, 7, 6, 5</div>
+<div class="line">        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2de46bea514b1cbd21934731d7ae8610" name="a2de46bea514b1cbd21934731d7ae8610"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2de46bea514b1cbd21934731d7ae8610">&#9670;&#160;</a></span>cubeVB</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D12Resource* Engine::DX12Backend::cubeVB = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77b4ada216da566421b4f32424c5ff7f" name="a77b4ada216da566421b4f32424c5ff7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77b4ada216da566421b4f32424c5ff7f">&#9670;&#160;</a></span>cubeVtx</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Engine::DX12Backend::cubeVtx[24]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">        {</div>
+<div class="line">            -1, -1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1,  1, 1, -1,  1, -1, 1,  1, 1, 1,  1</div>
+<div class="line">        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2cc6c71653e62877a41adca03da0eafb" name="a2cc6c71653e62877a41adca03da0eafb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cc6c71653e62877a41adca03da0eafb">&#9670;&#160;</a></span>debugController</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D12Debug1* Engine::DX12Backend::debugController = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8715177fcc73744c1962844c4ee0a37f" name="a8715177fcc73744c1962844c4ee0a37f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8715177fcc73744c1962844c4ee0a37f">&#9670;&#160;</a></span>debugDevice</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D12DebugDevice* Engine::DX12Backend::debugDevice = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2878d2c7f3e102f19c143cd80b9538e6" name="a2878d2c7f3e102f19c143cd80b9538e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2878d2c7f3e102f19c143cd80b9538e6">&#9670;&#160;</a></span>device</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D12Device5* Engine::DX12Backend::device = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab64a46307464ebd634e17d590a1f4f5c" name="ab64a46307464ebd634e17d590a1f4f5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab64a46307464ebd634e17d590a1f4f5c">&#9670;&#160;</a></span>factory</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IDXGIFactory4* Engine::DX12Backend::factory = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76cbd304d2b2d03824413e0c8a431353" name="a76cbd304d2b2d03824413e0c8a431353"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76cbd304d2b2d03824413e0c8a431353">&#9670;&#160;</a></span>fence</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D12Fence* Engine::DX12Backend::fence = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="addd382290de986153e9c19e86c486057" name="addd382290de986153e9c19e86c486057"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addd382290de986153e9c19e86c486057">&#9670;&#160;</a></span>fenceEvent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HANDLE Engine::DX12Backend::fenceEvent</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d54d9d8cbcd67be144711df19150e1d" name="a3d54d9d8cbcd67be144711df19150e1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d54d9d8cbcd67be144711df19150e1d">&#9670;&#160;</a></span>fenceValue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t Engine::DX12Backend::fenceValue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3dab4090ff47004e5409ad3bf863b5c7" name="a3dab4090ff47004e5409ad3bf863b5c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dab4090ff47004e5409ad3bf863b5c7">&#9670;&#160;</a></span>frameIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t Engine::DX12Backend::frameIndex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aadbe7e9d3e3094ff8a23e5604dd3bc4f" name="aadbe7e9d3e3094ff8a23e5604dd3bc4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadbe7e9d3e3094ff8a23e5604dd3bc4f">&#9670;&#160;</a></span>instanceData</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">D3D12_RAYTRACING_INSTANCE_DESC* Engine::DX12Backend::instanceData = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac755d3acf91c3ce9b565214f8f1de33f" name="ac755d3acf91c3ce9b565214f8f1de33f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac755d3acf91c3ce9b565214f8f1de33f">&#9670;&#160;</a></span>instances</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D12Resource* Engine::DX12Backend::instances = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a36e7004e640b46f559dbb46ad1e72c3e" name="a36e7004e640b46f559dbb46ad1e72c3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36e7004e640b46f559dbb46ad1e72c3e">&#9670;&#160;</a></span>NUM_INSTANCES</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UINT Engine::DX12Backend::NUM_INSTANCES = 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a31caf8ed6c525931a8e466f8f21e19a0" name="a31caf8ed6c525931a8e466f8f21e19a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31caf8ed6c525931a8e466f8f21e19a0">&#9670;&#160;</a></span>NUM_SHADER_IDS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t Engine::DX12Backend::NUM_SHADER_IDS = 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac48b2c88e36c6ac08bcb8826d1ff120c" name="ac48b2c88e36c6ac08bcb8826d1ff120c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac48b2c88e36c6ac08bcb8826d1ff120c">&#9670;&#160;</a></span>pso</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D12StateObject* Engine::DX12Backend::pso = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa273a4af45ee011434d32154bbccabba" name="aa273a4af45ee011434d32154bbccabba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa273a4af45ee011434d32154bbccabba">&#9670;&#160;</a></span>quadBlas</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D12Resource* Engine::DX12Backend::quadBlas = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf339ca9d14f736c873f2edd9616bd8f" name="adf339ca9d14f736c873f2edd9616bd8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf339ca9d14f736c873f2edd9616bd8f">&#9670;&#160;</a></span>quadVB</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D12Resource* Engine::DX12Backend::quadVB = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aea8cb8691133bbae60e5e58edcf9df5a" name="aea8cb8691133bbae60e5e58edcf9df5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea8cb8691133bbae60e5e58edcf9df5a">&#9670;&#160;</a></span>quadVtx</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Engine::DX12Backend::quadVtx[18]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
+<div class="line">        {</div>
+<div class="line">          -1, 0, -1,</div>
+<div class="line">          -1, 0,  1,</div>
+<div class="line">           1, 0,  1,</div>
+<div class="line">          -1, 0, -1,</div>
+<div class="line">           1, 0, -1,</div>
+<div class="line">           1, 0,  1</div>
+<div class="line">        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a97034abc8de8fef0337bdbe72a4524c6" name="a97034abc8de8fef0337bdbe72a4524c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97034abc8de8fef0337bdbe72a4524c6">&#9670;&#160;</a></span>renderTarget</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D12Resource* Engine::DX12Backend::renderTarget = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a93d0a8910b0616e248ad1f1a2d3dc4e2" name="a93d0a8910b0616e248ad1f1a2d3dc4e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93d0a8910b0616e248ad1f1a2d3dc4e2">&#9670;&#160;</a></span>rootSignature</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D12RootSignature* Engine::DX12Backend::rootSignature = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a015cfa669c7a2ecc538c9a2f413fb2a1" name="a015cfa669c7a2ecc538c9a2f413fb2a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a015cfa669c7a2ecc538c9a2f413fb2a1">&#9670;&#160;</a></span>shaderIDs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D12Resource* Engine::DX12Backend::shaderIDs = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5b32da2a15500488087e7a9047401ef1" name="a5b32da2a15500488087e7a9047401ef1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b32da2a15500488087e7a9047401ef1">&#9670;&#160;</a></span>swapchain</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IDXGISwapChain3* Engine::DX12Backend::swapchain = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a639605ca206027840a1132892dab8fdf" name="a639605ca206027840a1132892dab8fdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a639605ca206027840a1132892dab8fdf">&#9670;&#160;</a></span>tlas</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D12Resource* Engine::DX12Backend::tlas = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a971ad2b40ae1026b025ccea7d5125b07" name="a971ad2b40ae1026b025ccea7d5125b07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a971ad2b40ae1026b025ccea7d5125b07">&#9670;&#160;</a></span>tlasUpdateScratch</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D12Resource* Engine::DX12Backend::tlasUpdateScratch = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a868803ce01b39352e5cb1ef392e4d8ec" name="a868803ce01b39352e5cb1ef392e4d8ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a868803ce01b39352e5cb1ef392e4d8ec">&#9670;&#160;</a></span>uavHeap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ID3D12DescriptorHeap* Engine::DX12Backend::uavHeap = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8df11d8e67cbf8ce844a7310f3968179" name="a8df11d8e67cbf8ce844a7310f3968179"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8df11d8e67cbf8ce844a7310f3968179">&#9670;&#160;</a></span>value</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t Engine::DX12Backend::value</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>RenderingEngine/src/dx12/<a class="el" href="_d_x12_backend_8h_source.html">DX12Backend.h</a></li>
-<li>RenderingEngine/src/dx12/<b>DX12Backend.cpp</b></li>
+<li>RenderingEngine/src/dx12/<a class="el" href="_d_x12_backend_8cpp.html">DX12Backend.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Engine</b></li><li class="navelem"><a class="el" href="class_engine_1_1_d_x12_backend.html">DX12Backend</a></li>
+    <li class="navelem"><a class="el" href="namespace_engine.html">Engine</a></li><li class="navelem"><a class="el" href="class_engine_1_1_d_x12_backend.html">DX12Backend</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

@@ -105,64 +105,82 @@ $(function(){initNavTree('_hittable_list_8h_source.html',''); initResizable(true
   <div class="headertitle"><div class="title">HittableList.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<a href="_hittable_list_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;Hittable.h&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;Ray.h&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;HitRecord.h&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Interval.h&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_hittable_8h.html">Hittable.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_ray_8h.html">Ray.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="_hit_record_8h.html">HitRecord.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_interval_8h.html">Interval.h</a>&quot;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>Engine</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_engine.html">Engine</a></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
 <div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_engine_1_1_hittable_list.html">   10</a></span>    <span class="keyword">class </span>HittableList : <span class="keyword">public</span> <a class="code hl_class" href="class_engine_1_1_hittable.html">Hittable</a></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_engine_1_1_hittable_list.html">   10</a></span>    <span class="keyword">class </span><a class="code hl_function" href="class_engine_1_1_hittable_list.html#acaed0ab375f106571b3700f6c32484fd">HittableList</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_engine_1_1_hittable.html">Hittable</a></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    {</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        std::vector&lt;std::shared_ptr&lt;Hittable&gt;&gt; objects;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_engine_1_1_hittable_list.html#adcc1a5467e85a060b0d93d1b120a0bda">   14</a></span>        std::vector&lt;std::shared_ptr&lt;Hittable&gt;&gt; <a class="code hl_variable" href="class_engine_1_1_hittable_list.html#adcc1a5467e85a060b0d93d1b120a0bda">objects</a>;</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        HittableList() {}</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        HittableList(std::shared_ptr&lt;Hittable&gt; <span class="keywordtype">object</span>) { Add(<span class="keywordtype">object</span>); }</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_engine_1_1_hittable_list.html#acaed0ab375f106571b3700f6c32484fd">   16</a></span>        <a class="code hl_function" href="class_engine_1_1_hittable_list.html#acaed0ab375f106571b3700f6c32484fd">HittableList</a>() {}</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_engine_1_1_hittable_list.html#a0e8246f6786404c8dd7a1f2f51282e9e">   17</a></span>        <a class="code hl_function" href="class_engine_1_1_hittable_list.html#a0e8246f6786404c8dd7a1f2f51282e9e">HittableList</a>(std::shared_ptr&lt;Hittable&gt; <span class="keywordtype">object</span>) { <a class="code hl_function" href="class_engine_1_1_hittable_list.html#a3358114030ac2ccb647fcac2aaf88efb">Add</a>(<span class="keywordtype">object</span>); }</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keywordtype">void</span> Clear() { objects.clear(); }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_engine_1_1_hittable_list.html#a9587158f310de48366bb75f6edd40721">   19</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_engine_1_1_hittable_list.html#a9587158f310de48366bb75f6edd40721">Clear</a>() { <a class="code hl_variable" href="class_engine_1_1_hittable_list.html#adcc1a5467e85a060b0d93d1b120a0bda">objects</a>.clear(); }</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordtype">void</span> Add(std::shared_ptr&lt;Hittable&gt; <span class="keywordtype">object</span>)</div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="}">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_engine_1_1_hittable_list.html#a3358114030ac2ccb647fcac2aaf88efb">   21</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_engine_1_1_hittable_list.html#a3358114030ac2ccb647fcac2aaf88efb">Add</a>(std::shared_ptr&lt;Hittable&gt; <span class="keywordtype">object</span>)</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            objects.push_back(<span class="keywordtype">object</span>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <a class="code hl_variable" href="class_engine_1_1_hittable_list.html#adcc1a5467e85a060b0d93d1b120a0bda">objects</a>.push_back(<span class="keywordtype">object</span>);</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        }</div>
+</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordtype">bool</span> Hit(<span class="keyword">const</span> <a class="code hl_class" href="class_engine_1_1_ray.html">Ray</a>&amp; ray, <a class="code hl_class" href="class_engine_1_1_interval.html">Interval</a> ray_t, <a class="code hl_class" href="class_engine_1_1_hit_record.html">HitRecord</a>&amp; record)<span class="keyword"> const override</span></div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_engine_1_1_hittable_list.html#ac3771be4545eb4f210baf0dbe779992f">   26</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_engine_1_1_hittable_list.html#ac3771be4545eb4f210baf0dbe779992f">Hit</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_engine_1_1_ray.html">Ray</a>&amp; ray, <a class="code hl_class" href="class_engine_1_1_interval.html">Interval</a> ray_t, <a class="code hl_class" href="class_engine_1_1_hit_record.html">HitRecord</a>&amp; record)<span class="keyword"> const override</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">        </span>{</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <a class="code hl_class" href="class_engine_1_1_hit_record.html">HitRecord</a> tempRecord;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <span class="keywordtype">bool</span> hitAnything = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <span class="keyword">auto</span> closestSoFar = ray_t.max;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <span class="keyword">auto</span> closestSoFar = ray_t.<a class="code hl_variable" href="class_engine_1_1_interval.html#ae8ca0ea244a43b12f91d5b232a2bd967">max</a>;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <span class="keywordtype">object</span> : objects)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <span class="keywordtype">object</span> : <a class="code hl_variable" href="class_engine_1_1_hittable_list.html#adcc1a5467e85a060b0d93d1b120a0bda">objects</a>)</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                <span class="keywordflow">if</span> (object-&gt;Hit(ray, <a class="code hl_class" href="class_engine_1_1_interval.html">Interval</a>(ray_t.min, closestSoFar), tempRecord))</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                <span class="keywordflow">if</span> (object-&gt;Hit(ray, <a class="code hl_class" href="class_engine_1_1_interval.html">Interval</a>(ray_t.<a class="code hl_variable" href="class_engine_1_1_interval.html#a347c6c73a2abb48567d45b60a0ab3b64">min</a>, closestSoFar), tempRecord))</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                {</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                    hitAnything = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                    closestSoFar = tempRecord.t;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                    closestSoFar = tempRecord.<a class="code hl_variable" href="class_engine_1_1_hit_record.html#abfdaddddac3b12bf325b620db0d072cd">t</a>;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                    record = tempRecord;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                }</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            }</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keywordflow">return</span> hitAnything;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        }</div>
+</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    };</div>
 </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
+<div class="ttc" id="a_hit_record_8h_html"><div class="ttname"><a href="_hit_record_8h.html">HitRecord.h</a></div></div>
+<div class="ttc" id="a_hittable_8h_html"><div class="ttname"><a href="_hittable_8h.html">Hittable.h</a></div></div>
+<div class="ttc" id="a_interval_8h_html"><div class="ttname"><a href="_interval_8h.html">Interval.h</a></div></div>
+<div class="ttc" id="a_ray_8h_html"><div class="ttname"><a href="_ray_8h.html">Ray.h</a></div></div>
 <div class="ttc" id="aclass_engine_1_1_hit_record_html"><div class="ttname"><a href="class_engine_1_1_hit_record.html">Engine::HitRecord</a></div><div class="ttdef"><b>Definition</b> HitRecord.h:11</div></div>
+<div class="ttc" id="aclass_engine_1_1_hit_record_html_abfdaddddac3b12bf325b620db0d072cd"><div class="ttname"><a href="class_engine_1_1_hit_record.html#abfdaddddac3b12bf325b620db0d072cd">Engine::HitRecord::t</a></div><div class="ttdeci">double t</div><div class="ttdef"><b>Definition</b> HitRecord.h:17</div></div>
 <div class="ttc" id="aclass_engine_1_1_hittable_html"><div class="ttname"><a href="class_engine_1_1_hittable.html">Engine::Hittable</a></div><div class="ttdef"><b>Definition</b> Hittable.h:11</div></div>
+<div class="ttc" id="aclass_engine_1_1_hittable_list_html_a0e8246f6786404c8dd7a1f2f51282e9e"><div class="ttname"><a href="class_engine_1_1_hittable_list.html#a0e8246f6786404c8dd7a1f2f51282e9e">Engine::HittableList::HittableList</a></div><div class="ttdeci">HittableList(std::shared_ptr&lt; Hittable &gt; object)</div><div class="ttdef"><b>Definition</b> HittableList.h:17</div></div>
+<div class="ttc" id="aclass_engine_1_1_hittable_list_html_a3358114030ac2ccb647fcac2aaf88efb"><div class="ttname"><a href="class_engine_1_1_hittable_list.html#a3358114030ac2ccb647fcac2aaf88efb">Engine::HittableList::Add</a></div><div class="ttdeci">void Add(std::shared_ptr&lt; Hittable &gt; object)</div><div class="ttdef"><b>Definition</b> HittableList.h:21</div></div>
+<div class="ttc" id="aclass_engine_1_1_hittable_list_html_a9587158f310de48366bb75f6edd40721"><div class="ttname"><a href="class_engine_1_1_hittable_list.html#a9587158f310de48366bb75f6edd40721">Engine::HittableList::Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition</b> HittableList.h:19</div></div>
+<div class="ttc" id="aclass_engine_1_1_hittable_list_html_ac3771be4545eb4f210baf0dbe779992f"><div class="ttname"><a href="class_engine_1_1_hittable_list.html#ac3771be4545eb4f210baf0dbe779992f">Engine::HittableList::Hit</a></div><div class="ttdeci">bool Hit(const Ray &amp;ray, Interval ray_t, HitRecord &amp;record) const override</div><div class="ttdef"><b>Definition</b> HittableList.h:26</div></div>
+<div class="ttc" id="aclass_engine_1_1_hittable_list_html_acaed0ab375f106571b3700f6c32484fd"><div class="ttname"><a href="class_engine_1_1_hittable_list.html#acaed0ab375f106571b3700f6c32484fd">Engine::HittableList::HittableList</a></div><div class="ttdeci">HittableList()</div><div class="ttdef"><b>Definition</b> HittableList.h:16</div></div>
+<div class="ttc" id="aclass_engine_1_1_hittable_list_html_adcc1a5467e85a060b0d93d1b120a0bda"><div class="ttname"><a href="class_engine_1_1_hittable_list.html#adcc1a5467e85a060b0d93d1b120a0bda">Engine::HittableList::objects</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; Hittable &gt; &gt; objects</div><div class="ttdef"><b>Definition</b> HittableList.h:14</div></div>
 <div class="ttc" id="aclass_engine_1_1_interval_html"><div class="ttname"><a href="class_engine_1_1_interval.html">Engine::Interval</a></div><div class="ttdef"><b>Definition</b> Interval.h:8</div></div>
+<div class="ttc" id="aclass_engine_1_1_interval_html_a347c6c73a2abb48567d45b60a0ab3b64"><div class="ttname"><a href="class_engine_1_1_interval.html#a347c6c73a2abb48567d45b60a0ab3b64">Engine::Interval::min</a></div><div class="ttdeci">double min</div><div class="ttdef"><b>Definition</b> Interval.h:10</div></div>
+<div class="ttc" id="aclass_engine_1_1_interval_html_ae8ca0ea244a43b12f91d5b232a2bd967"><div class="ttname"><a href="class_engine_1_1_interval.html#ae8ca0ea244a43b12f91d5b232a2bd967">Engine::Interval::max</a></div><div class="ttdeci">double max</div><div class="ttdef"><b>Definition</b> Interval.h:10</div></div>
 <div class="ttc" id="aclass_engine_1_1_ray_html"><div class="ttname"><a href="class_engine_1_1_ray.html">Engine::Ray</a></div><div class="ttdef"><b>Definition</b> Ray.h:8</div></div>
+<div class="ttc" id="anamespace_engine_html"><div class="ttname"><a href="namespace_engine.html">Engine</a></div><div class="ttdef"><b>Definition</b> AssetLoader.h:9</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_07d9e4503b554f0274c5bfa511a2ed1e.html">RenderingEngine</a></li><li class="navelem"><a class="el" href="dir_5c87b902f4230e062b40434e837cf073.html">src</a></li><li class="navelem"><b>HittableList.h</b></li>
+    <li class="navelem"><a class="el" href="dir_07d9e4503b554f0274c5bfa511a2ed1e.html">RenderingEngine</a></li><li class="navelem"><a class="el" href="dir_5c87b902f4230e062b40434e837cf073.html">src</a></li><li class="navelem"><a class="el" href="_hittable_list_8h.html">HittableList.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

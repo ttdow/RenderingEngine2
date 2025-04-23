@@ -104,27 +104,170 @@ $(function(){initNavTree('class_engine_1_1_asset_loader.html',''); initResizable
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="class_engine_1_1_asset_loader-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Engine::AssetLoader Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_asset_loader_8h_source.html">AssetLoader.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aed77a6ffe69605a3f2042e6d766a615c" id="r_aed77a6ffe69605a3f2042e6d766a615c"><td class="memItemLeft" align="right" valign="top"><a id="aed77a6ffe69605a3f2042e6d766a615c" name="aed77a6ffe69605a3f2042e6d766a615c"></a>
-static std::unique_ptr&lt; <a class="el" href="class_engine_1_1_scene.html">Engine::Scene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>LoadGLTF</b> (const std::string &amp;filePath)</td></tr>
+<tr class="memitem:aed77a6ffe69605a3f2042e6d766a615c" id="r_aed77a6ffe69605a3f2042e6d766a615c"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="class_engine_1_1_scene.html">Engine::Scene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed77a6ffe69605a3f2042e6d766a615c">LoadGLTF</a> (const std::string &amp;filePath)</td></tr>
 <tr class="separator:aed77a6ffe69605a3f2042e6d766a615c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:af439a725a55ed57238d609873f3fb606" id="r_af439a725a55ed57238d609873f3fb606"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af439a725a55ed57238d609873f3fb606">ParseGLTF</a> ()</td></tr>
+<tr class="separator:af439a725a55ed57238d609873f3fb606"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b1c3c899b7e784c326e45dbd58b8288" id="r_a6b1c3c899b7e784c326e45dbd58b8288"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b1c3c899b7e784c326e45dbd58b8288">LoadExtensions</a> (fastgltf::Asset &amp;gltf)</td></tr>
+<tr class="separator:a6b1c3c899b7e784c326e45dbd58b8288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a785ffd7e4230c9cc8f474e169d6bd14c" id="r_a785ffd7e4230c9cc8f474e169d6bd14c"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a785ffd7e4230c9cc8f474e169d6bd14c">LoadScenes</a> (fastgltf::Asset &amp;gltf, std::unique_ptr&lt; <a class="el" href="class_engine_1_1_scene.html">Engine::Scene</a> &gt; &amp;scene)</td></tr>
+<tr class="separator:a785ffd7e4230c9cc8f474e169d6bd14c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34f00bc736689af137d846e8030d8cda" id="r_a34f00bc736689af137d846e8030d8cda"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a34f00bc736689af137d846e8030d8cda">LoadNodes</a> (fastgltf::Asset &amp;gltf)</td></tr>
+<tr class="separator:a34f00bc736689af137d846e8030d8cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a6b1c3c899b7e784c326e45dbd58b8288" name="a6b1c3c899b7e784c326e45dbd58b8288"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b1c3c899b7e784c326e45dbd58b8288">&#9670;&#160;</a></span>LoadExtensions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Engine::AssetLoader::LoadExtensions </td>
+          <td>(</td>
+          <td class="paramtype">fastgltf::Asset &amp;</td>          <td class="paramname"><span class="paramname"><em>gltf</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed77a6ffe69605a3f2042e6d766a615c" name="aed77a6ffe69605a3f2042e6d766a615c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed77a6ffe69605a3f2042e6d766a615c">&#9670;&#160;</a></span>LoadGLTF()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="class_engine_1_1_scene.html">Engine::Scene</a> &gt; Engine::AssetLoader::LoadGLTF </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34f00bc736689af137d846e8030d8cda" name="a34f00bc736689af137d846e8030d8cda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34f00bc736689af137d846e8030d8cda">&#9670;&#160;</a></span>LoadNodes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Engine::AssetLoader::LoadNodes </td>
+          <td>(</td>
+          <td class="paramtype">fastgltf::Asset &amp;</td>          <td class="paramname"><span class="paramname"><em>gltf</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a785ffd7e4230c9cc8f474e169d6bd14c" name="a785ffd7e4230c9cc8f474e169d6bd14c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a785ffd7e4230c9cc8f474e169d6bd14c">&#9670;&#160;</a></span>LoadScenes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Engine::AssetLoader::LoadScenes </td>
+          <td>(</td>
+          <td class="paramtype">fastgltf::Asset &amp;</td>          <td class="paramname"><span class="paramname"><em>gltf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_engine_1_1_scene.html">Engine::Scene</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>scene</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af439a725a55ed57238d609873f3fb606" name="af439a725a55ed57238d609873f3fb606"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af439a725a55ed57238d609873f3fb606">&#9670;&#160;</a></span>ParseGLTF()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Engine::AssetLoader::ParseGLTF </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>RenderingEngine/src/<a class="el" href="_asset_loader_8h_source.html">AssetLoader.h</a></li>
-<li>RenderingEngine/src/<b>AssetLoader.cpp</b></li>
+<li>RenderingEngine/src/<a class="el" href="_asset_loader_8cpp.html">AssetLoader.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Engine</b></li><li class="navelem"><a class="el" href="class_engine_1_1_asset_loader.html">AssetLoader</a></li>
+    <li class="navelem"><a class="el" href="namespace_engine.html">Engine</a></li><li class="navelem"><a class="el" href="class_engine_1_1_asset_loader.html">AssetLoader</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

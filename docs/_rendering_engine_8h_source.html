@@ -105,49 +105,66 @@ $(function(){initNavTree('_rendering_engine_8h_source.html',''); initResizable(t
   <div class="headertitle"><div class="title">RenderingEngine.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<a href="_rendering_engine_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;Windows.h&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;Camera.h&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;vulkan/VulkanBackend.h&quot;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;dx12/DX12Backend.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="_camera_8h.html">Camera.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_vulkan_backend_8h.html">vulkan/VulkanBackend.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_d_x12_backend_8h.html">dx12/DX12Backend.h</a>&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span>Engine</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_engine.html">Engine</a></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">enum</span> RenderingBackend</div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="namespace_engine.html#a9b8ef0d90a91152ce524f073abcd2064">   11</a></span>    <span class="keyword">enum</span> <a class="code hl_enumeration" href="namespace_engine.html#a9b8ef0d90a91152ce524f073abcd2064">RenderingBackend</a></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        VULKAN = 0,</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        DX12 = 1</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="namespace_engine.html#a9b8ef0d90a91152ce524f073abcd2064a96a66dd9002e2881465496643be4f0ac">   13</a></span>        <a class="code hl_enumvalue" href="namespace_engine.html#a9b8ef0d90a91152ce524f073abcd2064a96a66dd9002e2881465496643be4f0ac">VULKAN</a> = 0,</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="namespace_engine.html#a9b8ef0d90a91152ce524f073abcd2064a9517d49f12986c2edac9cfd8c902a920">   14</a></span>        <a class="code hl_enumvalue" href="namespace_engine.html#a9b8ef0d90a91152ce524f073abcd2064a9517d49f12986c2edac9cfd8c902a920">DX12</a> = 1</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    };</div>
+</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_engine_1_1_rendering_engine.html">   17</a></span>    <span class="keyword">class </span>RenderingEngine</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_engine_1_1_rendering_engine.html">   17</a></span>    <span class="keyword">class </span><a class="code hl_function" href="class_engine_1_1_rendering_engine.html#a5f1d87a8831794d27d11feed947b1205">RenderingEngine</a></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        RenderingEngine() = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        RenderingEngine(HINSTANCE hInstance, HWND hwnd);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        ~RenderingEngine();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_engine_1_1_rendering_engine.html#a5f1d87a8831794d27d11feed947b1205">   21</a></span>        <a class="code hl_function" href="class_engine_1_1_rendering_engine.html#a5f1d87a8831794d27d11feed947b1205">RenderingEngine</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <a class="code hl_function" href="class_engine_1_1_rendering_engine.html#a5f1d87a8831794d27d11feed947b1205">RenderingEngine</a>(HINSTANCE hInstance, HWND hwnd);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_function" href="class_engine_1_1_rendering_engine.html#aa2e7ab59c3be7cb7de564241c70a265c">~RenderingEngine</a>();</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordtype">void</span> Update();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_engine_1_1_rendering_engine.html#a715c106543e45b7ad041a497b3079f70">Update</a>();</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        std::unique_ptr&lt;VulkanBackend&gt; vulkanBackend;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        std::unique_ptr&lt;DX12Backend&gt; dx12Backend;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_engine_1_1_rendering_engine.html#a294129d63242491c902e470ea355230e">   29</a></span>        std::unique_ptr&lt;VulkanBackend&gt; <a class="code hl_variable" href="class_engine_1_1_rendering_engine.html#a294129d63242491c902e470ea355230e">vulkanBackend</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_engine_1_1_rendering_engine.html#ab2f571ea30743f729b27b4518dd89fb1">   30</a></span>        std::unique_ptr&lt;DX12Backend&gt; <a class="code hl_variable" href="class_engine_1_1_rendering_engine.html#ab2f571ea30743f729b27b4518dd89fb1">dx12Backend</a>;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        RenderingBackend selectedBackend = RenderingBackend::DX12;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordtype">int</span> imageWidth, imageHeight;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_engine_1_1_rendering_engine.html#ac9a7f535857cdccb2ea645e3784e86cf">   32</a></span>        <a class="code hl_enumeration" href="namespace_engine.html#a9b8ef0d90a91152ce524f073abcd2064">RenderingBackend</a> <a class="code hl_variable" href="class_engine_1_1_rendering_engine.html#ac9a7f535857cdccb2ea645e3784e86cf">selectedBackend</a> = <a class="code hl_enumvalue" href="namespace_engine.html#a9b8ef0d90a91152ce524f073abcd2064a9517d49f12986c2edac9cfd8c902a920">RenderingBackend::DX12</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_engine_1_1_rendering_engine.html#aca4bdf9ffd04a6f3f7990f396d73d34e">   33</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="class_engine_1_1_rendering_engine.html#a2104efc31fb81ae054c10b927d836305">imageWidth</a>, <a class="code hl_variable" href="class_engine_1_1_rendering_engine.html#aca4bdf9ffd04a6f3f7990f396d73d34e">imageHeight</a>;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    };</div>
 </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
+<div class="ttc" id="a_camera_8h_html"><div class="ttname"><a href="_camera_8h.html">Camera.h</a></div></div>
+<div class="ttc" id="a_d_x12_backend_8h_html"><div class="ttname"><a href="_d_x12_backend_8h.html">DX12Backend.h</a></div></div>
+<div class="ttc" id="a_vulkan_backend_8h_html"><div class="ttname"><a href="_vulkan_backend_8h.html">VulkanBackend.h</a></div></div>
+<div class="ttc" id="aclass_engine_1_1_rendering_engine_html_a2104efc31fb81ae054c10b927d836305"><div class="ttname"><a href="class_engine_1_1_rendering_engine.html#a2104efc31fb81ae054c10b927d836305">Engine::RenderingEngine::imageWidth</a></div><div class="ttdeci">int imageWidth</div><div class="ttdef"><b>Definition</b> RenderingEngine.h:33</div></div>
+<div class="ttc" id="aclass_engine_1_1_rendering_engine_html_a294129d63242491c902e470ea355230e"><div class="ttname"><a href="class_engine_1_1_rendering_engine.html#a294129d63242491c902e470ea355230e">Engine::RenderingEngine::vulkanBackend</a></div><div class="ttdeci">std::unique_ptr&lt; VulkanBackend &gt; vulkanBackend</div><div class="ttdef"><b>Definition</b> RenderingEngine.h:29</div></div>
+<div class="ttc" id="aclass_engine_1_1_rendering_engine_html_a5f1d87a8831794d27d11feed947b1205"><div class="ttname"><a href="class_engine_1_1_rendering_engine.html#a5f1d87a8831794d27d11feed947b1205">Engine::RenderingEngine::RenderingEngine</a></div><div class="ttdeci">RenderingEngine()=delete</div></div>
+<div class="ttc" id="aclass_engine_1_1_rendering_engine_html_a715c106543e45b7ad041a497b3079f70"><div class="ttname"><a href="class_engine_1_1_rendering_engine.html#a715c106543e45b7ad041a497b3079f70">Engine::RenderingEngine::Update</a></div><div class="ttdeci">void Update()</div><div class="ttdef"><b>Definition</b> RenderingEngine.cpp:29</div></div>
+<div class="ttc" id="aclass_engine_1_1_rendering_engine_html_aa2e7ab59c3be7cb7de564241c70a265c"><div class="ttname"><a href="class_engine_1_1_rendering_engine.html#aa2e7ab59c3be7cb7de564241c70a265c">Engine::RenderingEngine::~RenderingEngine</a></div><div class="ttdeci">~RenderingEngine()</div><div class="ttdef"><b>Definition</b> RenderingEngine.cpp:23</div></div>
+<div class="ttc" id="aclass_engine_1_1_rendering_engine_html_ab2f571ea30743f729b27b4518dd89fb1"><div class="ttname"><a href="class_engine_1_1_rendering_engine.html#ab2f571ea30743f729b27b4518dd89fb1">Engine::RenderingEngine::dx12Backend</a></div><div class="ttdeci">std::unique_ptr&lt; DX12Backend &gt; dx12Backend</div><div class="ttdef"><b>Definition</b> RenderingEngine.h:30</div></div>
+<div class="ttc" id="aclass_engine_1_1_rendering_engine_html_ac9a7f535857cdccb2ea645e3784e86cf"><div class="ttname"><a href="class_engine_1_1_rendering_engine.html#ac9a7f535857cdccb2ea645e3784e86cf">Engine::RenderingEngine::selectedBackend</a></div><div class="ttdeci">RenderingBackend selectedBackend</div><div class="ttdef"><b>Definition</b> RenderingEngine.h:32</div></div>
+<div class="ttc" id="aclass_engine_1_1_rendering_engine_html_aca4bdf9ffd04a6f3f7990f396d73d34e"><div class="ttname"><a href="class_engine_1_1_rendering_engine.html#aca4bdf9ffd04a6f3f7990f396d73d34e">Engine::RenderingEngine::imageHeight</a></div><div class="ttdeci">int imageHeight</div><div class="ttdef"><b>Definition</b> RenderingEngine.h:33</div></div>
+<div class="ttc" id="anamespace_engine_html"><div class="ttname"><a href="namespace_engine.html">Engine</a></div><div class="ttdef"><b>Definition</b> AssetLoader.h:9</div></div>
+<div class="ttc" id="anamespace_engine_html_a9b8ef0d90a91152ce524f073abcd2064"><div class="ttname"><a href="namespace_engine.html#a9b8ef0d90a91152ce524f073abcd2064">Engine::RenderingBackend</a></div><div class="ttdeci">RenderingBackend</div><div class="ttdef"><b>Definition</b> RenderingEngine.h:12</div></div>
+<div class="ttc" id="anamespace_engine_html_a9b8ef0d90a91152ce524f073abcd2064a9517d49f12986c2edac9cfd8c902a920"><div class="ttname"><a href="namespace_engine.html#a9b8ef0d90a91152ce524f073abcd2064a9517d49f12986c2edac9cfd8c902a920">Engine::DX12</a></div><div class="ttdeci">@ DX12</div><div class="ttdef"><b>Definition</b> RenderingEngine.h:14</div></div>
+<div class="ttc" id="anamespace_engine_html_a9b8ef0d90a91152ce524f073abcd2064a96a66dd9002e2881465496643be4f0ac"><div class="ttname"><a href="namespace_engine.html#a9b8ef0d90a91152ce524f073abcd2064a96a66dd9002e2881465496643be4f0ac">Engine::VULKAN</a></div><div class="ttdeci">@ VULKAN</div><div class="ttdef"><b>Definition</b> RenderingEngine.h:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_07d9e4503b554f0274c5bfa511a2ed1e.html">RenderingEngine</a></li><li class="navelem"><a class="el" href="dir_5c87b902f4230e062b40434e837cf073.html">src</a></li><li class="navelem"><b>RenderingEngine.h</b></li>
+    <li class="navelem"><a class="el" href="dir_07d9e4503b554f0274c5bfa511a2ed1e.html">RenderingEngine</a></li><li class="navelem"><a class="el" href="dir_5c87b902f4230e062b40434e837cf073.html">src</a></li><li class="navelem"><a class="el" href="_rendering_engine_8h.html">RenderingEngine.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

@@ -108,6 +108,8 @@ $(function(){initNavTree('class_engine_1_1_loss_function.html',''); initResizabl
   <div class="headertitle"><div class="title">Engine::LossFunction Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_loss_function_8h_source.html">LossFunction.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Engine::LossFunction:</div>
 <div class="dyncontent">
@@ -121,13 +123,102 @@ Inheritance diagram for Engine::LossFunction:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a064934e8d7aba7b43540353834a4e079" id="r_a064934e8d7aba7b43540353834a4e079"><td class="memItemLeft" align="right" valign="top"><a id="a064934e8d7aba7b43540353834a4e079" name="a064934e8d7aba7b43540353834a4e079"></a>
-virtual float&#160;</td><td class="memItemRight" valign="bottom"><b>Compute</b> (const std::vector&lt; float &gt; &amp;target, const std::vector&lt; float &gt; &amp;output) const =0</td></tr>
+<tr class="memitem:a064934e8d7aba7b43540353834a4e079" id="r_a064934e8d7aba7b43540353834a4e079"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a064934e8d7aba7b43540353834a4e079">Compute</a> (const std::vector&lt; float &gt; &amp;target, const std::vector&lt; float &gt; &amp;output) const =0</td></tr>
 <tr class="separator:a064934e8d7aba7b43540353834a4e079"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d96c57a5bd29fc9b51c768c5624d6fd" id="r_a8d96c57a5bd29fc9b51c768c5624d6fd"><td class="memItemLeft" align="right" valign="top"><a id="a8d96c57a5bd29fc9b51c768c5624d6fd" name="a8d96c57a5bd29fc9b51c768c5624d6fd"></a>
-virtual std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Derivative</b> (const std::vector&lt; float &gt; &amp;target, const std::vector&lt; float &gt; &amp;output) const =0</td></tr>
+<tr class="memitem:a8d96c57a5bd29fc9b51c768c5624d6fd" id="r_a8d96c57a5bd29fc9b51c768c5624d6fd"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d96c57a5bd29fc9b51c768c5624d6fd">Derivative</a> (const std::vector&lt; float &gt; &amp;target, const std::vector&lt; float &gt; &amp;output) const =0</td></tr>
 <tr class="separator:a8d96c57a5bd29fc9b51c768c5624d6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ca54b151231cba4859dfa7dee1864d3" id="r_a5ca54b151231cba4859dfa7dee1864d3"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ca54b151231cba4859dfa7dee1864d3">~LossFunction</a> ()=default</td></tr>
+<tr class="separator:a5ca54b151231cba4859dfa7dee1864d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a5ca54b151231cba4859dfa7dee1864d3" name="a5ca54b151231cba4859dfa7dee1864d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ca54b151231cba4859dfa7dee1864d3">&#9670;&#160;</a></span>~LossFunction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Engine::LossFunction::~LossFunction </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span><span class="mlabel default">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a064934e8d7aba7b43540353834a4e079" name="a064934e8d7aba7b43540353834a4e079"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a064934e8d7aba7b43540353834a4e079">&#9670;&#160;</a></span>Compute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual float Engine::LossFunction::Compute </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; float &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; float &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>output</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_engine_1_1_m_s_e_loss.html#a4755e121fa44ea97271fc232ae601339">Engine::MSELoss</a>.</p>
+
+</div>
+</div>
+<a id="a8d96c57a5bd29fc9b51c768c5624d6fd" name="a8d96c57a5bd29fc9b51c768c5624d6fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d96c57a5bd29fc9b51c768c5624d6fd">&#9670;&#160;</a></span>Derivative()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt; float &gt; Engine::LossFunction::Derivative </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; float &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; float &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>output</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="class_engine_1_1_m_s_e_loss.html#a72c503a6a439b286ac6dcb053eac4a26">Engine::MSELoss</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>RenderingEngine/src/<a class="el" href="_loss_function_8h_source.html">LossFunction.h</a></li>
 </ul>
@@ -136,7 +227,7 @@ virtual std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bo
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Engine</b></li><li class="navelem"><a class="el" href="class_engine_1_1_loss_function.html">LossFunction</a></li>
+    <li class="navelem"><a class="el" href="namespace_engine.html">Engine</a></li><li class="navelem"><a class="el" href="class_engine_1_1_loss_function.html">LossFunction</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

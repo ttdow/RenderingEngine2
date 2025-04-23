@@ -105,6 +105,7 @@ $(function(){initNavTree('class_engine_1_1_simple_neural_network.html',''); init
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="class_engine_1_1_simple_neural_network-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Engine::SimpleNeuralNetwork Class Reference</div></div>
 </div><!--header-->
@@ -129,30 +130,39 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a069bfc15bbe923389504ed1c6f4fee48" id="r_a069bfc15bbe923389504ed1c6f4fee48"><td class="memItemLeft" align="right" valign="top"><a id="a069bfc15bbe923389504ed1c6f4fee48" name="a069bfc15bbe923389504ed1c6f4fee48"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>input_hidden1_weights</b> [2][3]</td></tr>
-<tr class="memdesc:a069bfc15bbe923389504ed1c6f4fee48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weights connecting input layer (2 neurons) to first hidden layer (3 neurons). 'input_hidden1_weights[i][j]' is the weight from input neuron 'i' to hidden neuron 'j'. <br /></td></tr>
+<tr class="memitem:a069bfc15bbe923389504ed1c6f4fee48" id="r_a069bfc15bbe923389504ed1c6f4fee48"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a069bfc15bbe923389504ed1c6f4fee48">input_hidden1_weights</a> [2][3]</td></tr>
+<tr class="memdesc:a069bfc15bbe923389504ed1c6f4fee48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weights connecting input layer (2 neurons) to first hidden layer (3 neurons). 'input_hidden1_weights[i][j]' is the weight from input neuron 'i' to hidden neuron 'j'.  <br /></td></tr>
 <tr class="separator:a069bfc15bbe923389504ed1c6f4fee48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1729c983bee36c3d8af061fc1893419" id="r_aa1729c983bee36c3d8af061fc1893419"><td class="memItemLeft" align="right" valign="top"><a id="aa1729c983bee36c3d8af061fc1893419" name="aa1729c983bee36c3d8af061fc1893419"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>hidden1_bias</b> [3]</td></tr>
-<tr class="memdesc:aa1729c983bee36c3d8af061fc1893419"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bias values added to each neuron in the first hidden layer. <br /></td></tr>
+<tr class="memitem:aa1729c983bee36c3d8af061fc1893419" id="r_aa1729c983bee36c3d8af061fc1893419"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1729c983bee36c3d8af061fc1893419">hidden1_bias</a> [3]</td></tr>
+<tr class="memdesc:aa1729c983bee36c3d8af061fc1893419"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bias values added to each neuron in the first hidden layer.  <br /></td></tr>
 <tr class="separator:aa1729c983bee36c3d8af061fc1893419"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed24ff7c2130b62de2faf9145a159e5d" id="r_aed24ff7c2130b62de2faf9145a159e5d"><td class="memItemLeft" align="right" valign="top"><a id="aed24ff7c2130b62de2faf9145a159e5d" name="aed24ff7c2130b62de2faf9145a159e5d"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>hidden1_hidden2_weights</b> [3][2]</td></tr>
-<tr class="memdesc:aed24ff7c2130b62de2faf9145a159e5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weights connecting first hidden layer (3 neurons) to second hidden layer (2 neurons). @'hidden1_hidden2_weights[i][j]' is the weight from hidden1 neuron 'i' to hidden2 neuron 'j'. <br /></td></tr>
+<tr class="memitem:aed24ff7c2130b62de2faf9145a159e5d" id="r_aed24ff7c2130b62de2faf9145a159e5d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed24ff7c2130b62de2faf9145a159e5d">hidden1_hidden2_weights</a> [3][2]</td></tr>
+<tr class="memdesc:aed24ff7c2130b62de2faf9145a159e5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weights connecting first hidden layer (3 neurons) to second hidden layer (2 neurons). @'hidden1_hidden2_weights[i][j]' is the weight from hidden1 neuron 'i' to hidden2 neuron 'j'.  <br /></td></tr>
 <tr class="separator:aed24ff7c2130b62de2faf9145a159e5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a767f9461f599aa26ba0af762e9bb005c" id="r_a767f9461f599aa26ba0af762e9bb005c"><td class="memItemLeft" align="right" valign="top"><a id="a767f9461f599aa26ba0af762e9bb005c" name="a767f9461f599aa26ba0af762e9bb005c"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>hidden2_bias</b> [2]</td></tr>
-<tr class="memdesc:a767f9461f599aa26ba0af762e9bb005c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bias values added to each neuron in the second hidden layer. <br /></td></tr>
+<tr class="memitem:a767f9461f599aa26ba0af762e9bb005c" id="r_a767f9461f599aa26ba0af762e9bb005c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a767f9461f599aa26ba0af762e9bb005c">hidden2_bias</a> [2]</td></tr>
+<tr class="memdesc:a767f9461f599aa26ba0af762e9bb005c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bias values added to each neuron in the second hidden layer.  <br /></td></tr>
 <tr class="separator:a767f9461f599aa26ba0af762e9bb005c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad85fc4408ef06012c818138ebae746b0" id="r_ad85fc4408ef06012c818138ebae746b0"><td class="memItemLeft" align="right" valign="top"><a id="ad85fc4408ef06012c818138ebae746b0" name="ad85fc4408ef06012c818138ebae746b0"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>hidden2_output_weights</b> [2]</td></tr>
-<tr class="memdesc:ad85fc4408ef06012c818138ebae746b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weights connecting second hidden layer (2 neurons) to output layer (1 neuron). <br /></td></tr>
+<tr class="memitem:ad85fc4408ef06012c818138ebae746b0" id="r_ad85fc4408ef06012c818138ebae746b0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad85fc4408ef06012c818138ebae746b0">hidden2_output_weights</a> [2]</td></tr>
+<tr class="memdesc:ad85fc4408ef06012c818138ebae746b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weights connecting second hidden layer (2 neurons) to output layer (1 neuron).  <br /></td></tr>
 <tr class="separator:ad85fc4408ef06012c818138ebae746b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0154400a5bcff35a1ba4a70e09f3f5e8" id="r_a0154400a5bcff35a1ba4a70e09f3f5e8"><td class="memItemLeft" align="right" valign="top"><a id="a0154400a5bcff35a1ba4a70e09f3f5e8" name="a0154400a5bcff35a1ba4a70e09f3f5e8"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>output_bias</b></td></tr>
-<tr class="memdesc:a0154400a5bcff35a1ba4a70e09f3f5e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bias added to the output neuron. <br /></td></tr>
+<tr class="memitem:a0154400a5bcff35a1ba4a70e09f3f5e8" id="r_a0154400a5bcff35a1ba4a70e09f3f5e8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0154400a5bcff35a1ba4a70e09f3f5e8">output_bias</a></td></tr>
+<tr class="memdesc:a0154400a5bcff35a1ba4a70e09f3f5e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bias added to the output neuron.  <br /></td></tr>
 <tr class="separator:a0154400a5bcff35a1ba4a70e09f3f5e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a91358102986e897dd9ebf069d7c53d1f" id="r_a91358102986e897dd9ebf069d7c53d1f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91358102986e897dd9ebf069d7c53d1f">Sigmoid</a> (float x)</td></tr>
+<tr class="memdesc:a91358102986e897dd9ebf069d7c53d1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the sigmoid activation function.  <br /></td></tr>
+<tr class="separator:a91358102986e897dd9ebf069d7c53d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf9b3891e86a82b1ad1539d073aaa3ab" id="r_adf9b3891e86a82b1ad1539d073aaa3ab"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf9b3891e86a82b1ad1539d073aaa3ab">SigmoidDerivative</a> (float x)</td></tr>
+<tr class="memdesc:adf9b3891e86a82b1ad1539d073aaa3ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derivative of the sigmoid activation function. Assumes the input x is already sigmoid(x).  <br /></td></tr>
+<tr class="separator:adf9b3891e86a82b1ad1539d073aaa3ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9601fee010da92b29dbd72aa86914bd" id="r_ad9601fee010da92b29dbd72aa86914bd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9601fee010da92b29dbd72aa86914bd">Tanh</a> (float x)</td></tr>
+<tr class="memdesc:ad9601fee010da92b29dbd72aa86914bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies the hyperbolic tangent activation function.  <br /></td></tr>
+<tr class="separator:ad9601fee010da92b29dbd72aa86914bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60061d5ae84c92915810cd8d4a0ede00" id="r_a60061d5ae84c92915810cd8d4a0ede00"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60061d5ae84c92915810cd8d4a0ede00">TanhDerivative</a> (float x)</td></tr>
+<tr class="memdesc:a60061d5ae84c92915810cd8d4a0ede00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Derivative of the hyperbolic tangent activation function. Assumes the input x is already tanh(x).  <br /></td></tr>
+<tr class="separator:a60061d5ae84c92915810cd8d4a0ede00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Simple feed-forward neural network class. </p>
@@ -226,6 +236,142 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>output_bias</b></td>
 
 </div>
 </div>
+<a id="a91358102986e897dd9ebf069d7c53d1f" name="a91358102986e897dd9ebf069d7c53d1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91358102986e897dd9ebf069d7c53d1f">&#9670;&#160;</a></span>Sigmoid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Engine::SimpleNeuralNetwork::Sigmoid </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Applies the sigmoid activation function. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Input value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Sigmoid of x. </dd></dl>
+
+</div>
+</div>
+<a id="adf9b3891e86a82b1ad1539d073aaa3ab" name="adf9b3891e86a82b1ad1539d073aaa3ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf9b3891e86a82b1ad1539d073aaa3ab">&#9670;&#160;</a></span>SigmoidDerivative()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Engine::SimpleNeuralNetwork::SigmoidDerivative </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Derivative of the sigmoid activation function. Assumes the input x is already sigmoid(x). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Output of the sigmoid function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Derivative value. </dd></dl>
+
+</div>
+</div>
+<a id="ad9601fee010da92b29dbd72aa86914bd" name="ad9601fee010da92b29dbd72aa86914bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9601fee010da92b29dbd72aa86914bd">&#9670;&#160;</a></span>Tanh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Engine::SimpleNeuralNetwork::Tanh </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Applies the hyperbolic tangent activation function. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Input value. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Tanh of x. </dd></dl>
+
+</div>
+</div>
+<a id="a60061d5ae84c92915810cd8d4a0ede00" name="a60061d5ae84c92915810cd8d4a0ede00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60061d5ae84c92915810cd8d4a0ede00">&#9670;&#160;</a></span>TanhDerivative()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Engine::SimpleNeuralNetwork::TanhDerivative </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Derivative of the hyperbolic tangent activation function. Assumes the input x is already tanh(x). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>Output of the tanh function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Derivative value. </dd></dl>
+
+</div>
+</div>
 <a id="ac20d52ab154b5b8fed044cc72a7d72d1" name="ac20d52ab154b5b8fed044cc72a7d72d1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac20d52ab154b5b8fed044cc72a7d72d1">&#9670;&#160;</a></span>Train()</h2>
 
@@ -270,6 +416,103 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>output_bias</b></td>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aa1729c983bee36c3d8af061fc1893419" name="aa1729c983bee36c3d8af061fc1893419"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1729c983bee36c3d8af061fc1893419">&#9670;&#160;</a></span>hidden1_bias</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Engine::SimpleNeuralNetwork::hidden1_bias[3]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bias values added to each neuron in the first hidden layer. </p>
+
+</div>
+</div>
+<a id="aed24ff7c2130b62de2faf9145a159e5d" name="aed24ff7c2130b62de2faf9145a159e5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed24ff7c2130b62de2faf9145a159e5d">&#9670;&#160;</a></span>hidden1_hidden2_weights</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Engine::SimpleNeuralNetwork::hidden1_hidden2_weights[3][2]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Weights connecting first hidden layer (3 neurons) to second hidden layer (2 neurons). @'hidden1_hidden2_weights[i][j]' is the weight from hidden1 neuron 'i' to hidden2 neuron 'j'. </p>
+
+</div>
+</div>
+<a id="a767f9461f599aa26ba0af762e9bb005c" name="a767f9461f599aa26ba0af762e9bb005c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a767f9461f599aa26ba0af762e9bb005c">&#9670;&#160;</a></span>hidden2_bias</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Engine::SimpleNeuralNetwork::hidden2_bias[2]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bias values added to each neuron in the second hidden layer. </p>
+
+</div>
+</div>
+<a id="ad85fc4408ef06012c818138ebae746b0" name="ad85fc4408ef06012c818138ebae746b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad85fc4408ef06012c818138ebae746b0">&#9670;&#160;</a></span>hidden2_output_weights</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Engine::SimpleNeuralNetwork::hidden2_output_weights[2]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Weights connecting second hidden layer (2 neurons) to output layer (1 neuron). </p>
+
+</div>
+</div>
+<a id="a069bfc15bbe923389504ed1c6f4fee48" name="a069bfc15bbe923389504ed1c6f4fee48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a069bfc15bbe923389504ed1c6f4fee48">&#9670;&#160;</a></span>input_hidden1_weights</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Engine::SimpleNeuralNetwork::input_hidden1_weights[2][3]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Weights connecting input layer (2 neurons) to first hidden layer (3 neurons). 'input_hidden1_weights[i][j]' is the weight from input neuron 'i' to hidden neuron 'j'. </p>
+
+</div>
+</div>
+<a id="a0154400a5bcff35a1ba4a70e09f3f5e8" name="a0154400a5bcff35a1ba4a70e09f3f5e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0154400a5bcff35a1ba4a70e09f3f5e8">&#9670;&#160;</a></span>output_bias</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Engine::SimpleNeuralNetwork::output_bias</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bias added to the output neuron. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>RenderingEngine/src/<a class="el" href="_simple_neural_network_8h_source.html">SimpleNeuralNetwork.h</a></li>
 </ul>
@@ -278,7 +521,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>output_bias</b></td>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Engine</b></li><li class="navelem"><a class="el" href="class_engine_1_1_simple_neural_network.html">SimpleNeuralNetwork</a></li>
+    <li class="navelem"><a class="el" href="namespace_engine.html">Engine</a></li><li class="navelem"><a class="el" href="class_engine_1_1_simple_neural_network.html">SimpleNeuralNetwork</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

@@ -105,66 +105,77 @@ $(function(){initNavTree('_random_8h_source.html',''); initResizable(true); });
   <div class="headertitle"><div class="title">Random.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<a href="_random_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;pch.h&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;Vector3.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_vector3_8h.html">Vector3.h</a>&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span>Engine</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_engine.html">Engine</a></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
 <div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_engine_1_1_random.html">    8</a></span>    <span class="keyword">class </span>Random</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_engine_1_1_random.html">    8</a></span>    <span class="keyword">class </span><a class="code hl_function" href="class_engine_1_1_random.html#a5bec08541d3dd032f81e1073c049372f">Random</a></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    {</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keyword">static</span> Random* instance;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_engine_1_1_random.html#a0aa3c1e10e1db994773d90fced394a5c">   12</a></span>        <span class="keyword">static</span> <a class="code hl_function" href="class_engine_1_1_random.html#a5bec08541d3dd032f81e1073c049372f">Random</a>* <a class="code hl_variable" href="class_engine_1_1_random.html#a0aa3c1e10e1db994773d90fced394a5c">instance</a>;</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        std::mt19937 generator;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        std::uniform_real_distribution&lt;double&gt; uniformDistribution;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_engine_1_1_random.html#a8788411eab150b868cecb3a0fc063504">   14</a></span>        std::mt19937 <a class="code hl_variable" href="class_engine_1_1_random.html#a8788411eab150b868cecb3a0fc063504">generator</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_engine_1_1_random.html#aa6182ea4aa504eabe2bbbebb5a22f20b">   15</a></span>        std::uniform_real_distribution&lt;double&gt; <a class="code hl_variable" href="class_engine_1_1_random.html#aa6182ea4aa504eabe2bbbebb5a22f20b">uniformDistribution</a>;</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        Random() : generator(std::chrono::system_clock::now().time_since_epoch().count()), uniformDistribution(0.0f, 1.0f) {}</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        ~Random() {}</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_engine_1_1_random.html#a5bec08541d3dd032f81e1073c049372f">   17</a></span>        <a class="code hl_function" href="class_engine_1_1_random.html#a5bec08541d3dd032f81e1073c049372f">Random</a>() : <a class="code hl_variable" href="class_engine_1_1_random.html#a8788411eab150b868cecb3a0fc063504">generator</a>(std::chrono::system_clock::now().time_since_epoch().count()), <a class="code hl_variable" href="class_engine_1_1_random.html#aa6182ea4aa504eabe2bbbebb5a22f20b">uniformDistribution</a>(0.0f, 1.0f) {}</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_engine_1_1_random.html#ae1371cf157d25016020cb9b2f39d36ee">   18</a></span>        <a class="code hl_function" href="class_engine_1_1_random.html#ae1371cf157d25016020cb9b2f39d36ee">~Random</a>() {}</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        Random(<span class="keyword">const</span> Random&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        Random operator=(<span class="keyword">const</span> Random&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_engine_1_1_random.html#ac4353f8120a2af71b2211f457fc1b49a">   22</a></span>        <a class="code hl_function" href="class_engine_1_1_random.html#ac4353f8120a2af71b2211f457fc1b49a">Random</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_engine_1_1_random.html#a5bec08541d3dd032f81e1073c049372f">Random</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_engine_1_1_random.html#a28820de578507cc5c0d99e7e1c584874">   23</a></span>        <a class="code hl_function" href="class_engine_1_1_random.html#a5bec08541d3dd032f81e1073c049372f">Random</a> <a class="code hl_function" href="class_engine_1_1_random.html#a28820de578507cc5c0d99e7e1c584874">operator=</a>(<span class="keyword">const</span> <a class="code hl_function" href="class_engine_1_1_random.html#a5bec08541d3dd032f81e1073c049372f">Random</a>&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <span class="keyword">static</span> Random* Get()</div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_engine_1_1_random.html#af8b7b22d77fc5a704a000a5717d8e522">   25</a></span>        <span class="keyword">static</span> <a class="code hl_function" href="class_engine_1_1_random.html#a5bec08541d3dd032f81e1073c049372f">Random</a>* <a class="code hl_function" href="class_engine_1_1_random.html#af8b7b22d77fc5a704a000a5717d8e522">Get</a>()</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <span class="keywordflow">if</span> (instance == <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_engine_1_1_random.html#a0aa3c1e10e1db994773d90fced394a5c">instance</a> == <span class="keyword">nullptr</span>)</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                instance = <span class="keyword">new</span> Random();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                <a class="code hl_variable" href="class_engine_1_1_random.html#a0aa3c1e10e1db994773d90fced394a5c">instance</a> = <span class="keyword">new</span> <a class="code hl_function" href="class_engine_1_1_random.html#a5bec08541d3dd032f81e1073c049372f">Random</a>();</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            }</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <span class="keywordflow">return</span> instance;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="class_engine_1_1_random.html#a0aa3c1e10e1db994773d90fced394a5c">instance</a>;</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        }</div>
+</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordtype">double</span> RandomDouble()</div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_engine_1_1_random.html#a12f80a8f667076c6d82eda2c3492000e">   35</a></span>        <span class="keywordtype">double</span> <a class="code hl_function" href="class_engine_1_1_random.html#a12f80a8f667076c6d82eda2c3492000e">RandomDouble</a>()</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keywordflow">return</span> uniformDistribution(generator);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="class_engine_1_1_random.html#aa6182ea4aa504eabe2bbbebb5a22f20b">uniformDistribution</a>(<a class="code hl_variable" href="class_engine_1_1_random.html#a8788411eab150b868cecb3a0fc063504">generator</a>);</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        }</div>
+</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordtype">double</span> RandomDouble(<span class="keywordtype">double</span> min, <span class="keywordtype">double</span> max)</div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_engine_1_1_random.html#ad8870dbe9beb4a54d1dbca9b859c72d9">   40</a></span>        <span class="keywordtype">double</span> <a class="code hl_function" href="class_engine_1_1_random.html#ad8870dbe9beb4a54d1dbca9b859c72d9">RandomDouble</a>(<span class="keywordtype">double</span> min, <span class="keywordtype">double</span> max)</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordflow">return</span> min + (max - min) * RandomDouble();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordflow">return</span> min + (max - min) * <a class="code hl_function" href="class_engine_1_1_random.html#a12f80a8f667076c6d82eda2c3492000e">RandomDouble</a>();</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        }</div>
+</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <a class="code hl_class" href="class_engine_1_1_vector3.html">Vector3</a> RandomVector3()</div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_engine_1_1_random.html#a5ba00fe803bf2bd85a7474cb3d8e84c2">   45</a></span>        <a class="code hl_class" href="class_engine_1_1_vector3.html">Vector3</a> <a class="code hl_function" href="class_engine_1_1_random.html#a5ba00fe803bf2bd85a7474cb3d8e84c2">RandomVector3</a>()</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="class_engine_1_1_vector3.html">Vector3</a>(RandomDouble(), RandomDouble(), RandomDouble());</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="class_engine_1_1_vector3.html">Vector3</a>(<a class="code hl_function" href="class_engine_1_1_random.html#a12f80a8f667076c6d82eda2c3492000e">RandomDouble</a>(), <a class="code hl_function" href="class_engine_1_1_random.html#a12f80a8f667076c6d82eda2c3492000e">RandomDouble</a>(), <a class="code hl_function" href="class_engine_1_1_random.html#a12f80a8f667076c6d82eda2c3492000e">RandomDouble</a>());</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
+</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_class" href="class_engine_1_1_vector3.html">Vector3</a> RandomVector3(<span class="keywordtype">double</span> min, <span class="keywordtype">double</span> max)</div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_engine_1_1_random.html#a85d31e22e30f558cc189147f29c9a4c9">   50</a></span>        <a class="code hl_class" href="class_engine_1_1_vector3.html">Vector3</a> <a class="code hl_function" href="class_engine_1_1_random.html#a85d31e22e30f558cc189147f29c9a4c9">RandomVector3</a>(<span class="keywordtype">double</span> min, <span class="keywordtype">double</span> max)</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        {</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="class_engine_1_1_vector3.html">Vector3</a>(RandomDouble(min, max), RandomDouble(min, max), RandomDouble(min, max));</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="class_engine_1_1_vector3.html">Vector3</a>(<a class="code hl_function" href="class_engine_1_1_random.html#a12f80a8f667076c6d82eda2c3492000e">RandomDouble</a>(min, max), <a class="code hl_function" href="class_engine_1_1_random.html#a12f80a8f667076c6d82eda2c3492000e">RandomDouble</a>(min, max), <a class="code hl_function" href="class_engine_1_1_random.html#a12f80a8f667076c6d82eda2c3492000e">RandomDouble</a>(min, max));</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        }</div>
+</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_class" href="class_engine_1_1_vector3.html">Vector3</a> RandomUnitVector3()</div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_engine_1_1_random.html#aa42084b85211fc0914afc8eb5343f96f">   55</a></span>        <a class="code hl_class" href="class_engine_1_1_vector3.html">Vector3</a> <a class="code hl_function" href="class_engine_1_1_random.html#aa42084b85211fc0914afc8eb5343f96f">RandomUnitVector3</a>()</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        {</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                <a class="code hl_class" href="class_engine_1_1_vector3.html">Vector3</a> p = RandomVector3(-1.0, 1.0);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                <a class="code hl_class" href="class_engine_1_1_vector3.html">Vector3</a> p = <a class="code hl_function" href="class_engine_1_1_random.html#a5ba00fe803bf2bd85a7474cb3d8e84c2">RandomVector3</a>(-1.0, 1.0);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                <span class="keywordtype">double</span> lensq = p.<a class="code hl_function" href="class_engine_1_1_vector3.html#a445942ea6c01a6f000da980df86aee0b">Length2</a>();</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                <span class="keywordflow">if</span> (1e-160 &lt; lensq &amp;&amp; lensq &lt;= 1)</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                {</div>
@@ -172,10 +183,12 @@ $(function(){initNavTree('_random_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                }</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            }</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        }</div>
+</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <a class="code hl_class" href="class_engine_1_1_vector3.html">Vector3</a> RandomOnUnitHemisphere(<span class="keyword">const</span> <a class="code hl_class" href="class_engine_1_1_vector3.html">Vector3</a>&amp; N)</div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_engine_1_1_random.html#a2612cc15451c241338b4a06c372ca34d">   68</a></span>        <a class="code hl_class" href="class_engine_1_1_vector3.html">Vector3</a> <a class="code hl_function" href="class_engine_1_1_random.html#a2612cc15451c241338b4a06c372ca34d">RandomOnUnitHemisphere</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_engine_1_1_vector3.html">Vector3</a>&amp; N)</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <a class="code hl_class" href="class_engine_1_1_vector3.html">Vector3</a> onUnitSphere = RandomUnitVector3();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <a class="code hl_class" href="class_engine_1_1_vector3.html">Vector3</a> onUnitSphere = <a class="code hl_function" href="class_engine_1_1_random.html#aa42084b85211fc0914afc8eb5343f96f">RandomUnitVector3</a>();</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="class_engine_1_1_vector3.html#abfd79a6317dfeeaa44d11ed3ed97017f">Vector3::Dot</a>(onUnitSphere, N) &gt; 0.0)</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            {</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                <span class="keywordflow">return</span> onUnitSphere;</div>
@@ -185,18 +198,35 @@ $(function(){initNavTree('_random_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                <span class="keywordflow">return</span> -onUnitSphere;</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            }</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        }</div>
+</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    };</div>
 </div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>}</div>
+<div class="ttc" id="a_vector3_8h_html"><div class="ttname"><a href="_vector3_8h.html">Vector3.h</a></div></div>
+<div class="ttc" id="aclass_engine_1_1_random_html_a0aa3c1e10e1db994773d90fced394a5c"><div class="ttname"><a href="class_engine_1_1_random.html#a0aa3c1e10e1db994773d90fced394a5c">Engine::Random::instance</a></div><div class="ttdeci">static Random * instance</div><div class="ttdef"><b>Definition</b> Random.h:12</div></div>
+<div class="ttc" id="aclass_engine_1_1_random_html_a12f80a8f667076c6d82eda2c3492000e"><div class="ttname"><a href="class_engine_1_1_random.html#a12f80a8f667076c6d82eda2c3492000e">Engine::Random::RandomDouble</a></div><div class="ttdeci">double RandomDouble()</div><div class="ttdef"><b>Definition</b> Random.h:35</div></div>
+<div class="ttc" id="aclass_engine_1_1_random_html_a2612cc15451c241338b4a06c372ca34d"><div class="ttname"><a href="class_engine_1_1_random.html#a2612cc15451c241338b4a06c372ca34d">Engine::Random::RandomOnUnitHemisphere</a></div><div class="ttdeci">Vector3 RandomOnUnitHemisphere(const Vector3 &amp;N)</div><div class="ttdef"><b>Definition</b> Random.h:68</div></div>
+<div class="ttc" id="aclass_engine_1_1_random_html_a28820de578507cc5c0d99e7e1c584874"><div class="ttname"><a href="class_engine_1_1_random.html#a28820de578507cc5c0d99e7e1c584874">Engine::Random::operator=</a></div><div class="ttdeci">Random operator=(const Random &amp;)=delete</div></div>
+<div class="ttc" id="aclass_engine_1_1_random_html_a5ba00fe803bf2bd85a7474cb3d8e84c2"><div class="ttname"><a href="class_engine_1_1_random.html#a5ba00fe803bf2bd85a7474cb3d8e84c2">Engine::Random::RandomVector3</a></div><div class="ttdeci">Vector3 RandomVector3()</div><div class="ttdef"><b>Definition</b> Random.h:45</div></div>
+<div class="ttc" id="aclass_engine_1_1_random_html_a5bec08541d3dd032f81e1073c049372f"><div class="ttname"><a href="class_engine_1_1_random.html#a5bec08541d3dd032f81e1073c049372f">Engine::Random::Random</a></div><div class="ttdeci">Random()</div><div class="ttdef"><b>Definition</b> Random.h:17</div></div>
+<div class="ttc" id="aclass_engine_1_1_random_html_a85d31e22e30f558cc189147f29c9a4c9"><div class="ttname"><a href="class_engine_1_1_random.html#a85d31e22e30f558cc189147f29c9a4c9">Engine::Random::RandomVector3</a></div><div class="ttdeci">Vector3 RandomVector3(double min, double max)</div><div class="ttdef"><b>Definition</b> Random.h:50</div></div>
+<div class="ttc" id="aclass_engine_1_1_random_html_a8788411eab150b868cecb3a0fc063504"><div class="ttname"><a href="class_engine_1_1_random.html#a8788411eab150b868cecb3a0fc063504">Engine::Random::generator</a></div><div class="ttdeci">std::mt19937 generator</div><div class="ttdef"><b>Definition</b> Random.h:14</div></div>
+<div class="ttc" id="aclass_engine_1_1_random_html_aa42084b85211fc0914afc8eb5343f96f"><div class="ttname"><a href="class_engine_1_1_random.html#aa42084b85211fc0914afc8eb5343f96f">Engine::Random::RandomUnitVector3</a></div><div class="ttdeci">Vector3 RandomUnitVector3()</div><div class="ttdef"><b>Definition</b> Random.h:55</div></div>
+<div class="ttc" id="aclass_engine_1_1_random_html_aa6182ea4aa504eabe2bbbebb5a22f20b"><div class="ttname"><a href="class_engine_1_1_random.html#aa6182ea4aa504eabe2bbbebb5a22f20b">Engine::Random::uniformDistribution</a></div><div class="ttdeci">std::uniform_real_distribution&lt; double &gt; uniformDistribution</div><div class="ttdef"><b>Definition</b> Random.h:15</div></div>
+<div class="ttc" id="aclass_engine_1_1_random_html_ac4353f8120a2af71b2211f457fc1b49a"><div class="ttname"><a href="class_engine_1_1_random.html#ac4353f8120a2af71b2211f457fc1b49a">Engine::Random::Random</a></div><div class="ttdeci">Random(const Random &amp;)=delete</div></div>
+<div class="ttc" id="aclass_engine_1_1_random_html_ad8870dbe9beb4a54d1dbca9b859c72d9"><div class="ttname"><a href="class_engine_1_1_random.html#ad8870dbe9beb4a54d1dbca9b859c72d9">Engine::Random::RandomDouble</a></div><div class="ttdeci">double RandomDouble(double min, double max)</div><div class="ttdef"><b>Definition</b> Random.h:40</div></div>
+<div class="ttc" id="aclass_engine_1_1_random_html_ae1371cf157d25016020cb9b2f39d36ee"><div class="ttname"><a href="class_engine_1_1_random.html#ae1371cf157d25016020cb9b2f39d36ee">Engine::Random::~Random</a></div><div class="ttdeci">~Random()</div><div class="ttdef"><b>Definition</b> Random.h:18</div></div>
+<div class="ttc" id="aclass_engine_1_1_random_html_af8b7b22d77fc5a704a000a5717d8e522"><div class="ttname"><a href="class_engine_1_1_random.html#af8b7b22d77fc5a704a000a5717d8e522">Engine::Random::Get</a></div><div class="ttdeci">static Random * Get()</div><div class="ttdef"><b>Definition</b> Random.h:25</div></div>
 <div class="ttc" id="aclass_engine_1_1_vector3_html"><div class="ttname"><a href="class_engine_1_1_vector3.html">Engine::Vector3</a></div><div class="ttdoc">A simple 3D vector class for representing and manipulating 3D vectors.</div><div class="ttdef"><b>Definition</b> Vector3.h:16</div></div>
 <div class="ttc" id="aclass_engine_1_1_vector3_html_a445942ea6c01a6f000da980df86aee0b"><div class="ttname"><a href="class_engine_1_1_vector3.html#a445942ea6c01a6f000da980df86aee0b">Engine::Vector3::Length2</a></div><div class="ttdeci">double Length2() const</div><div class="ttdoc">Returns the squared length (magnitude) of the vector.</div><div class="ttdef"><b>Definition</b> Vector3.cpp:47</div></div>
 <div class="ttc" id="aclass_engine_1_1_vector3_html_abfd79a6317dfeeaa44d11ed3ed97017f"><div class="ttname"><a href="class_engine_1_1_vector3.html#abfd79a6317dfeeaa44d11ed3ed97017f">Engine::Vector3::Dot</a></div><div class="ttdeci">static double Dot(const Vector3 &amp;u, const Vector3 &amp;v)</div><div class="ttdoc">Computes the dot product of two vectors.</div><div class="ttdef"><b>Definition</b> Vector3.cpp:57</div></div>
+<div class="ttc" id="anamespace_engine_html"><div class="ttname"><a href="namespace_engine.html">Engine</a></div><div class="ttdef"><b>Definition</b> AssetLoader.h:9</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_07d9e4503b554f0274c5bfa511a2ed1e.html">RenderingEngine</a></li><li class="navelem"><a class="el" href="dir_5c87b902f4230e062b40434e837cf073.html">src</a></li><li class="navelem"><b>Random.h</b></li>
+    <li class="navelem"><a class="el" href="dir_07d9e4503b554f0274c5bfa511a2ed1e.html">RenderingEngine</a></li><li class="navelem"><a class="el" href="dir_5c87b902f4230e062b40434e837cf073.html">src</a></li><li class="navelem"><a class="el" href="_random_8h.html">Random.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

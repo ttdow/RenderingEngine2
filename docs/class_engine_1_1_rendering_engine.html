@@ -104,30 +104,241 @@ $(function(){initNavTree('class_engine_1_1_rendering_engine.html',''); initResiz
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_engine_1_1_rendering_engine-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Engine::RenderingEngine Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_rendering_engine_8h_source.html">RenderingEngine.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a44a010895db118fdbd7e98fe375b3f3a" id="r_a44a010895db118fdbd7e98fe375b3f3a"><td class="memItemLeft" align="right" valign="top"><a id="a44a010895db118fdbd7e98fe375b3f3a" name="a44a010895db118fdbd7e98fe375b3f3a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>RenderingEngine</b> (HINSTANCE hInstance, HWND hwnd)</td></tr>
+<tr class="memitem:a5f1d87a8831794d27d11feed947b1205" id="r_a5f1d87a8831794d27d11feed947b1205"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f1d87a8831794d27d11feed947b1205">RenderingEngine</a> ()=delete</td></tr>
+<tr class="separator:a5f1d87a8831794d27d11feed947b1205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44a010895db118fdbd7e98fe375b3f3a" id="r_a44a010895db118fdbd7e98fe375b3f3a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44a010895db118fdbd7e98fe375b3f3a">RenderingEngine</a> (HINSTANCE hInstance, HWND hwnd)</td></tr>
 <tr class="separator:a44a010895db118fdbd7e98fe375b3f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a715c106543e45b7ad041a497b3079f70" id="r_a715c106543e45b7ad041a497b3079f70"><td class="memItemLeft" align="right" valign="top"><a id="a715c106543e45b7ad041a497b3079f70" name="a715c106543e45b7ad041a497b3079f70"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> ()</td></tr>
+<tr class="memitem:aa2e7ab59c3be7cb7de564241c70a265c" id="r_aa2e7ab59c3be7cb7de564241c70a265c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2e7ab59c3be7cb7de564241c70a265c">~RenderingEngine</a> ()</td></tr>
+<tr class="separator:aa2e7ab59c3be7cb7de564241c70a265c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a715c106543e45b7ad041a497b3079f70" id="r_a715c106543e45b7ad041a497b3079f70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a715c106543e45b7ad041a497b3079f70">Update</a> ()</td></tr>
 <tr class="separator:a715c106543e45b7ad041a497b3079f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a294129d63242491c902e470ea355230e" id="r_a294129d63242491c902e470ea355230e"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_engine_1_1_vulkan_backend.html">VulkanBackend</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a294129d63242491c902e470ea355230e">vulkanBackend</a></td></tr>
+<tr class="separator:a294129d63242491c902e470ea355230e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2f571ea30743f729b27b4518dd89fb1" id="r_ab2f571ea30743f729b27b4518dd89fb1"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_engine_1_1_d_x12_backend.html">DX12Backend</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2f571ea30743f729b27b4518dd89fb1">dx12Backend</a></td></tr>
+<tr class="separator:ab2f571ea30743f729b27b4518dd89fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9a7f535857cdccb2ea645e3784e86cf" id="r_ac9a7f535857cdccb2ea645e3784e86cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_engine.html#a9b8ef0d90a91152ce524f073abcd2064">RenderingBackend</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9a7f535857cdccb2ea645e3784e86cf">selectedBackend</a> = <a class="el" href="namespace_engine.html#a9b8ef0d90a91152ce524f073abcd2064a9517d49f12986c2edac9cfd8c902a920">RenderingBackend::DX12</a></td></tr>
+<tr class="separator:ac9a7f535857cdccb2ea645e3784e86cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2104efc31fb81ae054c10b927d836305" id="r_a2104efc31fb81ae054c10b927d836305"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2104efc31fb81ae054c10b927d836305">imageWidth</a></td></tr>
+<tr class="separator:a2104efc31fb81ae054c10b927d836305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca4bdf9ffd04a6f3f7990f396d73d34e" id="r_aca4bdf9ffd04a6f3f7990f396d73d34e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca4bdf9ffd04a6f3f7990f396d73d34e">imageHeight</a></td></tr>
+<tr class="separator:aca4bdf9ffd04a6f3f7990f396d73d34e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a5f1d87a8831794d27d11feed947b1205" name="a5f1d87a8831794d27d11feed947b1205"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f1d87a8831794d27d11feed947b1205">&#9670;&#160;</a></span>RenderingEngine() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Engine::RenderingEngine::RenderingEngine </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel delete">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a44a010895db118fdbd7e98fe375b3f3a" name="a44a010895db118fdbd7e98fe375b3f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44a010895db118fdbd7e98fe375b3f3a">&#9670;&#160;</a></span>RenderingEngine() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Engine::RenderingEngine::RenderingEngine </td>
+          <td>(</td>
+          <td class="paramtype">HINSTANCE</td>          <td class="paramname"><span class="paramname"><em>hInstance</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HWND</td>          <td class="paramname"><span class="paramname"><em>hwnd</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa2e7ab59c3be7cb7de564241c70a265c" name="aa2e7ab59c3be7cb7de564241c70a265c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2e7ab59c3be7cb7de564241c70a265c">&#9670;&#160;</a></span>~RenderingEngine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Engine::RenderingEngine::~RenderingEngine </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a715c106543e45b7ad041a497b3079f70" name="a715c106543e45b7ad041a497b3079f70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a715c106543e45b7ad041a497b3079f70">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Engine::RenderingEngine::Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ab2f571ea30743f729b27b4518dd89fb1" name="ab2f571ea30743f729b27b4518dd89fb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2f571ea30743f729b27b4518dd89fb1">&#9670;&#160;</a></span>dx12Backend</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="class_engine_1_1_d_x12_backend.html">DX12Backend</a>&gt; Engine::RenderingEngine::dx12Backend</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca4bdf9ffd04a6f3f7990f396d73d34e" name="aca4bdf9ffd04a6f3f7990f396d73d34e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca4bdf9ffd04a6f3f7990f396d73d34e">&#9670;&#160;</a></span>imageHeight</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Engine::RenderingEngine::imageHeight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2104efc31fb81ae054c10b927d836305" name="a2104efc31fb81ae054c10b927d836305"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2104efc31fb81ae054c10b927d836305">&#9670;&#160;</a></span>imageWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Engine::RenderingEngine::imageWidth</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac9a7f535857cdccb2ea645e3784e86cf" name="ac9a7f535857cdccb2ea645e3784e86cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9a7f535857cdccb2ea645e3784e86cf">&#9670;&#160;</a></span>selectedBackend</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_engine.html#a9b8ef0d90a91152ce524f073abcd2064">RenderingBackend</a> Engine::RenderingEngine::selectedBackend = <a class="el" href="namespace_engine.html#a9b8ef0d90a91152ce524f073abcd2064a9517d49f12986c2edac9cfd8c902a920">RenderingBackend::DX12</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a294129d63242491c902e470ea355230e" name="a294129d63242491c902e470ea355230e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a294129d63242491c902e470ea355230e">&#9670;&#160;</a></span>vulkanBackend</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="class_engine_1_1_vulkan_backend.html">VulkanBackend</a>&gt; Engine::RenderingEngine::vulkanBackend</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>RenderingEngine/src/<a class="el" href="_rendering_engine_8h_source.html">RenderingEngine.h</a></li>
-<li>RenderingEngine/src/<b>RenderingEngine.cpp</b></li>
+<li>RenderingEngine/src/<a class="el" href="_rendering_engine_8cpp.html">RenderingEngine.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Engine</b></li><li class="navelem"><a class="el" href="class_engine_1_1_rendering_engine.html">RenderingEngine</a></li>
+    <li class="navelem"><a class="el" href="namespace_engine.html">Engine</a></li><li class="navelem"><a class="el" href="class_engine_1_1_rendering_engine.html">RenderingEngine</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
