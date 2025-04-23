@@ -3,12 +3,51 @@
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\Hypertarget{class_engine_1_1_vulkan_backend_a5b89991209882bddf47ff64ffc7a79f6}\label{class_engine_1_1_vulkan_backend_a5b89991209882bddf47ff64ffc7a79f6} 
+void {\bfseries Train\+DQN} ()
+\item 
+\Hypertarget{class_engine_1_1_vulkan_backend_a585e817aa434418973b4244df590b363}\label{class_engine_1_1_vulkan_backend_a585e817aa434418973b4244df590b363} 
+void {\bfseries Accumulate\+Wave\+To\+Height\+Field} (const double x, const double wave\+Length, const double max\+Height, std\+::array$<$ double, k\+Buffer\+Size $>$ \&height\+Field)
+\item 
+\Hypertarget{class_engine_1_1_vulkan_backend_a30d85fafba1b50e984ee830551c7cd2a}\label{class_engine_1_1_vulkan_backend_a30d85fafba1b50e984ee830551c7cd2a} 
+void {\bfseries Update\+Wave} (const double time\+Interval, double \&x, double \&speed)
+\item 
+\Hypertarget{class_engine_1_1_vulkan_backend_a569235b09f7ed47c46ab4969dc3eaf18}\label{class_engine_1_1_vulkan_backend_a569235b09f7ed47c46ab4969dc3eaf18} 
+void {\bfseries Draw\+Fluid} (const std\+::array$<$ double, k\+Buffer\+Size $>$ \&height\+Field) const
+\item 
+\Hypertarget{class_engine_1_1_vulkan_backend_a1c6ee0b6cb5ad7518d3a2d9ef73d26fb}\label{class_engine_1_1_vulkan_backend_a1c6ee0b6cb5ad7518d3a2d9ef73d26fb} 
+void {\bfseries Fluid} ()
+\item 
+\Hypertarget{class_engine_1_1_vulkan_backend_a89484039ab4c3eb615da86d9f7309ae3}\label{class_engine_1_1_vulkan_backend_a89484039ab4c3eb615da86d9f7309ae3} 
+void {\bfseries Draw} ()
+\item 
 \Hypertarget{class_engine_1_1_vulkan_backend_a774f3e65110529757602cc9553f25342}\label{class_engine_1_1_vulkan_backend_a774f3e65110529757602cc9553f25342} 
 {\bfseries Vulkan\+Backend} (HINSTANCE h\+Instance, HWND hwnd)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_engine_1_1_vulkan_backend_a5eb21e3d7d6154f31559cabbdb9646a9}\label{class_engine_1_1_vulkan_backend_a5eb21e3d7d6154f31559cabbdb9646a9} 
+Vk\+Device {\bfseries device}
+\item 
+\Hypertarget{class_engine_1_1_vulkan_backend_a7286161a7b80cb11cfc35e75a6b2dc37}\label{class_engine_1_1_vulkan_backend_a7286161a7b80cb11cfc35e75a6b2dc37} 
+Vma\+Allocator {\bfseries allocator}
+\item 
+\Hypertarget{class_engine_1_1_vulkan_backend_a122bb524b7efcbfd890a02432d308193}\label{class_engine_1_1_vulkan_backend_a122bb524b7efcbfd890a02432d308193} 
+const char \texorpdfstring{$\ast$}{*} {\bfseries k\+Gray\+Scale\+Table} = "{}.\+:-\/=+\texorpdfstring{$\ast$}{*}\#\%@"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_engine_1_1_vulkan_backend_aec385f8905b02c5a92f178b629565446}\label{class_engine_1_1_vulkan_backend_aec385f8905b02c5a92f178b629565446} 
+static const size\+\_\+t {\bfseries k\+Buffer\+Size} = 80
+\item 
+\Hypertarget{class_engine_1_1_vulkan_backend_a7727cf09eb7235866873f0a0aaad6666}\label{class_engine_1_1_vulkan_backend_a7727cf09eb7235866873f0a0aaad6666} 
+static const size\+\_\+t {\bfseries k\+Gray\+Scale\+Table\+Size} = sizeof(k\+Gray\+Scale\+Table) / sizeof(char)
 \end{DoxyCompactItemize}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Rendering\+Engine/src/Vulkan\+Backend.\+h\item 
-Rendering\+Engine/src/Vulkan\+Backend.\+cpp\end{DoxyCompactItemize}
+Rendering\+Engine/src/vulkan/Vulkan\+Backend.\+h\item 
+Rendering\+Engine/src/vulkan/Vulkan\+Backend.\+cpp\end{DoxyCompactItemize}

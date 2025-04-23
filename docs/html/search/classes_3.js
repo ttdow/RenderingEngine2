@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['hitrecord_0',['HitRecord',['../class_engine_1_1_hit_record.html',1,'Engine']]],
-  ['hittable_1',['Hittable',['../class_engine_1_1_hittable.html',1,'Engine']]],
-  ['hittablelist_2',['HittableList',['../class_engine_1_1_hittable_list.html',1,'Engine']]]
+  ['entity_0',['Entity',['../class_engine_1_1_entity.html',1,'Engine']]],
+  ['environment_1',['Environment',['../class_engine_1_1_environment.html',1,'Engine']]],
+  ['experience_2',['Experience',['../struct_engine_1_1_experience.html',1,'Engine']]]
 ];

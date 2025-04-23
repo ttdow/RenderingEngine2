@@ -42,7 +42,25 @@
     <ClCompile Include="src\Sphere.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\VulkanBackend.cpp">
+    <ClCompile Include="src\vulkan\VulkanBackend.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vulkan\VulkanImage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vulkan\VulkanDescriptor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\vulkan\VulkanPipeline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fluid\ParticleSystemData3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\fluid\ParticleSystemSolver3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dx12\DX12Backend.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -95,10 +113,10 @@
     <ClInclude Include="src\Lambertian.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\VulkanBackend.h">
+    <ClInclude Include="src\vulkan\VulkanBackend.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\pch.h">
+    <ClInclude Include="inc\pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Vector2.h">
@@ -119,5 +137,38 @@
     <ClInclude Include="src\DQNAgent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\LossFunction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RecurrentNeuralNetwork.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vulkan\VulkanImage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vulkan\VulkanDescriptor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\vulkan\VulkanPipeline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fluid\ParticleSystemData3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fluid\ParticleSystemSolver3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\fluid\Animation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\dx12\DX12Backend.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\shader\shader.comp" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="src\shader\shader.hlsl" />
   </ItemGroup>
 </Project>

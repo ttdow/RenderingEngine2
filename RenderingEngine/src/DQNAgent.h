@@ -2,6 +2,8 @@
 
 #include "NeuralNetwork.h"
 
+#include "LossFunction.h"
+
 namespace Engine
 {
 	struct Experience
@@ -65,16 +67,26 @@ namespace Engine
 	{
 	public:
 
-		DQNAgent(int stateSize, int actionSize) : stateSize(stateSize), actionSize(actionSize), qNet({ stateSize, 32, 32, actionSize })
+		DQNAgent(int stateSize, int actionSize, LossFunction* loss, size_t replayCapacity = 10000) : 
+			stateSize(stateSize), 
+			actionSize(actionSize), 
+			qNet({ stateSize, 32, 32, actionSize }, loss),
+			targetNet({ stateSize, 32, 32, actionSize}, loss),
+			replayBuffer(replayCapacity),
+			rng(static_cast<unsigned>(std::time(nullptr)))
 		{
-			// Nothing.
+			// Initialize target network.
+			targetNet = qNet;
 		}
 
 		int Act(const std::vector<float>& state, float epsilon)
 		{
-			if (((float)rand() / RAND_MAX) < epsilon)
+			std::uniform_real_distribution<float> floatDist(0.0f, 1.0f);
+			std::uniform_int_distribution<int> actionDist(0, actionSize - 1);
+
+			if (floatDist(rng) < epsilon)
 			{
-				int action = rand() % actionSize;
+				int action = actionDist(rng);
 
 				return action;
 			}
@@ -82,6 +94,33 @@ namespace Engine
 			std::vector<float> qValues = qNet.Predict(state);
 
 			return std::distance(qValues.begin(), std::max_element(qValues.begin(), qValues.end()));
+		}
+
+		void Step(const std::vector<float>& state, int action, float reward, const std::vector<float>& nextState, bool done)
+		{
+			replayBuffer.Add({ state, action, reward, nextState, done });
+		}
+
+		void TrainBatch(float gamma, float lr, size_t batchSize)
+		{
+			if (!replayBuffer.CanSample(batchSize))
+			{
+				return;
+			}
+
+			std::vector<Experience> batch = replayBuffer.Sample(batchSize);
+
+			for (const Experience& exp : batch)
+			{
+				std::vector<float> target = qNet.Predict(exp.state);
+				std::vector<float> nextQ = targetNet.Predict(exp.nextState);
+
+				float maxQ = *std::max_element(nextQ.begin(), nextQ.end());
+				target[exp.action] = exp.reward + (exp.done ? 0.0f : gamma * maxQ);
+
+				qNet.Train(exp.state, target, lr);
+			}
+
 		}
 
 		void Train(const std::vector<float>& state, int action, float reward, const std::vector<float>& nextState, bool done, float gamma, float lr)
@@ -95,10 +134,27 @@ namespace Engine
 			qNet.Train(state, target, lr);
 		}
 
+		void UpdateTargetNetwork()
+		{
+			targetNet = qNet;
+		}
+
+		void SoftUpdateTarget(float tau)
+		{
+			// TODO.
+			//targetNet.SoftUpdateFrom(qNet, tau);
+		}
+
 	private:
 
 		int stateSize;
 		int actionSize;
+
 		NeuralNetwork qNet;
+		NeuralNetwork targetNet;
+
+		ReplayBuffer replayBuffer;
+		
+		std::mt19937 rng;
 	};
 }

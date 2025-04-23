@@ -101,7 +101,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)$(ProjectName)\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>vulkan-1.lib;SDL2main.lib;SDL2.lib;fastgltf_d.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>vulkan-1.lib;fastgltf_d.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -125,7 +125,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)$(ProjectName)\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>vulkan-1.lib;SDL2main.lib;SDL2.lib;fastgltf.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>vulkan-1.lib;fastgltf.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -143,7 +143,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)$(ProjectName)\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>vulkan-1.lib;SDL2main.lib;SDL2.lib;fastgltf_d.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>vulkan-1.lib;fastgltf_d.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -167,12 +167,15 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)$(ProjectName)\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>vulkan-1.lib;SDL2main.lib;SDL2.lib;fastgltf.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>vulkan-1.lib;fastgltf.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\AssetLoader.cpp" />
     <ClCompile Include="src\Camera.cpp" />
+    <ClCompile Include="src\dx12\DX12Backend.cpp" />
+    <ClCompile Include="src\fluid\ParticleSystemData3.cpp" />
+    <ClCompile Include="src\fluid\ParticleSystemSolver3.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -185,9 +188,17 @@
     <ClCompile Include="src\Sphere.cpp" />
     <ClCompile Include="src\Transform.cpp" />
     <ClCompile Include="src\Vector3.cpp" />
-    <ClCompile Include="src\VulkanBackend.cpp" />
+    <ClCompile Include="src\vulkan\VulkanBackend.cpp" />
+    <ClCompile Include="src\vulkan\VulkanDescriptor.cpp" />
+    <ClCompile Include="src\vulkan\VulkanImage.cpp" />
+    <ClCompile Include="src\vulkan\VulkanPipeline.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\dx12\DX12Backend.h" />
+    <ClInclude Include="src\fluid\Animation.h" />
+    <ClInclude Include="src\fluid\ParticleSystemData3.h" />
+    <ClInclude Include="src\fluid\ParticleSystemSolver3.h" />
+    <ClInclude Include="src\LossFunction.h" />
     <ClInclude Include="src\AssetLoader.h" />
     <ClInclude Include="src\Camera.h" />
     <ClInclude Include="src\DQNAgent.h" />
@@ -200,9 +211,10 @@
     <ClInclude Include="src\Lambertian.h" />
     <ClInclude Include="src\Material.h" />
     <ClInclude Include="src\NeuralNetwork.h" />
-    <ClInclude Include="src\pch.h" />
+    <ClInclude Include="inc\pch.h" />
     <ClInclude Include="src\Random.h" />
     <ClInclude Include="src\Ray.h" />
+    <ClInclude Include="src\RecurrentNeuralNetwork.h" />
     <ClInclude Include="src\RenderingEngine.h" />
     <ClInclude Include="src\Scene.h" />
     <ClInclude Include="src\SimpleNeuralNetwork.h" />
@@ -211,7 +223,35 @@
     <ClInclude Include="src\Vector2.h" />
     <ClInclude Include="src\Vector2_SIMD.h" />
     <ClInclude Include="src\Vector3.h" />
-    <ClInclude Include="src\VulkanBackend.h" />
+    <ClInclude Include="src\vulkan\VulkanBackend.h" />
+    <ClInclude Include="src\vulkan\VulkanDescriptor.h" />
+    <ClInclude Include="src\vulkan\VulkanImage.h" />
+    <ClInclude Include="src\vulkan\VulkanPipeline.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\shader\shader.comp" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="src\shader\shader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Library</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Library</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Library</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Library</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">6.3</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">6.3</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">6.3</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">6.3</ShaderModel>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">compiledShader</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">shader.fxh</HeaderFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">compiledShader</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)inc\shader.fxh</HeaderFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">compiledShader</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">shader.fxh</HeaderFileOutput>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">compiledShader</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)inc\shader.fxh</HeaderFileOutput>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/Qembed_debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/Qembed_debug %(AdditionalOptions)</AdditionalOptions>
+    </FxCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

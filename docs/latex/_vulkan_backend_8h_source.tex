@@ -1,89 +1,125 @@
 \doxysection{Vulkan\+Backend.\+h}
-\hypertarget{_vulkan_backend_8h_source}{}\label{_vulkan_backend_8h_source}\index{RenderingEngine/src/VulkanBackend.h@{RenderingEngine/src/VulkanBackend.h}}
+\hypertarget{_vulkan_backend_8h_source}{}\label{_vulkan_backend_8h_source}\index{RenderingEngine/src/vulkan/VulkanBackend.h@{RenderingEngine/src/vulkan/VulkanBackend.h}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <Windows.h>}}
-\DoxyCodeLine{00004\ }
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <optional>}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <algorithm>}}
-\DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vulkan/vulkan.h>}}
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vulkan/vulkan\_win32.h>}}
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vulkan/vk\_enum\_string\_helper.h>}}
-\DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}Vector2.h"{}}}
-\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}Vector2\_SIMD.h"{}}}
-\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}SimpleNeuralNetwork.h"{}}}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }Engine}
-\DoxyCodeLine{00017\ \{}
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_engine_1_1_queue_family_indices}{QueueFamilyIndices}}}
-\DoxyCodeLine{00019\ \ \ \ \ \{}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::optional<uint32\_t>\ graphicsFamily;}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ std::optional<uint32\_t>\ computeFamily;}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ std::optional<uint32\_t>\ transferFamily;}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ std::optional<uint32\_t>\ presentFamily;}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ IsComplete()\textcolor{keyword}{\ const}}
-\DoxyCodeLine{00026\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ graphicsFamily.has\_value()\ \&\&}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ computeFamily.has\_value()\ \&\&}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ transferFamily.has\_value()\ \&\&}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ presentFamily.has\_value();}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00032\ \ \ \ \ \};}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_engine_1_1_swapchain_support_details}{SwapchainSupportDetails}}}
-\DoxyCodeLine{00035\ \ \ \ \ \{}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ VkSurfaceCapabilitiesKHR\ surfaceCapabilities\ =\ \{\};}
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ std::vector<VkSurfaceFormatKHR>\ surfaceFormats;}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ std::vector<VkPresentModeKHR>\ presentModes;}
-\DoxyCodeLine{00039\ \ \ \ \ \};}
-\DoxyCodeLine{00040\ }
-\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{class\ }VulkanBackend}
-\DoxyCodeLine{00042\ \ \ \ \ \{}
-\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ VulkanBackend()\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ VulkanBackend(HINSTANCE\ hInstance,\ HWND\ hwnd);}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \string~VulkanBackend();}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vulkan/vulkan.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vulkan/vulkan\_win32.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vulkan/vk\_enum\_string\_helper.h>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vma/vk\_mem\_alloc.h>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}../Vector2.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}../Vector2\_SIMD.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}../SimpleNeuralNetwork.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}../NeuralNetwork.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}../Environment.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}../DQNAgent.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}../LossFunction.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}../RecurrentNeuralNetwork.h"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}VulkanImage.h"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}VulkanDescriptor.h"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}VulkanPipeline.h"{}}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{namespace\ }Engine}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_engine_1_1_queue_family_indices}{QueueFamilyIndices}}}
+\DoxyCodeLine{00025\ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ std::optional<uint32\_t>\ graphicsFamily;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ std::optional<uint32\_t>\ computeFamily;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ std::optional<uint32\_t>\ transferFamily;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ std::optional<uint32\_t>\ presentFamily;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ IsComplete()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00032\ \textcolor{keyword}{\ \ \ \ \ \ \ \ }\{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ graphicsFamily.has\_value()\ \&\&}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ computeFamily.has\_value()\ \&\&}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ transferFamily.has\_value()\ \&\&}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ presentFamily.has\_value();}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_engine_1_1_swapchain_support_details}{SwapchainSupportDetails}}}
+\DoxyCodeLine{00041\ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ VkSurfaceCapabilitiesKHR\ surfaceCapabilities\ =\ \{\};}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ std::vector<VkSurfaceFormatKHR>\ surfaceFormats;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ std::vector<VkPresentModeKHR>\ presentModes;}
+\DoxyCodeLine{00045\ \ \ \ \ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{class\ }VulkanBackend}
+\DoxyCodeLine{00048\ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{public}:}
 \DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ VkInstance\ instance;}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ VkSurfaceKHR\ surface;}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ VkPhysicalDevice\ physicalDevice;}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ VkDevice\ device;}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ VkSwapchainKHR\ swapchain;}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ std::vector<VkImage>\ swapchainImages;}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ std::vector<VkImageView>\ swapchainImageViews;}
-\DoxyCodeLine{00058\ }
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ VkQueue\ graphicsQueue;}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ VkQueue\ computeQueue;}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ VkQueue\ transferQueue;}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ VkQueue\ presentQueue;}
-\DoxyCodeLine{00063\ }
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_engine_1_1_queue_family_indices}{QueueFamilyIndices}}\ queueFamilyIndices;}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_engine_1_1_swapchain_support_details}{SwapchainSupportDetails}}\ swapchainSupportDetails;}
-\DoxyCodeLine{00066\ }
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ VkPhysicalDeviceProperties\ physicalDeviceProperties;}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ VkPhysicalDeviceFeatures\ physicalDeviceFeatures;}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ VkPhysicalDeviceMemoryProperties\ physicalDeviceMemoryProperties;}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ VkPhysicalDeviceRayTracingPipelinePropertiesKHR\ physicalDeviceRTProperties;}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ VkPhysicalDeviceProperties2\ physicalDeviceProperties2;}
-\DoxyCodeLine{00072\ }
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ VkFormat\ imageFormat;}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ VkExtent2D\ imageExtent;}
-\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ uint32\_t\ framebufferCount;}
-\DoxyCodeLine{00076\ }
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ hardwareRaytracingSupported;}
-\DoxyCodeLine{00078\ }
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ RateDeviceSuitability(VkPhysicalDevice\ device);}
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_engine_1_1_queue_family_indices}{QueueFamilyIndices}}\ FindQueueFamilies(VkPhysicalDevice\ device)\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_engine_1_1_swapchain_support_details}{SwapchainSupportDetails}}\ QuerySwapchainSupport(VkPhysicalDevice\ device)\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00082\ \ \ \ \ \};}
-\DoxyCodeLine{00083\ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ VkDevice\ device;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ VmaAllocator\ allocator;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ kBufferSize\ =\ 80;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ kGrayScaleTable\ =\ \textcolor{stringliteral}{"{}.:-\/=+*\#\%@"{}};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ kGrayScaleTableSize\ =\ \textcolor{keyword}{sizeof}(kGrayScaleTable)\ /\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char});}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ TrainDQN();}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ AccumulateWaveToHeightField(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ x,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ waveLength,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ maxHeight,\ std::array<double,\ kBufferSize>\&\ heightField);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ UpdateWave(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ timeInterval,\ \textcolor{keywordtype}{double}\&\ x,\ \textcolor{keywordtype}{double}\&\ speed);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ DrawFluid(\textcolor{keyword}{const}\ std::array<double,\ kBufferSize>\&\ heightField)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Fluid();}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Draw();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ VulkanBackend()\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ VulkanBackend(HINSTANCE\ hInstance,\ HWND\ hwnd);}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \string~VulkanBackend();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ VkInstance\ instance;}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ VkSurfaceKHR\ surface;}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ VkPhysicalDevice\ physicalDevice;}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ VkSwapchainKHR\ swapchain;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ std::vector<VkImage>\ swapchainImages;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ std::vector<VkImageView>\ swapchainImageViews;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ std::vector<VkCommandPool>\ swapchainCmdPools;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ std::vector<VkCommandBuffer>\ swapchainCmdBuffers;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ std::vector<VkFence>\ swapchainFences;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ std::vector<VkSemaphore>\ swapchainSemaphores;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ std::vector<VkSemaphore>\ renderSemaphores;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ uint32\_t\ currentFrame;}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ uint32\_t\ frameNumber;}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ VkCommandPool\ immCmdPool;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ VkCommandBuffer\ immCmdBuffer;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ VkFence\ immFence;}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ std::unique\_ptr<VulkanImage>\ offscreenFramebuffer;}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ std::unique\_ptr<VulkanDescriptor>\ computeDescriptor;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ std::unique\_ptr<VulkanPipeline>\ computePipeline;}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ VkQueue\ graphicsQueue;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ VkQueue\ computeQueue;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ VkQueue\ transferQueue;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ VkQueue\ presentQueue;}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_engine_1_1_queue_family_indices}{QueueFamilyIndices}}\ queueFamilyIndices;}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_engine_1_1_swapchain_support_details}{SwapchainSupportDetails}}\ swapchainSupportDetails;}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ VkPhysicalDeviceProperties\ physicalDeviceProperties;}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ VkPhysicalDeviceFeatures\ physicalDeviceFeatures;}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ VkPhysicalDeviceMemoryProperties\ physicalDeviceMemoryProperties;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ VkPhysicalDeviceRayTracingPipelinePropertiesKHR\ physicalDeviceRTProperties;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ VkPhysicalDeviceProperties2\ physicalDeviceProperties2;}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ VkFormat\ imageFormat;}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ VkExtent2D\ imageExtent;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ uint32\_t\ framebufferCount;}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ hardwareRaytracingSupported;}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ RateDeviceSuitability(VkPhysicalDevice\ device);}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_engine_1_1_queue_family_indices}{QueueFamilyIndices}}\ FindQueueFamilies(VkPhysicalDevice\ device)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_engine_1_1_swapchain_support_details}{SwapchainSupportDetails}}\ QuerySwapchainSupport(VkPhysicalDevice\ device)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ TransitionImage(VkCommandBuffer\ cmd,\ VkImage\ image,\ VkImageLayout\ currentLayout,\ VkImageLayout\ newLayout);}
+\DoxyCodeLine{00118\ \ \ \ \ \};}
+\DoxyCodeLine{00119\ \}}
 
 \end{DoxyCode}

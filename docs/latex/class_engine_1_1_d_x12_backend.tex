@@ -1,0 +1,38 @@
+\doxysection{Engine\+::DX12\+Backend Class Reference}
+\hypertarget{class_engine_1_1_d_x12_backend}{}\label{class_engine_1_1_d_x12_backend}\index{Engine::DX12Backend@{Engine::DX12Backend}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_engine_1_1_d_x12_backend_ad3bc4687c859b6547c2a4d2f15c8d7dd}\label{class_engine_1_1_d_x12_backend_ad3bc4687c859b6547c2a4d2f15c8d7dd} 
+{\bfseries DX12\+Backend} (HINSTANCE h\+Instance, const HWND \&hwnd)
+\item 
+void \mbox{\hyperlink{class_engine_1_1_d_x12_backend_a3cd4ba6993c9dc72a68aba4572271a0b}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em Executes a full ray tracing rendering pass and presents the result to the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_engine_1_1_d_x12_backend_a3cd4ba6993c9dc72a68aba4572271a0b}\index{Engine::DX12Backend@{Engine::DX12Backend}!Draw@{Draw}}
+\index{Draw@{Draw}!Engine::DX12Backend@{Engine::DX12Backend}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{class_engine_1_1_d_x12_backend_a3cd4ba6993c9dc72a68aba4572271a0b} 
+void Engine\+::\+DX12\+Backend\+::\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Executes a full ray tracing rendering pass and presents the result to the screen. 
+
+This function resets the command list and allocator, updates the TLAS transforms, dispatches rays to a compute shader using DXR, copies the ray tracing output to the swapchain\textquotesingle{}s back buffer, and then presents the frame.
+
+Barriers are used throughout to ensure proper resource state transitions.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & if command list or allocator cannot be reset or if the swapchain back buffer cannot be acquired. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Rendering\+Engine/src/dx12/DX12\+Backend.\+h\item 
+Rendering\+Engine/src/dx12/DX12\+Backend.\+cpp\end{DoxyCompactItemize}

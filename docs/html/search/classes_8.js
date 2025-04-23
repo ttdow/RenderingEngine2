@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['random_0',['Random',['../class_engine_1_1_random.html',1,'Engine']]],
-  ['ray_1',['Ray',['../class_engine_1_1_ray.html',1,'Engine']]],
-  ['renderingengine_2',['RenderingEngine',['../class_engine_1_1_rendering_engine.html',1,'Engine']]]
+  ['material_0',['Material',['../class_engine_1_1_material.html',1,'Engine']]],
+  ['mseloss_1',['MSELoss',['../class_engine_1_1_m_s_e_loss.html',1,'Engine']]]
 ];

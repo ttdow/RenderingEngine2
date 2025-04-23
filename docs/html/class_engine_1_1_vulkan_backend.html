@@ -104,6 +104,8 @@ $(function(){initNavTree('class_engine_1_1_vulkan_backend.html',''); initResizab
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="class_engine_1_1_vulkan_backend-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Engine::VulkanBackend Class Reference</div></div>
 </div><!--header-->
@@ -111,13 +113,52 @@ $(function(){initNavTree('class_engine_1_1_vulkan_backend.html',''); initResizab
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a5b89991209882bddf47ff64ffc7a79f6" id="r_a5b89991209882bddf47ff64ffc7a79f6"><td class="memItemLeft" align="right" valign="top"><a id="a5b89991209882bddf47ff64ffc7a79f6" name="a5b89991209882bddf47ff64ffc7a79f6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>TrainDQN</b> ()</td></tr>
+<tr class="separator:a5b89991209882bddf47ff64ffc7a79f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a585e817aa434418973b4244df590b363" id="r_a585e817aa434418973b4244df590b363"><td class="memItemLeft" align="right" valign="top"><a id="a585e817aa434418973b4244df590b363" name="a585e817aa434418973b4244df590b363"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>AccumulateWaveToHeightField</b> (const double x, const double waveLength, const double maxHeight, std::array&lt; double, kBufferSize &gt; &amp;heightField)</td></tr>
+<tr class="separator:a585e817aa434418973b4244df590b363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30d85fafba1b50e984ee830551c7cd2a" id="r_a30d85fafba1b50e984ee830551c7cd2a"><td class="memItemLeft" align="right" valign="top"><a id="a30d85fafba1b50e984ee830551c7cd2a" name="a30d85fafba1b50e984ee830551c7cd2a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateWave</b> (const double timeInterval, double &amp;x, double &amp;speed)</td></tr>
+<tr class="separator:a30d85fafba1b50e984ee830551c7cd2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a569235b09f7ed47c46ab4969dc3eaf18" id="r_a569235b09f7ed47c46ab4969dc3eaf18"><td class="memItemLeft" align="right" valign="top"><a id="a569235b09f7ed47c46ab4969dc3eaf18" name="a569235b09f7ed47c46ab4969dc3eaf18"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawFluid</b> (const std::array&lt; double, kBufferSize &gt; &amp;heightField) const</td></tr>
+<tr class="separator:a569235b09f7ed47c46ab4969dc3eaf18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c6ee0b6cb5ad7518d3a2d9ef73d26fb" id="r_a1c6ee0b6cb5ad7518d3a2d9ef73d26fb"><td class="memItemLeft" align="right" valign="top"><a id="a1c6ee0b6cb5ad7518d3a2d9ef73d26fb" name="a1c6ee0b6cb5ad7518d3a2d9ef73d26fb"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Fluid</b> ()</td></tr>
+<tr class="separator:a1c6ee0b6cb5ad7518d3a2d9ef73d26fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89484039ab4c3eb615da86d9f7309ae3" id="r_a89484039ab4c3eb615da86d9f7309ae3"><td class="memItemLeft" align="right" valign="top"><a id="a89484039ab4c3eb615da86d9f7309ae3" name="a89484039ab4c3eb615da86d9f7309ae3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Draw</b> ()</td></tr>
+<tr class="separator:a89484039ab4c3eb615da86d9f7309ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a774f3e65110529757602cc9553f25342" id="r_a774f3e65110529757602cc9553f25342"><td class="memItemLeft" align="right" valign="top"><a id="a774f3e65110529757602cc9553f25342" name="a774f3e65110529757602cc9553f25342"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>VulkanBackend</b> (HINSTANCE hInstance, HWND hwnd)</td></tr>
 <tr class="separator:a774f3e65110529757602cc9553f25342"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a5eb21e3d7d6154f31559cabbdb9646a9" id="r_a5eb21e3d7d6154f31559cabbdb9646a9"><td class="memItemLeft" align="right" valign="top"><a id="a5eb21e3d7d6154f31559cabbdb9646a9" name="a5eb21e3d7d6154f31559cabbdb9646a9"></a>
+VkDevice&#160;</td><td class="memItemRight" valign="bottom"><b>device</b></td></tr>
+<tr class="separator:a5eb21e3d7d6154f31559cabbdb9646a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7286161a7b80cb11cfc35e75a6b2dc37" id="r_a7286161a7b80cb11cfc35e75a6b2dc37"><td class="memItemLeft" align="right" valign="top"><a id="a7286161a7b80cb11cfc35e75a6b2dc37" name="a7286161a7b80cb11cfc35e75a6b2dc37"></a>
+VmaAllocator&#160;</td><td class="memItemRight" valign="bottom"><b>allocator</b></td></tr>
+<tr class="separator:a7286161a7b80cb11cfc35e75a6b2dc37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a122bb524b7efcbfd890a02432d308193" id="r_a122bb524b7efcbfd890a02432d308193"><td class="memItemLeft" align="right" valign="top"><a id="a122bb524b7efcbfd890a02432d308193" name="a122bb524b7efcbfd890a02432d308193"></a>
+const char *&#160;</td><td class="memItemRight" valign="bottom"><b>kGrayScaleTable</b> = &quot;.:-=+*#%@&quot;</td></tr>
+<tr class="separator:a122bb524b7efcbfd890a02432d308193"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:aec385f8905b02c5a92f178b629565446" id="r_aec385f8905b02c5a92f178b629565446"><td class="memItemLeft" align="right" valign="top"><a id="aec385f8905b02c5a92f178b629565446" name="aec385f8905b02c5a92f178b629565446"></a>
+static const size_t&#160;</td><td class="memItemRight" valign="bottom"><b>kBufferSize</b> = 80</td></tr>
+<tr class="separator:aec385f8905b02c5a92f178b629565446"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7727cf09eb7235866873f0a0aaad6666" id="r_a7727cf09eb7235866873f0a0aaad6666"><td class="memItemLeft" align="right" valign="top"><a id="a7727cf09eb7235866873f0a0aaad6666" name="a7727cf09eb7235866873f0a0aaad6666"></a>
+static const size_t&#160;</td><td class="memItemRight" valign="bottom"><b>kGrayScaleTableSize</b> = sizeof(kGrayScaleTable) / sizeof(char)</td></tr>
+<tr class="separator:a7727cf09eb7235866873f0a0aaad6666"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>RenderingEngine/src/<a class="el" href="_vulkan_backend_8h_source.html">VulkanBackend.h</a></li>
-<li>RenderingEngine/src/<b>VulkanBackend.cpp</b></li>
+<li>RenderingEngine/src/vulkan/<a class="el" href="_vulkan_backend_8h_source.html">VulkanBackend.h</a></li>
+<li>RenderingEngine/src/vulkan/<b>VulkanBackend.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

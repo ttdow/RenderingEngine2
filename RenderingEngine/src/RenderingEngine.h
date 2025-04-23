@@ -3,10 +3,17 @@
 #include <Windows.h>
 
 #include "Camera.h"
-#include "VulkanBackend.h"
+#include "vulkan/VulkanBackend.h"
+#include "dx12/DX12Backend.h"
 
 namespace Engine
 {
+	enum RenderingBackend
+	{
+		VULKAN = 0,
+		DX12 = 1
+	};
+
 	class RenderingEngine
 	{
 	public:
@@ -15,17 +22,14 @@ namespace Engine
 		RenderingEngine(HINSTANCE hInstance, HWND hwnd);
 		~RenderingEngine();
 
-		void Run();
+		void Update();
 
 	private:
 
 		std::unique_ptr<VulkanBackend> vulkanBackend;
+		std::unique_ptr<DX12Backend> dx12Backend;
 
-		const int SCREEN_WIDTH = 800;
-		const double ASPECT_RATIO = 16.0 / 9.0;
-		int SCREEN_HEIGHT;
+		RenderingBackend selectedBackend = RenderingBackend::DX12;
 		int imageWidth, imageHeight;
-
-		void Render();
 	};
 }

@@ -1,22 +1,36 @@
 var annotated_dup =
 [
     [ "Engine", null, [
+      [ "Animation", "class_engine_1_1_animation.html", null ],
       [ "AssetLoader", "class_engine_1_1_asset_loader.html", null ],
       [ "Camera", "class_engine_1_1_camera.html", null ],
+      [ "DQNAgent", "class_engine_1_1_d_q_n_agent.html", null ],
+      [ "DX12Backend", "class_engine_1_1_d_x12_backend.html", "class_engine_1_1_d_x12_backend" ],
       [ "Entity", "class_engine_1_1_entity.html", null ],
+      [ "Environment", "class_engine_1_1_environment.html", "class_engine_1_1_environment" ],
+      [ "Experience", "struct_engine_1_1_experience.html", null ],
+      [ "Frame", "struct_engine_1_1_frame.html", null ],
       [ "HitRecord", "class_engine_1_1_hit_record.html", null ],
       [ "Hittable", "class_engine_1_1_hittable.html", null ],
       [ "HittableList", "class_engine_1_1_hittable_list.html", null ],
       [ "Interval", "class_engine_1_1_interval.html", null ],
       [ "Lambertian", "class_engine_1_1_lambertian.html", null ],
+      [ "LossFunction", "class_engine_1_1_loss_function.html", null ],
       [ "Material", "class_engine_1_1_material.html", null ],
+      [ "MSELoss", "class_engine_1_1_m_s_e_loss.html", null ],
+      [ "NeuralNetwork", "class_engine_1_1_neural_network.html", "class_engine_1_1_neural_network" ],
+      [ "ParticleSystemData3", "class_engine_1_1_particle_system_data3.html", null ],
+      [ "ParticleSystemSolver3", "class_engine_1_1_particle_system_solver3.html", null ],
       [ "QueueFamilyIndices", "struct_engine_1_1_queue_family_indices.html", null ],
       [ "Random", "class_engine_1_1_random.html", null ],
       [ "Ray", "class_engine_1_1_ray.html", null ],
+      [ "RecurrentNeuralNetwork", "class_engine_1_1_recurrent_neural_network.html", null ],
       [ "RenderingEngine", "class_engine_1_1_rendering_engine.html", null ],
+      [ "ReplayBuffer", "class_engine_1_1_replay_buffer.html", null ],
       [ "Scene", "class_engine_1_1_scene.html", null ],
       [ "SceneNode", "class_engine_1_1_scene_node.html", null ],
       [ "SimpleNeuralNetwork", "class_engine_1_1_simple_neural_network.html", "class_engine_1_1_simple_neural_network" ],
+      [ "SineAnimation", "class_engine_1_1_sine_animation.html", null ],
       [ "Sphere", "class_engine_1_1_sphere.html", null ],
       [ "SwapchainSupportDetails", "struct_engine_1_1_swapchain_support_details.html", null ],
       [ "TrainingExample", "struct_engine_1_1_training_example.html", "struct_engine_1_1_training_example" ],
@@ -24,6 +38,9 @@ var annotated_dup =
       [ "Vector2", "class_engine_1_1_vector2.html", null ],
       [ "Vector2_SIMD", "class_engine_1_1_vector2___s_i_m_d.html", null ],
       [ "Vector3", "class_engine_1_1_vector3.html", "class_engine_1_1_vector3" ],
-      [ "VulkanBackend", "class_engine_1_1_vulkan_backend.html", null ]
+      [ "VulkanBackend", "class_engine_1_1_vulkan_backend.html", null ],
+      [ "VulkanDescriptor", "class_engine_1_1_vulkan_descriptor.html", null ],
+      [ "VulkanImage", "class_engine_1_1_vulkan_image.html", null ],
+      [ "VulkanPipeline", "class_engine_1_1_vulkan_pipeline.html", null ]
     ] ]
 ];
