@@ -1,5 +1,8 @@
 #include "pch.h"
 
+#define STB_IMAGE_IMPLEMENTATION
+//#include "stb_image.h"
+
 #include "RenderingEngine.h"
 
 // Windows message handler.
@@ -79,12 +82,42 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance
 
 #endif
 
-	SetProcessDpiAwarenessContext(DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2);
+	DWORD buffSize = 0;
+	GetLogicalProcessorInformation(nullptr, &buffSize);
+	std::vector<unsigned char> buffer;
+	buffer.resize(buffSize);
+	SYSTEM_LOGICAL_PROCESSOR_INFORMATION* ptr = reinterpret_cast<SYSTEM_LOGICAL_PROCESSOR_INFORMATION*>(buffer.data());
+	GetLogicalProcessorInformation(ptr, &buffSize);
 
-	HWND hwnd = MakeWindow(hInstance, SCREEN_WIDTH, SCREEN_HEIGHT);
+	const int n = buffSize / sizeof(SYSTEM_LOGICAL_PROCESSOR_INFORMATION);
+
+	int numPhysicalCores = 0;
+	int numLogicalCores = 0;
+
+	for (int i = 0; i < n; i++)
+	{
+		if (ptr->Relationship == RelationProcessorCore)
+		{
+			numPhysicalCores++;
+			numLogicalCores += static_cast<int>(__popcnt64(ptr->ProcessorMask));
+		}
+
+		ptr++;
+	}
+
+	std::cout << "Physical cores: " << numPhysicalCores << '\n';
+	std::cout << "Logical cores: " << numLogicalCores << '\n';
 
 	try
 	{
+		bool result = SetProcessDpiAwarenessContext(DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2);
+		if (!result)
+		{
+			throw std::runtime_error("Oh no.");
+		}
+
+		HWND hwnd = MakeWindow(hInstance, SCREEN_WIDTH, SCREEN_HEIGHT);
+
 		// Create rendering engine.
 		std::unique_ptr<Engine::RenderingEngine> engine = std::make_unique<Engine::RenderingEngine>(hInstance, hwnd);
 

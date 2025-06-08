@@ -3,6 +3,8 @@
 #include <fastgltf/core.hpp>
 #include <fastgltf/tools.hpp>
 
+//#include "stb_image.h"
+
 #include "Scene.h"
 
 namespace Engine
@@ -11,6 +13,8 @@ namespace Engine
 	{
 	public:
 
+		static void DoNothing();
+		static void LoadImg();
 		static std::unique_ptr<Engine::Scene> LoadGLTF(const std::string& filePath);
 
 	private:

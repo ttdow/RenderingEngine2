@@ -1,5 +1,9 @@
 #pragma once
 
+#include "DX12Descriptor.h"
+#include "DX12DescriptorHeap.h"
+#include "../ImageLoader.h"
+
 namespace Engine
 {
 	class DX12Backend
@@ -61,16 +65,21 @@ namespace Engine
 
 		ID3D12Device5* device = nullptr;
 		ID3D12DebugDevice* debugDevice = nullptr;
+		ID3D12InfoQueue* infoQueue = nullptr;
 
 		ID3D12CommandQueue* cmdQueue = nullptr;
-		
-		ID3D12Fence* fence = nullptr;
-		IDXGISwapChain3* swapchain = nullptr;
-		ID3D12DescriptorHeap* uavHeap = nullptr;
-		ID3D12Resource* renderTarget = nullptr;
-
 		ID3D12CommandAllocator* cmdAlloc = nullptr;
 		ID3D12GraphicsCommandList4* cmdList = nullptr;
+		ID3D12Fence* fence = nullptr;
+
+		IDXGISwapChain3* swapchain = nullptr;
+		ID3D12Resource* renderTarget = nullptr;
+
+		DX12Descriptor* descriptor = nullptr;
+		DX12Descriptor* srvDescriptor = nullptr;
+
+		DX12DescriptorHeap* shaderHeap = nullptr;
+		DX12DescriptorHeap* samplerHeap = nullptr;
 
 		ID3D12Resource* quadVB = nullptr;
 		ID3D12Resource* cubeVB = nullptr;
@@ -104,6 +113,10 @@ namespace Engine
 		 */
 		void InitDevice();
 
+		void InitDebug(uint32_t dxgiFactoryFlags);
+
+		void InitDescriptorHeap();
+
 		/**
 		 * @brief Initializes the swapchain and UAV descriptor heap for the rendering surface.
 		 * 
@@ -117,9 +130,19 @@ namespace Engine
 		 * @param hwnd Handle to the target window.
 		 * @throws std::runtime_error if swapchain or descriptor heap creation fails.
 		 */
-		void InitSurfaces(const HWND& hwnd);
+		void InitSwapchain(const HWND& hwnd);
 
-		// TODO.
+		/**
+		 * @brief Initializes the command allocator and command list used for recording GPU commands.
+		 * 
+		 * This function:
+		 *  - Creates a command allocator of type 'DIRECT' for general-purpose rendering and compute.
+		 *  - Creates a corresponding command list bound to that allocator.
+		 * 
+		 * These are required to record and submit GPU work, such as ray dispatches and resource copies.
+		 * 
+		 * @throws std::runtime_error if creation of either the allocator or the command list fails.
+		 */
 		void InitCommand();
 
 		/**
@@ -300,5 +323,7 @@ namespace Engine
 		 * This function uses animated or static transformations to demonstrate dynamic instance movement.
 		 */
 		void UpdateTransforms();
+
+		void LoadTexture();
 	};
 }

@@ -18,6 +18,7 @@
 #include "VulkanImage.h"
 #include "VulkanDescriptor.h"
 #include "VulkanPipeline.h"
+#include "../AssetLoader.h"
 
 namespace Engine
 {

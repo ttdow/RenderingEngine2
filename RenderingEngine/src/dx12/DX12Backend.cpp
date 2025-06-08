@@ -4,7 +4,10 @@
 
 #pragma comment(lib, "user32") // Windows functions like DefWindowProcW, PostQuitMessage, etc.
 #pragma comment(lib, "d3d12")  // Direct3D 12 graphics API.
-#pragma comment(lib, "dxgi")   // DirectX Graphics Infrastructure, for handling adapters/swap chains.
+#pragma comment(lib, "dxgi.lib")   // DirectX Graphics Infrastructure, for handling adapters/swap chains.
+#pragma comment(lib, "dxguid.lib")
+
+#include <dxgidebug.h>
 
 namespace Engine
 {
@@ -30,9 +33,11 @@ namespace Engine
 		value = 1;
 
 		InitDevice();
-		InitSurfaces(hwnd);
+		InitDescriptorHeap();
+		InitSwapchain(hwnd);
 		InitCommand();
 		InitMeshes();
+		LoadTexture();
 		InitBLAS();
 		InitScene();
 		InitTLAS();
@@ -47,6 +52,7 @@ namespace Engine
 
 #if defined _DEBUG
 
+		/*
 		HRESULT hr = debugDevice->ReportLiveDeviceObjects(D3D12_RLDO_DETAIL);
 		if (FAILED(hr))
 		{
@@ -56,6 +62,7 @@ namespace Engine
 		{
 			std::cout << "ReportLiveDeviceObjects succeeded.\n";
 		}
+		*/
 #endif
 
 	}
@@ -86,8 +93,8 @@ namespace Engine
 		cmdList->SetComputeRootSignature(rootSignature);
 
 		// Bind descriptor heaps (UAV table required for output target).
-		cmdList->SetDescriptorHeaps(1, &uavHeap);
-		D3D12_GPU_DESCRIPTOR_HANDLE uavTable = uavHeap->GetGPUDescriptorHandleForHeapStart();
+		cmdList->SetDescriptorHeaps(1, &descriptor->heap);
+		D3D12_GPU_DESCRIPTOR_HANDLE uavTable = descriptor->heap->GetGPUDescriptorHandleForHeapStart();
 		cmdList->SetComputeRootDescriptorTable(0, uavTable);						// Bind UAV descriptor table.
 		cmdList->SetComputeRootShaderResourceView(1, tlas->GetGPUVirtualAddress()); // Bind TLAS directly by GPU virtual address.
 
@@ -174,30 +181,7 @@ namespace Engine
 
 #if defined _DEBUG
 
-		// Create a debug controller to track errors.
-		ID3D12Debug* debug;
-		hr = D3D12GetDebugInterface(IID_PPV_ARGS(&debug));
-		if (FAILED(hr))
-		{
-			throw std::runtime_error("Failed to get debug interface!");
-		}
-
-		// Get ID3D12Debug1 for GPU-side validation control.
-		hr = debug->QueryInterface(IID_PPV_ARGS(&debugController));
-		if (FAILED(hr))
-		{
-			throw std::runtime_error("Failed to get debug1 interface!");
-		}
-
-		// Enable debug validation layers.
-		debugController->EnableDebugLayer();				// Enable CPU-side validation.
-		debugController->SetEnableGPUBasedValidation(true); // Enable GPU-side validation.
-
-		// Add debug flag for factory.
-		dxgiFactoryFlags |= DXGI_CREATE_FACTORY_DEBUG; // Tell DXGI to enable debugging.
-
-		debug->Release();
-		debug = nullptr;
+		InitDebug(dxgiFactoryFlags);
 
 #endif
 
@@ -212,6 +196,9 @@ namespace Engine
 		IDXGIAdapter1* adapter = nullptr;
 		uint32_t warpIndex = 0;
 		uint32_t adapterIndex = 0;
+
+		// TODO: Unused for now.
+		//factory->EnumAdapterByGpuPreference();
 
 		while (factory->EnumAdapters1(adapterIndex, &adapter) != DXGI_ERROR_NOT_FOUND)
 		{
@@ -254,6 +241,8 @@ namespace Engine
 			throw std::runtime_error("Failed to enumerate WARP adapter!");
 		}
 
+		// TODO: Unused for now.
+		/*
 		// Create the D3D12 device with a required feature level.
 		D3D_FEATURE_LEVEL levelsToCheck[] =
 		{
@@ -265,6 +254,7 @@ namespace Engine
 		D3D12_FEATURE_DATA_FEATURE_LEVELS featureLevels = {};
 		featureLevels.NumFeatureLevels = _countof(levelsToCheck);
 		featureLevels.pFeatureLevelsRequested = levelsToCheck;
+		*/
 
 		// Attempt to create the device at 12.1 (WARP supports this).
 		hr = D3D12CreateDevice(adapter, D3D_FEATURE_LEVEL_12_1, IID_PPV_ARGS(&device));
@@ -273,17 +263,20 @@ namespace Engine
 			throw std::runtime_error("Failed to create D3D12 device using WARP adapter with feature level 12.1!");
 		}
 
+		// TODO: Add label to device for debugging.
+		device->SetName(L"D3D12 Device");
+
 		adapter->Release();
 
+		// TODO: Unused for now.
+		/*
 		// Query and print the highest feature level supported by the adapter.
 		hr = device->CheckFeatureSupport(D3D12_FEATURE_FEATURE_LEVELS, &featureLevels, sizeof(featureLevels));
 		if (SUCCEEDED(hr))
 		{
 			std::cout << "Highest supported feature level: " << featureLevels.MaxSupportedFeatureLevel << "\n";
 		}
-
-		// TODO: Is there a point to this?
-		device->SetName(L"Hello Triangle Device");
+		*/
 
 #if defined _DEBUG
 
@@ -311,43 +304,110 @@ namespace Engine
 		}
 	}
 
-	void DX12Backend::InitSurfaces(const HWND& hwnd)
+	void DX12Backend::InitDebug(uint32_t dxgiFactoryFlags)
 	{
+		HRESULT hr;
+
+		// Create a debug controller to track errors.
+		ID3D12Debug* debug = nullptr;
+		hr = D3D12GetDebugInterface(IID_PPV_ARGS(&debug));
+		if (FAILED(hr))
+		{
+			throw std::runtime_error("Failed to get debug interface!");
+		}
+
+		IDXGIInfoQueue* dxgiInfoQueue = nullptr;
+		hr = DXGIGetDebugInterface1(0, IID_PPV_ARGS(&dxgiInfoQueue));
+		if (FAILED(hr))
+		{
+			throw std::runtime_error("Failed to get debug interface!");
+		}
+
+		// Get ID3D12Debug1 for GPU-side validation control.
+		hr = debug->QueryInterface(IID_PPV_ARGS(&debugController));
+		if (FAILED(hr))
+		{
+			throw std::runtime_error("Failed to get debug1 interface!");
+		}
+
+		// Enable debug validation layers.
+		debugController->EnableDebugLayer();				// Enable CPU-side validation.
+		debugController->SetEnableGPUBasedValidation(true); // Enable GPU-side validation.
+
+		// Add debug flag for factory.
+		dxgiFactoryFlags |= DXGI_CREATE_FACTORY_DEBUG; // Tell DXGI to enable debugging.
+
+		// Release the preliminary debug resource.
+		debug->Release();
+		debug = nullptr;
+
+		/*
+		hr = device->QueryInterface(IID_PPV_ARGS(&infoQueue));
+		if (FAILED(hr))
+		{
+			throw std::runtime_error("Failed to get ID3D12InfoQueue interface!");
+		}
+		*/
+	}
+
+	void DX12Backend::InitDescriptorHeap()
+	{
+		// Create UAV descriptor heap for ray tracing pipeline output image.
+		descriptor = new DX12Descriptor(device, D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV, 1, true);
+
+		shaderHeap = new DX12DescriptorHeap(device, D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV, true);
+		samplerHeap = new DX12DescriptorHeap(device, D3D12_DESCRIPTOR_HEAP_TYPE_SAMPLER, true);
+
+		// Create SRV descriptor heap for texture sampling.
+		srvDescriptor = new DX12Descriptor(device, D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV, 1, true);
+	}
+
+	void DX12Backend::InitSwapchain(const HWND& hwnd)
+	{
+		// Query the window's current client area dimensions.
+		RECT rect;
+		GetClientRect(hwnd, &rect);
+		UINT width = std::max<UINT>(rect.right - rect.left, 1);
+		UINT height = std::max<UINT>(rect.bottom - rect.top, 1);
+
 		// Describe a double-buffered swapchain for the window.
-		DXGI_SWAP_CHAIN_DESC1 scDesc = {};
-		scDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;		   // RGBA 8-bit format.
-		scDesc.SampleDesc = NO_AA;						   // No multisampling.
-		scDesc.BufferCount = 2;							   // Double buffering.
-		scDesc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_DISCARD; // Recommended for modern presentation.
+		DXGI_SWAP_CHAIN_DESC1 desc = {};
+		desc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;		 // RGBA 8-bit format.
+		desc.SampleDesc = NO_AA;						 // No multisampling.
+		desc.BufferCount = 2;							 // Double buffering.
+		desc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_DISCARD; // Recommended for modern presentation.
+		desc.Width = width;
+		desc.Height = height;
+		desc.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
 
 		// Create the swapchain using DXGI 1.1 interface.
-		IDXGISwapChain1* swapchain1;
-		HRESULT hr = factory->CreateSwapChainForHwnd(cmdQueue, hwnd, &scDesc, nullptr, nullptr, &swapchain1);
+		IDXGISwapChain1* swapchain1 = nullptr;
+		HRESULT hr = factory->CreateSwapChainForHwnd(
+			cmdQueue,	// GPU command queue.
+			hwnd,		// Window handle.
+			&desc,		// Swapchain description.
+			nullptr,	// Fullscreen.
+			nullptr,	// Monitor.
+			&swapchain1 // Output for swapchain resource.
+		);
+
 		if (FAILED(hr))
 		{
 			throw std::runtime_error("Failed to create swapchain!");
 		}
 
 		// Upgrade the swapchain to version 3 for advanced usage (e.g., frame indexing).
-		swapchain1->QueryInterface(&swapchain);
+		hr = swapchain1->QueryInterface(&swapchain);
+		if (FAILED(hr))
+		{
+			throw std::runtime_error("Failed to create swapchain version 3!");
+		}
+
 		swapchain1->Release();
 		
 		// DXGI factory is no longer needed after swapchain creation.
 		factory->Release();
-
-		// TODO: Add a new descriptor for texture.
-		
-		// Create a GPU-visible descriptor heap to hold SRVs/UAVs/CBVs
-		D3D12_DESCRIPTOR_HEAP_DESC uavHeapDesc = {};
-		uavHeapDesc.Type = D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV;
-		uavHeapDesc.NumDescriptors = 2;								   // One for output UAV, one spare.
-		uavHeapDesc.Flags = D3D12_DESCRIPTOR_HEAP_FLAG_SHADER_VISIBLE; // Needed for shader access.
-
-		hr = device->CreateDescriptorHeap(&uavHeapDesc, IID_PPV_ARGS(&uavHeap));
-		if (FAILED(hr))
-		{
-			throw std::runtime_error("Failed to create descriptor heap!");
-		}
+		factory = nullptr;
 
 		// Initialize render target with the current window size.
 		Resize(hwnd);
@@ -355,16 +415,23 @@ namespace Engine
 
 	void DX12Backend::InitCommand()
 	{
-		// A command allocator is a chunk of memory used to store the actual command data 
-		// recorded by a command list.
+		// Create a command allocator for recording DIRECT command lists.
+		// This allocator will manage memory used during command list recording.
 		HRESULT hr = device->CreateCommandAllocator(D3D12_COMMAND_LIST_TYPE_DIRECT, IID_PPV_ARGS(&cmdAlloc));
 		if (FAILED(hr))
 		{
 			throw std::runtime_error("Failed to create command allocator!");
 		}
 
-		// A command list is where you actually record the GPU commands.
-		hr = device->CreateCommandList1(0, D3D12_COMMAND_LIST_TYPE_DIRECT, D3D12_COMMAND_LIST_FLAG_NONE, IID_PPV_ARGS(&cmdList));
+		// Create a command list that will record commands submitted to the GPU.
+		// Unlike CreateCommandList, CreateCommandList1 doesn't require an initial allocator.
+		hr = device->CreateCommandList1(
+			0,								// Node mask (single GPU).
+			D3D12_COMMAND_LIST_TYPE_DIRECT, // Same type as allocator.
+			D3D12_COMMAND_LIST_FLAG_NONE,	// No special flags (not a bundle).
+			IID_PPV_ARGS(&cmdList)
+		);
+
 		if (FAILED(hr))
 		{
 			throw std::runtime_error("Failed to create command list!");
@@ -780,12 +847,14 @@ namespace Engine
 		uavDesc.ViewDimension = D3D12_UAV_DIMENSION_TEXTURE2D;
 		uavDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
 
+		std::cout << "Heap start: " << descriptor->heap->GetCPUDescriptorHandleForHeapStart().ptr << std::endl;
+
 		// Bind UAV to the descriptor heap at slot 0.
 		device->CreateUnorderedAccessView(
-			renderTarget,								  // The actual resource (e.g., a texture on the GPU).
-			nullptr,									  // No counter resource (used only for structured buffers).
-			&uavDesc,									  // Descriptor for the UAV.
-			uavHeap->GetCPUDescriptorHandleForHeapStart() // Where to place the descriptor.
+			renderTarget,										   // The actual resource (e.g., a texture on the GPU).
+			nullptr,											   // No counter resource (used only for structured buffers).
+			&uavDesc,											   // Descriptor for the UAV.
+			descriptor->heap->GetCPUDescriptorHandleForHeapStart() // Where to place the descriptor.
 		);
 	}
 
@@ -945,5 +1014,107 @@ namespace Engine
 		auto floor = DirectX::XMMatrixScaling(5, 5, 5);
 		floor *= DirectX::XMMatrixTranslation(0, 0, 2);
 		Set(2, floor);
+	}
+
+	void DX12Backend::LoadTexture()
+	{
+		int w, h, c;
+		unsigned char* pixelData = ImageLoader::LoadImg(w, h, c);
+
+		std::cout << w << "x" << h << '\n';
+
+		D3D12_RESOURCE_DESC texDesc = {};
+		texDesc.Dimension = D3D12_RESOURCE_DIMENSION_TEXTURE2D;
+		texDesc.Width = w;
+		texDesc.Height = h;
+		texDesc.DepthOrArraySize = 1;
+		texDesc.MipLevels = 1;
+		texDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
+		texDesc.SampleDesc = { 1, 0 };
+		texDesc.Layout = D3D12_TEXTURE_LAYOUT_UNKNOWN;
+		texDesc.Flags = D3D12_RESOURCE_FLAG_NONE;
+
+		// Create empty texture memory on GPU.
+		ID3D12Resource* texture = nullptr;
+		HRESULT hr = device->CreateCommittedResource(
+			&DEFAULT_HEAP,
+			D3D12_HEAP_FLAG_NONE,
+			&texDesc,
+			D3D12_RESOURCE_STATE_COPY_DEST,
+			nullptr,
+			IID_PPV_ARGS(&texture)
+		);
+
+		texture->SetName(L"Texture");
+
+		if (FAILED(hr))
+		{
+			throw std::runtime_error("Failed to create texture resource on GPU!");
+		}
+
+		uint64_t uploadSize;
+		device->GetCopyableFootprints(
+			&texDesc,
+			0,
+			1,
+			0,
+			nullptr,
+			nullptr,
+			nullptr,
+			&uploadSize
+		);
+
+		std::cout << "Copyable footprint size: " << uploadSize << '\n';
+
+		// Scratch buffer description.
+		D3D12_RESOURCE_DESC scratchDesc = {};
+		scratchDesc.Dimension = D3D12_RESOURCE_DIMENSION_BUFFER;
+		scratchDesc.Alignment = 0;
+		scratchDesc.Width = uploadSize;
+		scratchDesc.Height = 1;
+		scratchDesc.DepthOrArraySize = 1;
+		scratchDesc.MipLevels = 1;
+		scratchDesc.Format = DXGI_FORMAT_UNKNOWN;
+		scratchDesc.SampleDesc = NO_AA;
+		scratchDesc.Layout = D3D12_TEXTURE_LAYOUT_ROW_MAJOR;
+		scratchDesc.Flags = D3D12_RESOURCE_FLAG_NONE;
+
+		// Upload heap properties.
+		D3D12_HEAP_PROPERTIES props = {};
+		props.Type = D3D12_HEAP_TYPE_UPLOAD;
+		props.CPUPageProperty = D3D12_CPU_PAGE_PROPERTY_UNKNOWN;
+		props.MemoryPoolPreference = D3D12_MEMORY_POOL_UNKNOWN;
+		props.CreationNodeMask = 1;
+		props.VisibleNodeMask = 1;
+
+		ID3D12Resource* scratch = nullptr;
+		hr = device->CreateCommittedResource(
+			&props,							   // Heap type = CPU-writeable memory.
+			D3D12_HEAP_FLAG_NONE,			   // No special heap flags.
+			&scratchDesc,					   // Resource description (buffer size and layout).
+			D3D12_RESOURCE_STATE_GENERIC_READ, // Initial resource state (not used for upload).
+			nullptr,						   // No optimized clear value.
+			IID_PPV_ARGS(&scratch)			   // Output resource pointer.
+		);
+
+		if (FAILED(hr))
+		{
+			throw std::runtime_error("Failed to create scratch buffer!");
+		}
+
+		D3D12_SHADER_RESOURCE_VIEW_DESC srvDesc = {};
+		srvDesc.Shader4ComponentMapping = D3D12_DEFAULT_SHADER_4_COMPONENT_MAPPING;
+		srvDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
+		srvDesc.ViewDimension = D3D12_SRV_DIMENSION_TEXTURE2D;
+		srvDesc.Texture2D.MipLevels = 1;
+
+		//device->CreateShaderResourceView(texture, &srvDesc, descriptor->heap->GetCPUDescriptorHandleForHeapStart());
+
+		scratch->Release();
+		scratch = nullptr;
+		texture->Release();
+		texture = nullptr;
+
+		stbi_image_free(pixelData);
 	}
 }

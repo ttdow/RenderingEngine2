@@ -2,6 +2,24 @@
 
 #include "AssetLoader.h"
 
+namespace Engine
+{
+	void AssetLoader::DoNothing()
+	{
+		return;
+	}
+
+	void AssetLoader::LoadImg()
+	{
+		int width, height, channels;
+		//unsigned char* pixelData = stbi_load("./brick.png", &width, &height, &channels, 4);
+		//if (!pixelData)
+		//{
+		//	throw std::runtime_error("Failed to load image!");
+		//}
+	}
+}
+
 std::unique_ptr<Engine::Scene> Engine::AssetLoader::LoadGLTF(const std::string& filePath)
 {
 	std::cout << "Loading glTF file: " << filePath << std::endl;
